@@ -50,7 +50,7 @@ class UserService
             }
         }
     }
-    public function upadate(){}
+    public function update(){}
     
     public function destroy($data)
     {
