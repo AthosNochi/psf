@@ -30,5 +30,5 @@ Route::get('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardControll
 
 
 Route::resource('user', 'UsersController');
-
+Route::resource('psf', 'PsfsController');
 
