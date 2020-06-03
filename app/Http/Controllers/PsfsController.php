@@ -11,6 +11,8 @@ use App\Http\Requests\PsfCreateRequest;
 use App\Http\Requests\PsfUpdateRequest;
 use App\Repositories\PsfRepository;
 use App\Validators\PsfValidator;
+use App\Services\PsfService;
+use App\Entities\Psf;
 
 /**
  * Class PsfsController.
@@ -19,26 +21,15 @@ use App\Validators\PsfValidator;
  */
 class PsfsController extends Controller
 {
-    /**
-     * @var PsfRepository
-     */
     protected $repository;
-
-    /**
-     * @var PsfValidator
-     */
     protected $validator;
+    protected $service;
 
-    /**
-     * PsfsController constructor.
-     *
-     * @param PsfRepository $repository
-     * @param PsfValidator $validator
-     */
-    public function __construct(PsfRepository $repository, PsfValidator $validator)
+    public function __construct(PsfRepository $repository, PsfValidator $validator, PsfService $service)
     {
         $this->repository = $repository;
         $this->validator  = $validator;
+        $this->service    = $service;
     }
 
     /**
@@ -48,17 +39,10 @@ class PsfsController extends Controller
      */
     public function index()
     {
-        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $psfs = $this->repository->all();
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $psfs,
-            ]);
-        }
-
-        return view('psfs.index', compact('psfs'));
+        return view('psfs.index')->with([
+            'psfs'=>$psfs,
+        ]);
     }
 
     /**
@@ -72,33 +56,16 @@ class PsfsController extends Controller
      */
     public function store(PsfCreateRequest $request)
     {
-        try {
-
-            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
-
-            $psf = $this->repository->create($request->all());
-
-            $response = [
-                'message' => 'Psf created.',
-                'data'    => $psf->toArray(),
-            ];
-
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->back()->with('message', $response['message']);
-        } catch (ValidatorException $e) {
-            if ($request->wantsJson()) {
-                return response()->json([
-                    'error'   => true,
-                    'message' => $e->getMessageBag()
-                ]);
-            }
-
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
-        }
+        //$request    = $this->service->store($request->all());//
+        $psf        = $request ['success'] ? $request['data'] : null;
+        $psf        = Psf::create($request->all());
+        
+        session()->flash('success', [
+            'success'  => $request['success'],
+            'messages' => $request['messages']
+        ]);
+        
+        return redirect()->route('psf.index');
     }
 
     /**

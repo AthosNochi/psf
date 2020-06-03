@@ -59,8 +59,8 @@ class UsersController extends Controller
     {
         //$request = $this->service->store($request->all());//
         $usuario = $request ['success'] ? $request['data'] : null;
-        
         $usuario = User::create($request->all());
+        
         session()->flash('success', [
             'success'  => $request['success'],
             'messages' => $request['messages']
