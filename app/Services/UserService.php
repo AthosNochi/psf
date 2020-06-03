@@ -9,9 +9,6 @@ use Prettus\Validator\Contracts\ValidatorInterface;
 use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
 
-
-
-
 class UserService
 {
     private $repository;
