@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-caralhooo lek agora foi
+alteradooooo
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
