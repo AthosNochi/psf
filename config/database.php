@@ -53,7 +53,7 @@ return [
             'database' => 'DB_DATABASE', 'heroku_ea7f90cf099561f',
             'username' => 'DB_USERNAME', 'bde1acd1dc7c88',
             'password' => 'DB_PASSWORD', '654ece8c0967ea4',
-            
+            'unix_socket' => 'DB_SOCKET',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
