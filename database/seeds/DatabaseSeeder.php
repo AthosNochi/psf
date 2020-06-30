@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create([
+            'isAdm'         => true,
         	'cpf' 			=> '43117378820',
         	'name' 			=> 'athos',
             'phone' 		=> '1971025399',
