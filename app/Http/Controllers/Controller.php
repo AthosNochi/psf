@@ -16,7 +16,7 @@ class Controller extends BaseController
     {
     	$variavel = "homepage do sistema de PSF";
 
-    	return view('welcome', [
+    	return view('login', [
     		'title' => $variavel
     	]);
     }
