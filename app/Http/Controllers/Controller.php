@@ -33,10 +33,6 @@ class Controller extends BaseController
     ------------------------------------------------------------------------
     **/
 
-    public function fazerLogin()
-    {
-        return view('user.login');
-    }
-
+    
     
 }
