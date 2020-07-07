@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration
 
             //Permission
            $table->string('status')->default('active');
-           $table->string('permission')->default('app.user');
+           $table->boolean('isAdm');
 
            $table->rememberToken();
 		   $table->timestamps();

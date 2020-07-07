@@ -32,7 +32,7 @@
                 <td>Nascimento</td>
                 <td>Email</td>
                 <td>Status</td>
-                <td>Permissão</td>
+                <td>Administrador</td>
                 <td>Menu</td>
             </tr>
         </thead>
