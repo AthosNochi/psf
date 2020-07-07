@@ -1,3 +1,4 @@
 <label class="{{ $class ?? null }} checkbox">
-    {!! Form::checkbox($input, true, true, $attributes) !!}
+    <span>{{ $label ?? $input ?? "erro"}}</span>
+    {!! Form::checkbox($input, $value ?? null, $attributes) !!}
 </label>

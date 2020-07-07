@@ -17,7 +17,7 @@
         @include('templates.formulario.input', ['input' => 'rg', 'attributes' => ['placeholder' => "RG"]])
         @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
-        @include('templates.formulario.checkbox', ['input' => 'Administrador', 'attributes' => ['name' => "Administrador"]])
+        @include('templates.formulario.checkbox', ['input' => 'isAdm','input' => 'Admnistrador', 'attributes' => ''])
         @include('templates.formulario.submit', ['input' => 'Cadastrar'])
         
     {!! Form::close() !!}
@@ -47,7 +47,7 @@
                 <td>{{ $user->birth }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->status }}</td>
-                <td>{{ $user->permission }}</td>
+                <td>{{ $user->isAdm }}</td>
                 <td>
                     {!! Form::open(['route' => ['user.destroy', $user->id], 'method' => 'DELETE']) !!}
                     {!! Form::submit('Remover') !!}
