@@ -18,9 +18,9 @@
         @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
         @include('templates.formulario.checkbox', ['input' => 'isAdm','input' => 'Admnistrador', 'attributes' => ''])
-        @include('templates.formulario.submit', ['input' => 'Cadastrar'])
-        
+        @include('templates.formulario.submit', ['input' => 'Cadastrar'])    
     {!! Form::close() !!}
+
     <table class="default-table">
         <thead>
             <tr>
