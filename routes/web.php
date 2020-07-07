@@ -15,14 +15,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ['uses' => 'Controller@homepage']);
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
-
-
+/*
+------------------------------
+Rotas de parte administrativa
+------------------------------
+*/
+Route::group(['middleware'=>'admin'],function(){
+Route::get('/admin',['as'=>'user.index','uses'=>'Controller@index']);
+  
+});
 
 /**
 ----------------------------------------------------------------------------
 routes to user auth
 ----------------------------------------------------------------------------
 **/
+
 Route::get('/login', ['uses' => 'LoginController@fazerLogin']);
 Route::post('/login', ['as' => 'user.login', 'uses' => 'DashboardController@auth']);
 Route::get('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardController@index']);
@@ -31,4 +39,3 @@ Route::get('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardControll
 
 Route::resource('user', 'UsersController');
 Route::resource('psf', 'PsfsController');
-

@@ -18,6 +18,7 @@
         @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
         @include('templates.formulario.submit', ['input' => 'Cadastrar'])
+        {!! Form::checkbox('admin', 1, null) !!}
     {!! Form::close() !!}
     <table class="default-table">
         <thead>
