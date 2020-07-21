@@ -2,20 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Doctor;
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
+use App\Http\Requests\DoctorCreateRequest;
+use App\Http\Requests\DoctorUpdateRequest;
+use App\Repositories\DoctorRepository;
+use App\Validators\DoctorValidator;
+use App\Services\DoctorService;
+use App\Entities\Doctor;
 
 class DoctorsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    protected $service;
+    protected $repository;
+     
+    public function __construct(DoctorRepository $repository, DoctorService $service)
+    {
+        $this->repository   = $repository;
+        $this->service      = $service;
+    }
+
+
     public function index()
     {
-        $doctors = Doctor::all();
-        return view('doctors.lista')->with('doctors', $doctors);
+        //$doctors = Doctor::all();
+        //return view('doctors.lista')->with('doctors', $doctors);
+
+        $doctors = $this->repository->all();
+        return view('doctor.index')->with([
+            'doctors'=>$doctors,
+        ]);
     }
 
     // API
