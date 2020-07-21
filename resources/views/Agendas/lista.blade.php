@@ -1,3 +1,11 @@
+@extends('templates.master')
+
+
+@section('conteudo-view')
+    @if (session('success'))
+        <h3>{{ session('success')['messages'] }}</h3>
+    @endif
+    
 @extends('templates.app2')
 @section('external_css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
@@ -5,25 +13,7 @@
     <link href="css/jquery.bootpop.css" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
-<div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading">Agenda - Cadastros</div>
 
-                <div class="panel-body">
-                                        
-                    
-                    <ul class="nav nav-tabs">
-                      <li role="presentation"><a href="home">Home</a></li>
-                      <li role="presentation" class="active"><a href="#">Agendamentos</a></li>
-                      <li role="presentation"><a href="patients">Pacientes</a></li>
-                      <li role="presentation"><a href="doctors">Medicos</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
