@@ -80,6 +80,11 @@ class DoctorsController extends Controller
             $doctor->phone = $request->input('phone');
             $doctor->save();
 
+            session()->flash('success', [
+                'success'  => $request['success'],
+                'messages' => $request['messages']
+            ]);
+
             return redirect()->route('doctors.index');
         }
     }

@@ -14,7 +14,7 @@ class CategoriesAddColumn extends Migration
     public function up()
     {
         Schema::table('doctors', function (Blueprint $table) {
-            $table->string('specialty');
+            $table->string('specialty', 50);
         });
     }
 
