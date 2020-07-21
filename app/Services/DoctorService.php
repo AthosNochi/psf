@@ -9,7 +9,7 @@ use Prettus\Validator\Contracts\ValidatorInterface;
 use App\Repositories\DoctorRepository;
 use App\Validators\DoctorValidator;
 
-class UserService
+class DoctorService
 {
     private $repository;
     private $validator;
@@ -74,3 +74,5 @@ class UserService
                 default                         : return ['success' => false, 'messages' => $e->getMessage()];
             }
         }
+    }
+}

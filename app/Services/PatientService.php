@@ -9,7 +9,7 @@ use Prettus\Validator\Contracts\ValidatorInterface;
 use App\Repositories\PatientRepository;
 use App\Validators\PatientValidator;
 
-class UserService
+class PatientService
 {
     private $repository;
     private $validator;

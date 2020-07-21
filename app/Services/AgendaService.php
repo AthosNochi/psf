@@ -9,7 +9,7 @@ use Prettus\Validator\Contracts\ValidatorInterface;
 use App\Repositories\AgendaRepository;
 use App\Validators\AgendaValidator;
 
-class PsfService
+class AgendaService
 {
     private $repository;
     private $validator;
