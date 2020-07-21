@@ -2,45 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Agendas;
+use App\Patient;
+use App\Doctor;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
-use App\Http\Requests\AgendaCreateRequest;
-use App\Http\Requests\AgendaUpdateRequest;
-use App\Repositories\AgendaRepository;
-use App\Validators\AgendaValidator;
-
-/**
- * Class AgendasController.
- *
- * @package namespace App\Http\Controllers;
- */
 class AgendasController extends Controller
 {
-    /**
-     * @var AgendaRepository
-     */
-    protected $repository;
-
-    /**
-     * @var AgendaValidator
-     */
-    protected $validator;
-
-    /**
-     * AgendasController constructor.
-     *
-     * @param AgendaRepository $repository
-     * @param AgendaValidator $validator
-     */
-    public function __construct(AgendaRepository $repository, AgendaValidator $validator)
-    {
-        $this->repository = $repository;
-        $this->validator  = $validator;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -48,157 +16,130 @@ class AgendasController extends Controller
      */
     public function index()
     {
-        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $agendas = $this->repository->all();
+        $agendas = Agenda::all();
+        return view('agendas.lista')->with('agendas', $agendas);
+    }
 
-        if (request()->wantsJson()) {
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $method = 'post';
+        $agenda = new Agenda();
+        $patient = Patient::all();
+        $doctors = Doctor::all();
 
-            return response()->json([
-                'data' => $agendas,
-            ]);
-        }
-
-        return view('agendas.index', compact('agendas'));
+        return view('agendas.form')->with('patients', $patients)
+                                        ->with('doctors', $doctors)
+                                        ->with('method', $method)
+                                        ->with('agenda', $agenda);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  AgendaCreateRequest $request
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     *
-     * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function store(AgendaCreateRequest $request)
+    public function store(Request $request)
     {
-        try {
+        $validator = \Validator::make($request->all(), [
+            'description' => 'required|min:5',
+            'date' => 'required',
+            'patient_id' => 'required',
+            'doctor_id' => 'required', 
+            'subtitle' => 'required',            
+        ]);
+        if ($validator->fails()) {
+            return back()->withErrors($validator);
+        } else {
+            $agenda = new Agenda();
+            $agenda->description = $request->input('description');
+            $agenda->date = $request->input('date');
+            $agenda->id_patient = $request->input('patient_id');
+            $agenda->id_doctor = $request->input('doctor_id');
+            $agenda->subtitle = $request->input('subtitle');
+            $agenda->save();
 
-            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
-
-            $agenda = $this->repository->create($request->all());
-
-            $response = [
-                'message' => 'Agenda created.',
-                'data'    => $agenda->toArray(),
-            ];
-
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->back()->with('message', $response['message']);
-        } catch (ValidatorException $e) {
-            if ($request->wantsJson()) {
-                return response()->json([
-                    'error'   => true,
-                    'message' => $e->getMessageBag()
-                ]);
-            }
-
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return redirect()->route('agendas.index');
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
-     *
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $agenda = $this->repository->find($id);
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $agenda,
-            ]);
-        }
-
-        return view('agendas.show', compact('agenda'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
-     *
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $agenda = $this->repository->find($id);
-
-        return view('agendas.edit', compact('agenda'));
+        $method = 'put';
+        $agenda = Agenda::find($id);
+        $patients = Patient::all();
+        $doctors = Doctor::all();        
+        return view('agendas.form')->with('method', $method)
+                                        ->with('agenda', $agenda)
+                                        ->with('patients', $patients)
+                                        ->with('doctors', $doctors);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  AgendaUpdateRequest $request
-     * @param  string            $id
-     *
-     * @return Response
-     *
-     * @throws \Prettus\Validator\Exceptions\ValidatorException
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function update(AgendaUpdateRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        try {
+        $validator = \Validator::make($request->all(), [
+            'description' => 'required|min:5',
+            'date' => 'required',
+            'patient_id' => 'required',
+            'doctor_id' => 'required', 
+            'subtitle' => 'required',           
+        ]);
+        if ($validator->fails()) {
+            return back()->withErrors($validator);
+        } else {
+            $agenda = Agenda::find($id);
+            $agenda->description = $request->input('description');
+            $agenda->date = $request->input('date');
+            $agenda->id_patient = $request->input('patient_id');
+            $agenda->id_doctor = $request->input('doctor_id');
+            $agenda->subtitle = $request->input('subtitle');
+            $agenda->save();
 
-            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
-
-            $agenda = $this->repository->update($request->all(), $id);
-
-            $response = [
-                'message' => 'Agenda updated.',
-                'data'    => $agenda->toArray(),
-            ];
-
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->back()->with('message', $response['message']);
-        } catch (ValidatorException $e) {
-
-            if ($request->wantsJson()) {
-
-                return response()->json([
-                    'error'   => true,
-                    'message' => $e->getMessageBag()
-                ]);
-            }
-
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return redirect()->route('agendas.index');
         }
     }
-
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
-     *
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $deleted = $this->repository->delete($id);
+        $agenda = Agenda::find($id);
+        
+        $agenda->delete();
 
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'message' => 'Agenda deleted.',
-                'deleted' => $deleted,
-            ]);
-        }
-
-        return redirect()->back()->with('message', 'Agenda deleted.');
+        return redirect()->route('agendas.index');
     }
 }

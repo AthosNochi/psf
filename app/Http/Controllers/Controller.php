@@ -26,6 +26,10 @@ class Controller extends BaseController
     	echo "tela de cadastro";
     }
 
+    public function register(){
+        return view('auth.register');
+    }  
+
 
     
     

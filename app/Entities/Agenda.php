@@ -1,27 +1,22 @@
 <?php
 
-namespace App\Entities;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-/**
- * Class Agenda.
- *
- * @package namespace App\Entities;
- */
-class Agenda extends Model implements Transformable
+class Agenda extends Model
 {
-    use TransformableTrait;
+    //
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class, 'id_doctor');
+    }
 
-    public $timestamps      = true;
-    protected $fillable = ['dataAgendamento', 'dataRetorno'];
-
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class, 'id_patient');
+    }
+    
 }
+

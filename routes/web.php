@@ -39,3 +39,6 @@ Route::get('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardControll
 
 Route::resource('user', 'UsersController');
 Route::resource('psf', 'PsfsController');
+Route::resource('/agenda', 'AgendasController');
+Route::resource('/patients', 'PatientsController');
+Route::resource('/doctors', 'DoctorsController');
