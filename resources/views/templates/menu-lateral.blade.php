@@ -13,7 +13,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('doctors.index') }}">
                 <i class"""></i>
                 <h3>Especialistas</h3>
             </a>
