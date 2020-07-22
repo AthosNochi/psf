@@ -14,11 +14,13 @@ class AgendasController extends Controller
 {
     protected $service;
     protected $repository;
+    protected $validator;
      
-    public function __construct(AgendaRepository $repository, AgendaService $service)
+    public function __construct(AgendaRepository $repository, AgendaService $service, AgendaValidator $validator)
     {
         $this->repository   = $repository;
         $this->service      = $service;
+        $this->validator  = $validator;
     }
 
     /**
@@ -34,7 +36,7 @@ class AgendasController extends Controller
         //return redirect()->route('agenda.lista');
 
         $agendas = $this->repository->all();
-        return view('agendas.index')->with([
+        return view('agendas.lista')->with([
             'agendas'=>$agendas,
         ]);
     }
