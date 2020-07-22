@@ -1,17 +1,16 @@
 @extends('templates.master')
 @extends('templates.app2')
 
-@section('conteudo-view')
-    @if (session('success'))
-        <h3>{{ session('success')['messages'] }}</h3>
-    @endif
-
 @section('external_css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/jquery.bootpop.css" rel="stylesheet" type="text/css">
 @endsection
-@section('content')
+
+@section('conteudo-view')
+    @if (session('success'))
+        <h3>{{ session('success')['messages'] }}</h3>
+    @endif
 
 <div class="container">
     <div class="row">
@@ -84,7 +83,7 @@
       </div>
     </footer>
 @endsection
-@endsection
+
 
     @section('external_js')
 

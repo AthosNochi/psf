@@ -30,7 +30,7 @@ class AgendasController extends Controller
     public function index()
     {
         $agendas = Agenda::all();
-        return redirect()->route('agendas.lista');
+        return redirect()->route('agenda.lista');
 
         //$agendas = $this->repository->all();
         //return view('agendas.lista')->with([
@@ -82,7 +82,7 @@ class AgendasController extends Controller
             $agenda->subtitle = $request->input('subtitle');
             $agenda->save();
 
-            return redirect()->route('agendas.lista');
+            return redirect()->route('agenda.lista');
         }
     }
 
@@ -142,7 +142,7 @@ class AgendasController extends Controller
             $agenda->subtitle = $request->input('subtitle');
             $agenda->save();
 
-            return redirect()->route('agendas.index');
+            return redirect()->route('agenda.lista');
         }
     }
 
@@ -158,6 +158,6 @@ class AgendasController extends Controller
         
         $agenda->delete();
 
-        return redirect()->route('agendas.index');
+        return redirect()->route('agenda.lista');
     }
 }
