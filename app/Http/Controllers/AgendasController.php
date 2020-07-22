@@ -29,13 +29,13 @@ class AgendasController extends Controller
 
     public function index()
     {
-        $agendas = Agenda::all();
-        return redirect()->route('agendas.lista');
+        //$agendas = Agenda::all();
+        //return redirect()->route('agendas.lista');
 
-       // $agendas = $this->repository->all();
-       // return view('agendas.lista')->with([
-       //     'agendas'=>$agendas,
-       // ]);
+        $agendas = $this->repository->all();
+        return view('agendas.lista')->with([
+            'agendas'=>$agendas,
+        ]);
     }
 
     /**
