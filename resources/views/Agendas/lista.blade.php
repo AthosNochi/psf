@@ -20,11 +20,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading painel_cab">
                     Agendamentos
-                    <a class="btn btn-primary pull-right" href="{{ route('agendamentos.create') }}">Novo</a>
+                    <a class="btn btn-primary pull-right" href="{{ route('agendas.create') }}">Novo</a>
                 </div>
                 <div class="panel-body">
-                    @if(count($agendamentos) > 0)
-                    <table id="agendamento_table" class="table table-striped table-hover" cellspacing="0" width="100%">
+                    @if(count($agendas) > 0)
+                    <table id="agenda_table" class="table table-striped table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -39,24 +39,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($agendamentos as $agendamento)
+                            @foreach($agendas as $agenda)
                             <tr>
-                                <td>{{ $agendamento->id }}</td>
-                                <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-                                <td>{{ $agendamento->paciente->nome }}</td>
-                                <td>{{ $agendamento->descricao }}</td>
+                                <td>{{ $agenda->id }}</td>
+                                <td>{{ date("d/m/Y H:i:s", strtotime($agenda->date)) }}</td>
+                                <td>{{ $agenda->patient->name }}</td>
+                                <td>{{ $agenda->descri }}</td>
                                 
-                                <td>{{ $agendamento->medico->nome }}</td>
-                                <td>{{ $agendamento->medico->especialidade }}</td>
-                                <td><a href="{{ route('agendamentos.edit', $agendamento->id) }}" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></a></td>
+                                <td>{{ $agenda->doctor->name }}</td>
+                                <td>{{ $agenda->doctor->specialty }}</td>
+                                <td><a href="{{ route('agendas.edit', $agenda->id) }}" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></a></td>
                                  <td>
-                                    <form action="{{ route('agendamentos.destroy', $agendamento->id ) }}" method="POST">
+                                    <form action="{{ route('agendas.destroy', $agenda->id ) }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></button>
                                     </form>
                                 </td> 
-                                    <td>{{ $agendamento->legenda }}</td>
+                                    <td>{{ $agenda->subtitle }}</td>
                             <!-- <td><button class="btn btn-info demo" >Status</button></td> -->        
                             </tr>
                             @endforeach
@@ -79,7 +79,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <p class="text-muted small mb-4 mb-lg-0">&copy; Renato de Oliveira Lucena 2018</p>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Athos Nochi 2020</p>
           </div>
         </div>
       </div>
@@ -88,13 +88,13 @@
 
 @section('external_js')
 
-@if(count('agendamentos') > 0)
+@if(count('agendas') > 0)
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#agendamento_table').DataTable( {
+            $('#agenda_table').DataTable( {
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
                 }

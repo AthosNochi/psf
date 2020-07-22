@@ -6,18 +6,36 @@ use App\Entities\Agenda;
 use App\Entities\Patient;
 use App\Entities\Doctor;
 use Illuminate\Http\Request;
+use App\Repositories\AgendaRepository;
+use App\Validators\AgendaValidator;
+use App\Services\AgendaService;
 
 class AgendasController extends Controller
 {
+    protected $service;
+    protected $repository;
+     
+    public function __construct(AgendaRepository $repository, AgendaService $service)
+    {
+        $this->repository   = $repository;
+        $this->service      = $service;
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $agendas = Agenda::all();
         return redirect()->route('agendas.lista');
+
+       // $agendas = $this->repository->all();
+       // return view('agendas.lista')->with([
+       //     'agendas'=>$agendas,
+       // ]);
     }
 
     /**
