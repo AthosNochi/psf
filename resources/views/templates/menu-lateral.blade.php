@@ -13,7 +13,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('agenda.lista') }}">
+            <a href="{{ route('agenda.index') }}">
                 <i class"""></i>
                 <h3>Agenda</h3>
             </a>
