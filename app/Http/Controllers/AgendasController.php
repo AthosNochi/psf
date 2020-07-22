@@ -34,7 +34,7 @@ class AgendasController extends Controller
         //return redirect()->route('agenda.lista');
 
         $agendas = $this->repository->all();
-        return view('agendas.lista')->with([
+        return view('agendas.index')->with([
             'agendas'=>$agendas,
         ]);
     }
