@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\Agenda;
-use App\Entities\Patient;
-use App\Entities\Doctor;
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
+use App\Http\Requests\AgendaCreateRequest;
+use App\Http\Requests\AgendaUpdateRequest;
 use App\Repositories\AgendaRepository;
 use App\Validators\AgendaValidator;
 use App\Services\AgendaService;
+use App\Entities\Agenda;
+use App\Entities\Patient;
+use App\Entities\Doctor;
 
 class AgendasController extends Controller
 {
@@ -35,10 +41,12 @@ class AgendasController extends Controller
         //return redirect()->to('/agenda');
         //return redirect()->route('agenda.lista');
 
-        $agendas = $this->repository->all();
-        return view('agendas.form')->with([
-            'agendas'=>$agendas,
-        ]);
+       // $agendas = $this->repository->all();
+       // return view('agendas.form')->with([
+       //     'agendas'=>$agendas,
+       // ]);
+
+       return view('agendas.form', compact('agendas'));
     }
 
     /**
