@@ -34,7 +34,7 @@ class AgendasController extends Controller
 
         //$agendas = $this->repository->all();
         //return view('agendas.lista')->with([
-            'agendas'=>$agendas,
+        //    'agendas'=>$agendas,
         //]);
     }
 
