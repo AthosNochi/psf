@@ -1,12 +1,11 @@
 @extends('templates.master')
-
+@extends('templates.app2')
 
 @section('conteudo-view')
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-    
-@extends('templates.app2')
+
 @section('external_css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -85,22 +84,23 @@
       </div>
     </footer>
 @endsection
-
-@section('external_js')
-
-@if(count('agendas') > 0)
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#agenda_table').DataTable( {
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
-                }
-            } );            
-        } );   
-    </script> 
-
-@endif
 @endsection
+
+    @section('external_js')
+
+    @if(count('agendas') > 0)
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#agenda_table').DataTable( {
+                    "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+                    }
+                } );            
+            } );   
+        </script> 
+
+    @endif
+    @endsection
