@@ -83,7 +83,7 @@ class AgendasController extends Controller
             $agenda->subtitle = $request->input('subtitle');
             $agenda->save();
 
-            return redirect()->route('agenda.lista');
+            return redirect()->to('/agenda');
         }
     }
 
@@ -143,7 +143,7 @@ class AgendasController extends Controller
             $agenda->subtitle = $request->input('subtitle');
             $agenda->save();
 
-            return redirect()->route('agenda.lista');
+            return redirect()->to('/agenda');
         }
     }
 
@@ -159,6 +159,6 @@ class AgendasController extends Controller
         
         $agenda->delete();
 
-        return redirect()->route('agenda.lista');
+        return redirect()->to('/agenda');
     }
 }
