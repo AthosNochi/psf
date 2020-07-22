@@ -30,7 +30,7 @@ class AgendasController extends Controller
     public function index()
     {
         $agendas = Agenda::all();
-        return redirect()->to('/agenda');
+        //return redirect()->to('/agenda');
         //return redirect()->route('agenda.lista');
 
         //$agendas = $this->repository->all();
@@ -83,7 +83,7 @@ class AgendasController extends Controller
             $agenda->subtitle = $request->input('subtitle');
             $agenda->save();
 
-            return redirect()->to('/agenda');
+            //return redirect()->to('/agenda');
         }
     }
 
@@ -143,7 +143,7 @@ class AgendasController extends Controller
             $agenda->subtitle = $request->input('subtitle');
             $agenda->save();
 
-            return redirect()->to('/agenda');
+           // return redirect()->to('/agenda');
         }
     }
 
@@ -159,6 +159,6 @@ class AgendasController extends Controller
         
         $agenda->delete();
 
-        return redirect()->to('/agenda');
+        //return redirect()->to('/agenda');
     }
 }
