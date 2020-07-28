@@ -134,13 +134,7 @@ class AgendasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validator = \Validator::make($request->all(), [
-            'description' => 'required|min:5',
-            'date' => 'required',
-            'patient_id' => 'required',
-            'doctor_id' => 'required', 
-            'subtitle' => 'required',           
-        ]);
+        $agendas = $this->repository->all();
         if ($validator->fails()) {
             return back()->withErrors($validator);
         } else {

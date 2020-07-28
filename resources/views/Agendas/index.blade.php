@@ -29,7 +29,7 @@
                     </div>
                 @endif
                 <div class="panel-body">
-                    @if($method == 'put')
+                    @if ( $method ?? 'put' )
                     <form action="{{ route('agendas.update', $agenda->id) }}" method="post">
                         {{ csrf_field() }}                        
                         {{ method_field('PUT') }}
