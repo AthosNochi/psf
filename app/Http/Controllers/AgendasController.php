@@ -26,7 +26,7 @@ class AgendasController extends Controller
     {
         $this->repository   = $repository;
         $this->service      = $service;
-        $this->validator  = $validator;
+        $this->validator    = $validator;
     }
 
     /**
@@ -47,8 +47,6 @@ class AgendasController extends Controller
         return view('agendas.index')->with([
             'agendas'=>$agendas,
         ]);
-
-       
     }
 
     /**
@@ -75,28 +73,18 @@ class AgendasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AgendaCreateRequest $request)
     {
-        $validator = \Validator::make($request->all(), [
-            'description' => 'required|min:5',
-            'date' => 'required',
-            'patient_id' => 'required',
-            'doctor_id' => 'required', 
-            'subtitle' => 'required',            
-        ]);
-        if ($validator->fails()) {
-            return back()->withErrors($validator);
-        } else {
-            $agenda = new Agenda();
-            $agenda->description = $request->input('description');
-            $agenda->date = $request->input('date');
-            $agenda->id_patient = $request->input('patient_id');
-            $agenda->id_doctor = $request->input('doctor_id');
-            $agenda->subtitle = $request->input('subtitle');
-            $agenda->save();
-
-            return redirect()->to('/agenda');
-        }
+         //$request    = $this->service->store($request->all());//
+         $agenda        = $request ['success'] ? $request['data'] : null;
+         $agenda        = Agenda::create($request->all());
+         
+         session()->flash('success', [
+             'success'  => $request['success'],
+             'messages' => $request['messages']
+         ]);
+         
+         return redirect()->route('agenda.index');
     }
 
     /**
@@ -107,7 +95,16 @@ class AgendasController extends Controller
      */
     public function show($id)
     {
-        //
+        $agenda = $this->repository->find($id);
+
+        if (request()->wantsJson()) {
+
+            return response()->json([
+                'data' => $agenda,
+            ]);
+        }
+
+        return view('agendas.show', compact('agenda'));
     }
 
     /**
