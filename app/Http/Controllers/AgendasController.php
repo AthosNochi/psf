@@ -37,7 +37,7 @@ class AgendasController extends Controller
 
     public function index()
     {
-        //$agendas = Agenda::all();
+        $agendas = Agenda::all();
         //return redirect()->to('/agenda');
         $agendas = $this->repository->all();
         //return redirect()->route('agendas.index');
