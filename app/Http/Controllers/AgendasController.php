@@ -40,7 +40,7 @@ class AgendasController extends Controller
         //$agendas = Agenda::all();
         //return redirect()->to('/agenda');
         $agendas = $this->repository->all();
-        return redirect()->route('agenda.lista');
+        return redirect()->route('agenda.index');
 
        // $agendas = $this->repository->all();
        // return view('agendas.form', compact('agendas'));
