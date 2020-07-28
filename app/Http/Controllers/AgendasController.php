@@ -39,10 +39,11 @@ class AgendasController extends Controller
     {
         //$agendas = Agenda::all();
         //return redirect()->to('/agenda');
-        //return redirect()->route('agenda.lista');
-
         $agendas = $this->repository->all();
-        return view('agendas.form', compact('agendas'));
+        return redirect()->route('agenda.lista');
+
+       // $agendas = $this->repository->all();
+       // return view('agendas.form', compact('agendas'));
        // return view('agendas.form')->with([
        //     'agendas'=>$agendas,
        // ]);
