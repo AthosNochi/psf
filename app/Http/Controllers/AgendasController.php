@@ -37,7 +37,8 @@ class AgendasController extends Controller
 
     public function index()
     {
-        $agenda = '';
+        $agenda = new stdClass();
+        $agenda->id = 0;
         //$agendas = Agenda::all();
         //return redirect()->to('/agenda');
         $agendas = $this->repository->all();
