@@ -40,13 +40,13 @@ class AgendasController extends Controller
         //$agendas = Agenda::all();
         //return redirect()->to('/agenda');
         $agendas = $this->repository->all();
-        return redirect()->route('agendas.index');
+        //return redirect()->route('agendas.index');
 
        // $agendas = $this->repository->all();
        // return view('agendas.form', compact('agendas'));
-       // return view('agendas.form')->with([
-       //     'agendas'=>$agendas,
-       // ]);
+        return view('agendas.index')->with([
+            'agendas'=>$agendas,
+        ]);
 
        
     }
@@ -95,7 +95,7 @@ class AgendasController extends Controller
             $agenda->subtitle = $request->input('subtitle');
             $agenda->save();
 
-            //return redirect()->to('/agenda');
+            return redirect()->to('/agenda');
         }
     }
 
