@@ -37,6 +37,7 @@ class AgendasController extends Controller
 
     public function index()
     {
+        $agenda = '';
         //$agendas = Agenda::all();
         //return redirect()->to('/agenda');
         $agendas = $this->repository->all();
@@ -44,7 +45,7 @@ class AgendasController extends Controller
 
        // $agendas = $this->repository->all();
        // return view('agendas.form', compact('agendas'));
-       return view('agendas', compact('agendas'));
+       return view('agendas.index', compact('agendas', 'agenda'));
             
         
     }
