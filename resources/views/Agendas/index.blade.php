@@ -50,7 +50,7 @@
                         <div class="form-group">
                             <label for="patient_id">Paciente</label>
                             <select name="patient_id" class="form-control" id="patient_id" value="{{ $agenda->id_patient }}">
-                                @foreach($patients as $ptient)
+                                @foreach($patients as $patient)
                                     <option value="{{ $patient->id }}" {{ $patient->id == $agenda->id_patient ? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
                                 @endforeach
                             </select>
