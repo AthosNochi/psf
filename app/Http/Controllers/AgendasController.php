@@ -53,7 +53,7 @@ class AgendasController extends Controller
 
        // $agendas = $this->repository->all();
        // return view('agendas.form', compact('agendas'));
-       return view('agendas.index', compact('agendas', 'agenda', 'patients', 'doctors'));
+       return view('agendas', compact('agendas', 'agenda', 'patients', 'doctors'));
             
         
     }
