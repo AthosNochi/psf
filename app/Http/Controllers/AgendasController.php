@@ -53,7 +53,7 @@ class AgendasController extends Controller
 
        // $agendas = $this->repository->all();
        // return view('agendas.form', compact('agendas'));
-       return view('agendas', compact('agendas', 'agenda', 'patients', 'doctors'));
+       return view('agendas.index', compact('agendas', 'agenda', 'patients', 'doctors'));
             
         
     }
@@ -143,19 +143,34 @@ class AgendasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $agendas = $this->repository->all();
-        if ($validator->fails()) {
-            return back()->withErrors($validator);
-        } else {
-            $agenda = Agenda::find($id);
-            $agenda->description = $request->input('description');
-            $agenda->date = $request->input('date');
-            $agenda->id_patient = $request->input('patient_id');
-            $agenda->id_doctor = $request->input('doctor_id');
-            $agenda->subtitle = $request->input('subtitle');
-            $agenda->save();
+        try {
 
-           // return redirect()->to('/agenda');
+            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
+
+            $agenda = $this->repository->update($request->all(), $id);
+
+            $response = [
+                'message' => 'Agenda updated.',
+                'data'    => $user->toArray(),
+            ];
+
+            if ($request->wantsJson()) {
+
+                return response()->json($response);
+            }
+
+            return redirect()->back()->with('message', $response['message']);
+        } catch (ValidatorException $e) {
+
+            if ($request->wantsJson()) {
+
+                return response()->json([
+                    'error'   => true,
+                    'message' => $e->getMessageBag()
+                ]);
+            }
+
+            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
 
