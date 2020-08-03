@@ -1,10 +1,4 @@
-@extends('templates.master') /
-
-@section('css-view')
-@endsection
-
-@section('js-conteudo-view')
-@endsection
+@extends('templates.master')
 
 @section('conteudo-view')
     @if (session('success'))
