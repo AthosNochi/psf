@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Agendas;
+use App\Agenda;
 use App\Patient;
 use App\Doctor;
 use Illuminate\Http\Request;
