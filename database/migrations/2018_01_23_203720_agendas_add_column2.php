@@ -14,7 +14,7 @@ class AgendasAddColumn2 extends Migration
     public function up()
     {
         Schema::table('agendas', function (Blueprint $table) {
-            $table->string('subtitlee');
+            $table->string('subtitle');
         });
     }
 
