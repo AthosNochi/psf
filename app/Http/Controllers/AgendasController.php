@@ -46,14 +46,15 @@ class AgendasController extends Controller
         $agenda->subtitle = '';
         $patients = Patient::all();
         $doctors = Doctor::all();
-        //$agendas = Agenda::all();
+        $agendas = Agenda::all();
         //return redirect()->to('/agenda');
-        $agendas = $this->repository->all();
+        //$agendas = $this->repository->all();
         //return redirect()->route('agendas.index');
-
+        $agendas = Agendamento::all();
+        return view('agendas.index')->with('agendas', $agendas);
        // $agendas = $this->repository->all();
        // return view('agendas.form', compact('agendas'));
-       return view('agendas.index', compact('agendas', 'agenda', 'patients', 'doctors'));
+       //return view('agendas.index', compact('agendas', 'agenda', 'patients', 'doctors'));
             
         
     }
