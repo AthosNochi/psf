@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Entities\Agenda;
 use App\Entities\Patient;
 use App\Entities\Doctor;
-use Illuminate\Http\Requests;
+use Illuminate\Http\Request;
 
 class AgendaController extends Controller
 {
