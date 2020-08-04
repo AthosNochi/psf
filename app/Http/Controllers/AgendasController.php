@@ -105,16 +105,7 @@ class AgendasController extends Controller
      */
     public function show($id)
     {
-        $agenda = $this->repository->find($id);
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $agenda,
-            ]);
-        }
-
-        return view('agendas.show', compact('agenda'));
+        
     }
 
     /**
