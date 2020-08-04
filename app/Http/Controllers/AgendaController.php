@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Agenda;
-use App\Patient;
-use App\Doctor;
-use Illuminate\Http\Request;
+use App\Entities\Agenda;
+use App\Entities\Patient;
+use App\Entities\Doctor;
+use Illuminate\Http\Requests;
 
 class AgendaController extends Controller
 {
