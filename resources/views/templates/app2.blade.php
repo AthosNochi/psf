@@ -45,27 +45,15 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('user.login') }}">Login</a></li>
+                            
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
+                               
                             </li>
                         @endguest
                     </ul>
@@ -81,16 +69,7 @@
     <script src="{{ asset('js/jquery.bootpop.js') }}"></script>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/jquery.bootpop.js"></script>
-    <script>
-    //botao inativo em agendamento
-   $( ".demo" ).click(function() {
-    Bootpop.alert('{{$agendamento->legenda}}', { title:'detalhe', size: 'small'});
-    });
-
-    </script>
-    
-     
+    <script src="js/jquery.bootpop.js"></script>  
 </body>
 </html>
 

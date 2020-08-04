@@ -21,7 +21,7 @@
                     <a class="btn btn-primary pull-right" href="{{ route('agendas.create') }}">Novo</a>
                 </div>
                 <div class="panel-body">
-                    @if(count($agendas) > 0)
+        
                     <table id="agenda_table" class="table table-striped table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -60,9 +60,9 @@
                             @endforeach
                         </tbody>
                     </table>
-                    @else
+                    
                         <p>Não há agendamentos cadastrados!</p>
-                    @endif
+            
 
                 </div>
             </div>
@@ -87,7 +87,7 @@
 
     @section('external_js')
 
-    @if(count('agendas') > 0)
+ 
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
@@ -101,5 +101,5 @@
             } );   
         </script> 
 
-    @endif
+    
     @endsection

@@ -51,7 +51,7 @@ class AgendasController extends Controller
         //$agendas = $this->repository->all();
         //return redirect()->route('agendas.index');
         $agenda = Agenda::all();
-        return view('agendas.index')->with('agendas', $agendas);
+        return view('agendas.lista')->with('agendas', $agendas);
        // $agendas = $this->repository->all();
        // return view('agendas.form', compact('agendas'));
        //return view('agendas.index', compact('agendas', 'agenda', 'patients', 'doctors'));
@@ -94,7 +94,7 @@ class AgendasController extends Controller
              'messages' => $request['messages']
          ]);
          
-         return redirect()->route('agenda.index');
+         return redirect()->route('agendas.index');
     }
 
     /**
