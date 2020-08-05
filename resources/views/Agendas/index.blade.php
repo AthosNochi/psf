@@ -1,4 +1,10 @@
-@extends('templates.master')
+@extends('templates.master') 
+
+@section('css-view')
+@endsection
+
+@section('js-conteudo-view')
+@endsection
 
 @section('conteudo-view')
     @if (session('success'))
@@ -22,17 +28,14 @@
                     </div>
                 @endif
                 <div class="panel-body">
-                    @foreach($agendas as $agenda)
                     @if ( $method ?? 'put' )
-                    <form action="{{ route('agendas.update', $agendas->id) }}" method="post">
+                    <form action="{{ route('agendas.update', $agenda->id) }}" method="post">
                         {{ csrf_field() }}                        
                         {{ method_field('PUT') }}
                     @else
-                    
                     <form action="{{ route('agendas.store') }}" method="post">
                         {{ csrf_field() }}
                     @endif
-                    
                         <div class="form-group">
                             <label for="description">Descrição</label>
                             <input id="description" type="text" name="description" class="form-control" value="{{ $agenda->description }}"/>
@@ -65,7 +68,6 @@
                             <label for="subtitle">Legenda</label>
                             <input id="subtitle" type="text" name="subtitle" class="form-control" value="{{ $agenda->subtitle }}"/>
                         </div>
-                        @endforeach
                         <!-- <div class="radio">
                           <label>
                             <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -93,7 +95,7 @@
         </div>
     </div>
 </div>
-//*@endsection
+@endsection
 
 
 
