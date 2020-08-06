@@ -35,10 +35,11 @@ class DoctorsController extends Controller
      * @param DoctorRepository $repository
      * @param DoctorValidator $validator
      */
-    public function __construct(DoctorRepository $repository, DoctorValidator $validator)
+    public function __construct(DoctorRepository $repository, DoctorValidator $validator, DoctorService $service)
     {
         $this->repository = $repository;
         $this->validator  = $validator;
+        $this->service      = $service;
     }
 
     /**
