@@ -40,7 +40,7 @@ class PatientsController extends Controller
     public function index()
     {
 
-        $users = $this->repository->all();
+        $patients = $this->repository->all();
         return view('patient.index')->with([
             'patients'=>$patients,
         ]);
