@@ -19,7 +19,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('patient.index') }}">
                 <i class"""></i>
                 <h3>Agendamento</h3>
             </a>
