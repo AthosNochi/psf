@@ -35,7 +35,7 @@
                 <td>{{ $doctor->phone }}</td>
                 <td>{{ $doctor->email }}</td>
                 <td>
-                    {!! Form::open(['route' => ['doctor.destroy', $psf->id], 'method' => 'DELETE']) !!}
+                    {!! Form::open(['route' => ['doctor.destroy', $doctor->id], 'method' => 'DELETE']) !!}
                     {!! Form::submit('Remover') !!}
                     {!! Form::close() !!}
                 </td>
