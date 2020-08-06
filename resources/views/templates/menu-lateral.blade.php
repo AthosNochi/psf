@@ -21,7 +21,7 @@
         <li>
             <a href="{{ route('patient.index') }}">
                 <i class"""></i>
-                <h3>Agendamento</h3>
+                <h3>Pacientes</h3>
             </a>
         </li>
     </ul>

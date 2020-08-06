@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
-use App\Http\Requests\PatPatientCreateRequest;
-use App\Http\Requests\PatPatientUpdateRequest;
-use App\Repositories\PatPatientRepository;
-use App\Validators\PatPatientValidator;
-use App\Services\PatPatientService;
-use App\Entities\PatPatient;
+use App\Http\Requests\PatientCreateRequest;
+use App\Http\Requests\PatientUpdateRequest;
+use App\Repositories\PatientRepository;
+use App\Validators\PatientValidator;
+use App\Services\PatientService;
+use App\Entities\Patient;
 
 /**
  * Class UsersController.
