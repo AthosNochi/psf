@@ -25,16 +25,12 @@ class CreateUsersTable extends Migration
 		   $table->string('name', 50);
 		   $table->string('rg', 50)->unique()->nullable();
            $table->char('phone', 11);
-           $table->date('birth')->nullable();
-           $table->char('gender', 1)->nullable();
-           $table->text('notes')->nullable();
 
             //Auth data
            $table->string('email', 80)->unique();
            $table->string('password', 254)->nullable();
 
             //Permission
-           $table->string('status')->default('active');
            $table->boolean('isAdm');
 
            $table->rememberToken();

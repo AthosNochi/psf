@@ -29,9 +29,7 @@
                 <td>Nome</td>
                 <td>RG</td>
                 <td>Telefone</td>
-                <td>Nascimento</td>
                 <td>Email</td>
-                <td>Status</td>
                 <td>Administrador</td>
                 <td>Menu</td>
             </tr>
@@ -44,9 +42,7 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->rg }}</td>
                 <td>{{ $user->phone }}</td>
-                <td>{{ $user->birth }}</td>
                 <td>{{ $user->email }}</td>
-                <td>{{ $user->status }}</td>
                 <td>{{ $user->isAdm }}</td>
                 <td>
                     {!! Form::open(['route' => ['user.destroy', $user->id], 'method' => 'DELETE']) !!}
