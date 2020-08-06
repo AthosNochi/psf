@@ -12,6 +12,7 @@ use App\Http\Requests\DoctorUpdateRequest;
 use App\Repositories\DoctorRepository;
 use App\Validators\DoctorValidator;
 use App\Services\DoctorService;
+use App\Entities\Doctor;
 
 /**
  * Class DoctorsController.
