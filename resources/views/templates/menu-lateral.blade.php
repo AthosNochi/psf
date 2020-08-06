@@ -9,7 +9,7 @@
         <li>
         <a href="{{ route('psf.index') }}">
                 <i class"""></i>
-                <h3>PSF</h3>
+                <h3>Psf</h3>
             </a>
         </li>
         <li>
@@ -21,7 +21,7 @@
         <li>
             <a href="">
                 <i class"""></i>
-                <h3>Agenda</h3>
+                <h3>Agendamento</h3>
             </a>
         </li>
     </ul>
