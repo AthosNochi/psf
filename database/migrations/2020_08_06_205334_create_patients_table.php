@@ -15,10 +15,28 @@ class CreatePatientsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('patients', function(Blueprint $table) {
-            $table->increments('id');
+		Schema::create('patients', function (Blueprint $table){
+           $table->increments('id');
 
-            $table->timestamps();
+            //People data
+           $table->string('cpf', 11)->unique()->nullable();
+		   $table->string('name', 50);
+		   $table->string('rg', 50)->unique()->nullable();
+		   $table->char('phone', 11);
+		   $table->char('birth', 30);
+		   $table->char('gender', 20);
+		   $table->string('notes', 100);
+
+            //Auth data
+           $table->string('email', 80)->unique();
+           $table->string('password', 254)->nullable();
+
+            //Permission
+           //---//
+
+           $table->rememberToken();
+		   $table->timestamps();
+		   $table->softDeletes();
 		});
 	}
 
@@ -29,6 +47,9 @@ class CreatePatientsTable extends Migration
 	 */
 	public function down()
 	{
+		Schema::table('patients', function (Blueprint $table) {
+
+		});
 		Schema::drop('patients');
 	}
 }

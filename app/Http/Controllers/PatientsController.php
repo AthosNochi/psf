@@ -19,7 +19,7 @@ use App\Entities\Patient;
  *
  * @package namespace App\Http\Controllers;
  */
-class UsersController extends Controller
+class PatientsController extends Controller
 {
     
     protected $service;
