@@ -18,7 +18,14 @@ class PatientValidator extends LaravelValidator
      * @var array
      */
     protected $rules = [
-        ValidatorInterface::RULE_CREATE => [],
+        ValidatorInterface::RULE_CREATE => [
+            'cpf'   => 'required', 
+            'name'  => 'required', 
+            'phone' => 'required',
+            'rg'    => 'required',
+            'email' => 'required|unique:user,email',
+        ],
+
         ValidatorInterface::RULE_UPDATE => [],
     ];
 }
