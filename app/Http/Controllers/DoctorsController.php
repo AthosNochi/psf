@@ -11,150 +11,171 @@ use App\Http\Requests\DoctorCreateRequest;
 use App\Http\Requests\DoctorUpdateRequest;
 use App\Repositories\DoctorRepository;
 use App\Validators\DoctorValidator;
-use App\Services\DoctorService;
-use App\Entities\Doctor;
 
+/**
+ * Class DoctorsController.
+ *
+ * @package namespace App\Http\Controllers;
+ */
 class DoctorsController extends Controller
 {
-    protected $service;
+    /**
+     * @var DoctorRepository
+     */
     protected $repository;
-     
-    public function __construct(DoctorRepository $repository, DoctorService $service)
+
+    /**
+     * @var DoctorValidator
+     */
+    protected $validator;
+
+    /**
+     * DoctorsController constructor.
+     *
+     * @param DoctorRepository $repository
+     * @param DoctorValidator $validator
+     */
+    public function __construct(DoctorRepository $repository, DoctorValidator $validator)
     {
-        $this->repository   = $repository;
-        $this->service      = $service;
+        $this->repository = $repository;
+        $this->validator  = $validator;
     }
 
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        //$doctors = Doctor::all();
-        //return view('doctors.lista')->with('doctors', $doctors);
-
         $doctors = $this->repository->all();
         return view('doctor.index')->with([
             'doctors'=>$doctors,
         ]);
-    }
-
-    // API
-    public function listaMedicos(){
-        $doctors = Doctor::all();
-        return response()->json($doctors);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $method = 'post';
-        $doctor = new Doctor();
-        return view('doctors.form')->with('method', $method)
-                                     ->with('doctor', $doctor);
+    
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  DoctorCreateRequest $request
+     *
      * @return \Illuminate\Http\Response
+     *
+     * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function store(Request $request)
+    public function store(DoctorCreateRequest $request)
     {
-        $validator = \Validator::make($request->all(), [
-            'name' => 'required|min:3',
-            'crm' => 'required',
-            'specialty' => 'required',
-            'phone' => 'required',
-        ]);
-        if ($validator->fails()) {
-            return back()->withErrors($validator);
-        } else {
-            $doctor = new Doctor();
-            $doctor->name = $request->input('name');
-            $doctor->crm = $request->input('crm');
-            $doctor->specialty = $request->input('specialty');
-            $doctor->phone = $request->input('phone');
-            $doctor->save();
-
-            session()->flash('success', [
-                'success'  => $request['success'],
-                'messages' => $request['messages']
-            ]);
-
-            return redirect()->route('doctors.index');
-        }
+       //$request = $this->service->store($request->all());//
+       $doctor = $request ['success'] ? $request['data'] : null;
+       $doctor = Doctor::create($request->all());
+       
+       session()->flash('success', [
+           'success'  => $request['success'],
+           'messages' => $request['messages']
+       ]);
+       
+       return redirect()->route('doctor.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $doctor = $this->repository->find($id);
+
+        if (request()->wantsJson()) {
+
+            return response()->json([
+                'data' => $doctor,
+            ]);
+        }
+
+        return view('doctors.show', compact('doctor'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $method = 'put';
-        $doctor = Doctor::find($id);
-        return view('doctors.form')->with('method', $method)
-        ->with('doctor', $doctor);
+        $doctor = $this->repository->find($id);
+
+        return view('doctors.edit', compact('doctor'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  DoctorUpdateRequest $request
+     * @param  string            $id
+     *
+     * @return Response
+     *
+     * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function update(Request $request, $id)
+    public function update(DoctorUpdateRequest $request, $id)
     {
-        $validator = \Validator::make($request->all(), [
-            'name' => 'required|min:3',
-            'crm' => 'required',
-            'specialty' => 'required',
-            'phone' => 'required',
-        ]);
-        if ($validator->fails()) {
-            return back()->withErrors($validator);
-        } else {
-            $doctor = Doctor::find($id);
-            $doctor->name = $request->input('name');
-            $doctor->crm = $request->input('crm');
-            $doctor->specialty = $request->input('specialty');
-            $doctor->phone = $request->input('phone');
-            $doctor->save();
+        try {
 
-            return redirect()->route('doctors.index');
+            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
+
+            $doctor = $this->repository->update($request->all(), $id);
+
+            $response = [
+                'message' => 'Doctor updated.',
+                'data'    => $doctor->toArray(),
+            ];
+
+            if ($request->wantsJson()) {
+
+                return response()->json($response);
+            }
+
+            return redirect()->back()->with('message', $response['message']);
+        } catch (ValidatorException $e) {
+
+            if ($request->wantsJson()) {
+
+                return response()->json([
+                    'error'   => true,
+                    'message' => $e->getMessageBag()
+                ]);
+            }
+
+            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
+
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $doctor = Doctor::find($id);
-        
-        $doctor->delete();
-        
-        return redirect()->route('doctors.index');
+        $deleted = $this->repository->delete($id);
+
+        if (request()->wantsJson()) {
+
+            return response()->json([
+                'message' => 'Doctor deleted.',
+                'deleted' => $deleted,
+            ]);
+        }
+
+        return redirect()->back()->with('message', 'Doctor deleted.');
     }
 }

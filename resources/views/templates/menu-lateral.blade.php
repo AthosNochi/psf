@@ -13,9 +13,9 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('agendas.index') }}">
+            <a href="{{ route('doctor.index') }}">
                 <i class"""></i>
-                <h3>Agenda</h3>
+                <h3>Médicos</h3>
             </a>
         </li>
         <li>
