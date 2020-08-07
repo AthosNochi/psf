@@ -35,7 +35,7 @@
                             <label for="patient_id">Paciente</label>
                             <select name="patient_id" class="form-control" id="patient_id" value="{{ $agendamento->id_patient }}">
                                 @foreach($patients as $patient)
-                                    <option value="{{ $patient->id }}" {{ $patient->id == $agendamento->id_patient ? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
+                                {{ Form::select('patient_id', $client, Input::old('patient_id')) }}
                                 @endforeach
                             </select>
                         </div>
