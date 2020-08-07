@@ -53,8 +53,6 @@
     </div>
 </div>
 
-
-</script>
  <!-- Footer -->
     <footer class="footer bg-light">
       <div class="container">
