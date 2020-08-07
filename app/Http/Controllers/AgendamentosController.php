@@ -12,6 +12,8 @@ use App\Http\Requests\AgendamentoUpdateRequest;
 use App\Repositories\AgendamentoRepository;
 use App\Validators\AgendamentoValidator;
 use App\Entities\Agendamento;
+use App\Entities\Patient;
+use App\Entities\Doctor;
 
 /**
  * Class AgendamentosController.
@@ -77,7 +79,7 @@ class AgendamentosController extends Controller
                                         ->with('agendamento', $agendamento);
     }
 
-    
+
     public function store(AgendamentoCreateRequest $request)
     {
         try {
