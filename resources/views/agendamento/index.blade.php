@@ -1,3 +1,6 @@
+@extends('templates.master')
+
+
 <!DOCTYPE html>
 <html>
 <head>
