@@ -41,4 +41,4 @@ Route::resource('user', 'UsersController');
 Route::resource('psf', 'PsfsController');
 Route::resource('doctor', 'DoctorsController');
 Route::resource('patient', 'PatientsController');
-Route::resource('/agendamento', 'AgendamentosController');
+Route::resource('agendamento', 'AgendamentosController');
