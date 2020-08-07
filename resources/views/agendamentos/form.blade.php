@@ -19,7 +19,7 @@
                 @endif
                 <div class="panel-body">
                     
-                    <form action="{{ route('agendamentos.store') }}" method="post">
+                    {!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
@@ -74,7 +74,7 @@
 
                         <button type="submit" class="btn btn-primary">Salvar</button>
                         <a class="btn btn-default" href="{{ url('/agendamentos') }}">Voltar</a>
-                    </form>
+                        {!! Form::close() !!}
                 </div>
             </div>
         </div>
