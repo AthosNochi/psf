@@ -11,7 +11,7 @@ use App\Http\Requests\AgendamentoCreateRequest;
 use App\Http\Requests\AgendamentoUpdateRequest;
 use App\Repositories\AgendamentoRepository;
 use App\Validators\AgendamentoValidator;
-use App\Validators\AgendamentoService;
+use App\Services\AgendamentoService;
 use App\Entities\Agendamento;
 use App\Entities\Patient;
 use App\Entities\Doctor;
