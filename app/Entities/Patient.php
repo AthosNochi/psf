@@ -2,9 +2,12 @@
 
 namespace App\Entities;
 
-use Illuminate\Foundation\Auth\Patient as Authenticatable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
+use Illuminate\Database\Eloquent\Model;
 
 class Patient extends Authenticatable
 {
