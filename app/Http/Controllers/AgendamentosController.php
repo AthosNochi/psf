@@ -82,32 +82,15 @@ class AgendamentosController extends Controller
 
     public function store(AgendamentoCreateRequest $request)
     {
-        try {
+        $agendamento = new Agendamento();
+            $agendamento->descricao = $request->input('descricao');
+            $agendamento->datahora = $request->input('datahora');
+            $agendamento->id_paciente = $request->input('patient_id');
+            $agendamento->id_medico = $request->input('doctor_id');
+            $agendamento->legenda = $request->input('legenda');
+            $agendamento->save();
 
-            $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
-
-            $agendamento = $this->repository->create($request->all());
-
-            $response = [
-                'message' => 'Agendamento created.',
-                'data'    => $agendamento->toArray(),
-            ];
-
-            if ($request->wantsJson()) {
-
-                return response()->json($response);
-            }
-
-            return redirect()->back()->with('message', $response['message']);
-        } catch (ValidatorException $e) {
-            if ($request->wantsJson()) {
-                return response()->json([
-                    'error'   => true,
-                    'message' => $e->getMessageBag()
-                ]);
-            }
-
-            return redirect()->back()->withErrors($e->getMessageBag())->withInput();
+            return redirect()->route('agendamentos.index');
         }
     }
 

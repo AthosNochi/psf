@@ -18,7 +18,14 @@ class AgendamentoValidator extends LaravelValidator
      * @var array
      */
     protected $rules = [
-        ValidatorInterface::RULE_CREATE => [],
+        ValidatorInterface::RULE_CREATE => [
+            'descricao' => 'required|min:5',
+            'datahora' => 'required',
+            'patient_id' => 'required',
+            'doctor_id' => 'required', 
+            'legenda' => 'required',
+        ],
+
         ValidatorInterface::RULE_UPDATE => [],
     ];
 }
