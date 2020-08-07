@@ -11,6 +11,7 @@ use App\Http\Requests\AgendamentoCreateRequest;
 use App\Http\Requests\AgendamentoUpdateRequest;
 use App\Repositories\AgendamentoRepository;
 use App\Validators\AgendamentoValidator;
+use App\Validators\AgendamentoService;
 use App\Entities\Agendamento;
 use App\Entities\Patient;
 use App\Entities\Doctor;
@@ -26,11 +27,9 @@ class AgendamentosController extends Controller
      * @var AgendamentoRepository
      */
     protected $repository;
-
-    /**
-     * @var AgendamentoValidator
-     */
     protected $validator;
+    protected $service;
+    protected $patientRepository;
 
     /**
      * AgendamentosController constructor.
@@ -38,10 +37,11 @@ class AgendamentosController extends Controller
      * @param AgendamentoRepository $repository
      * @param AgendamentoValidator $validator
      */
-    public function __construct(AgendamentoRepository $repository, AgendamentoValidator $validator)
+    public function __construct(AgendamentoRepository $repository, AgendamentoValidator $validator, AgendamentoService $service)
     {
         $this->repository = $repository;
         $this->validator  = $validator;
+        $this->service    = $service;
     }
 
     /**
@@ -51,8 +51,14 @@ class AgendamentosController extends Controller
      */
     public function index()
     {
-        $agendamentos = Agendamento::all();
-        return view('agendamentos.form')->with('agendamentos', $agendamentos);
+        $agendamentos =$this->repository->all();
+
+        $patient_list = \App\Entities\Patient::pluck('name', 'id')->all();
+
+
+        return view('agendamentos.form', [
+            'patient_list'      =>'patient_list',
+        ])->with('agendamentos', $agendamentos);
     }
 
     /**

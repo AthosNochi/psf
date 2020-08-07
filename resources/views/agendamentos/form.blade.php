@@ -33,7 +33,7 @@
 
                         <div class="form-group">
                             <label for="patient_id">Paciente</label>
-                            {{ Form::select('patient_id', $patient, Input::old('patient_id')) }}
+                            @include('templates.formulario.select', ['select' => 'id_patient', 'data' => 'attributes' => ['placeholder' => "Paciente"]])
                         </div>
 
                         <div class="form-group">
