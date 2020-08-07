@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    @if (($agendamentos) % 2 == "0")
+                    @foreach ($psfs as $psf)
                     <table id="agendamento_table" class="table table-striped table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -52,7 +52,7 @@
                     </table>
                     @else
                         <p>Não há agendamentos cadastrados!</p>
-                    @endif
+                    @endforeach
 
                 </div>
             </div>
