@@ -11,6 +11,7 @@ use App\Http\Requests\AgendamentoCreateRequest;
 use App\Http\Requests\AgendamentoUpdateRequest;
 use App\Repositories\AgendamentoRepository;
 use App\Validators\AgendamentoValidator;
+use App\Entities\Agendamento;
 
 /**
  * Class AgendamentosController.
@@ -48,7 +49,8 @@ class AgendamentosController extends Controller
      */
     public function index()
     {
-        return view('agendamento.index');
+        $agendamentos = Agendamento::all();
+        return view('agendamentos.lista')->with('agendamentos', $agendamentos);
     }
 
     /**
