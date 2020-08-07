@@ -6,8 +6,8 @@ use Exception;
 use Illuminate\Database\QueryException;
 use Prettus\Validator\Exceptions\ValidatorExceptions;
 use Prettus\Validator\Contracts\ValidatorInterface;
-use App\Repositories\AgendaRepository;
-use App\Validators\AgendaValidator;
+use App\Repositories\AgendamentoRepository;
+use App\Validators\AgendamentoValidator;
 
 class AgendamentoService
 {
