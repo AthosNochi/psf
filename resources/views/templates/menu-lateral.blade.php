@@ -25,7 +25,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('agendamento.index') }}">
                 <i class"""></i>
                 <h3>Agendamento</h3>
             </a>
