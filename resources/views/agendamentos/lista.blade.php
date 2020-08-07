@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                {{$pkCount = (is_array($this->agendamentos) ? count($this->agendamentos) : 0)}};
+                {{$pkCount = (is_array($agendamentos) ? count($agendamentos) : 0)}};
                     @if ($pkCount == 0) {
                     <table id="agendamento_table" class="table table-striped table-hover" cellspacing="0" width="100%">
                         <thead>
