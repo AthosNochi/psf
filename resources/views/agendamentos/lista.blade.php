@@ -50,8 +50,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    @else
-                        <p>Não há agendamentos cadastrados!</p>
                     @endforeach
 
                 </div>
