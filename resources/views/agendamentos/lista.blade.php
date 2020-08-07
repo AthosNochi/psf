@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    @if(count($agendamentos) == 0)
+                    @if(is_array($this->agendamentos) ? count($this->agendamentos) : 0)
                     <table id="agendamento_table" class="table table-striped table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr>
