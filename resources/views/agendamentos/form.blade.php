@@ -28,7 +28,7 @@
 
                         <div class="form-group">
                             <label for="datahora">Data/Hora</label>
-                            <input id="datahora" type="datetime-local" name="datahora" class="form-control" value="{{ strftime('%Y-%m-%dT%H:%M', strtotime($agendamento->datahora)) }}"/>
+                            @include('templates.formulario.input', ['input' => 'datahora', 'attributes' => ['placeholder' => "Data/Hora"]])
                         </div>                        
 
                         <div class="form-group">
