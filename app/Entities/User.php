@@ -42,10 +42,4 @@ class User extends Authenticatable
         $rg = $this->attributes['rg'];
         return substr($rg, 0, 2). '.' . substr($rg, 2, 3). '.' . substr($rg, 5, 3). '-' . substr($rg, -1);
    }
-
-   public function getBirthAttribute()
-   {
-        $birth = $this->attributes['birth'];
-        return date('d/m/Y', strtotime($birth));
-   }
 }
