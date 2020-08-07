@@ -52,7 +52,7 @@ class AgendamentosController extends Controller
     public function index()
     {
         $agendamentos = Agendamento::all();
-        return view('agendamentos.lista')->with('agendamentos', $agendamentos);
+        return view('agendamentos.form')->with('agendamentos', $agendamentos);
     }
 
     /**
