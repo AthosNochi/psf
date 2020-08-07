@@ -48,17 +48,7 @@ class AgendamentosController extends Controller
      */
     public function index()
     {
-        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $agendamentos = $this->repository->all();
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $agendamentos,
-            ]);
-        }
-
-        return view('agendamentos.index', compact('agendamentos'));
+        return view('agendamento.index');
     }
 
     /**
