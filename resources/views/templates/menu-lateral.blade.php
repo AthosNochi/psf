@@ -24,6 +24,12 @@
                 <h3>Pacientes</h3>
             </a>
         </li>
+        <li>
+            <a href="">
+                <i class"""></i>
+                <h3>Agendamento</h3>
+            </a>
+        </li>
     </ul>
 
     

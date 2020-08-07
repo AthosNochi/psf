@@ -37,15 +37,15 @@
         <tbody>
             @foreach ($patients as $patient)
             <tr>
-                <td>{{ $Patient->id }}</td>
-                <td>{{ $Patient->cpf }}</td>
-                <td>{{ $Patient->rg }}</td>
-                <td>{{ $Patient->name }}</td>
-                <td>{{ $Patient->email }}</td>
-                <td>{{ $Patient->phone }}</td>
-                <td>{{ $Patient->birth }}</td>
-                <td>{{ $Patient->gender }}</td>
-                <td>{{ $Patient->notes }}</td>
+                <td>{{ $patient->id }}</td>
+                <td>{{ $patient->cpf }}</td>
+                <td>{{ $patient->rg }}</td>
+                <td>{{ $patient->name }}</td>
+                <td>{{ $patient->email }}</td>
+                <td>{{ $patient->phone }}</td>
+                <td>{{ $patient->birth }}</td>
+                <td>{{ $patient->gender }}</td>
+                <td>{{ $patient->notes }}</td>
                 <td>
                     {!! Form::open(['route' => ['patient.destroy', $patient->id], 'method' => 'DELETE']) !!}
                     {!! Form::submit('Remover') !!}
