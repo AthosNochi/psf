@@ -23,7 +23,7 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
-                            <input id="descricao" type="text" name="descricao" class="form-control" value="{{ $agendamentos->descricao }}"/>
+                            @include('templates.formulario.input', ['input' => 'descricao', 'attributes' => ['placeholder' => "Descrição"]])
                         </div>
 
                         <div class="form-group">
