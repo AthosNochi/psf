@@ -31,11 +31,11 @@
                             <tr>
                                 <td>{{ $agendamento->id }}</td>
                                 <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-                                <td>{{ $agendamento->paciente->nome }}</td>
+                                <td>{{ $agendamento->patient->name }}</td>
                                 <td>{{ $agendamento->descricao }}</td>
                                 
-                                <td>{{ $agendamento->medico->nome }}</td>
-                                <td>{{ $agendamento->medico->especialidade }}</td>
+                                <td>{{ $agendamento->doctor->name }}</td>
+                                <td>{{ $agendamento->doctor->specialty }}</td>
                                 <td><a href="{{ route('agendamentos.edit', $agendamento->id) }}" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></a></td>
                                  <td>
                                     <form action="{{ route('agendamentos.destroy', $agendamento->id ) }}" method="POST">
