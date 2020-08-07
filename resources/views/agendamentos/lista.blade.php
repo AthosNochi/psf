@@ -5,25 +5,7 @@
     <link href="css/jquery.bootpop.css" rel="stylesheet" type="text/css">
 @endsection
 @section('conteudo-view')
-<div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading">Agenda - Cadastros</div>
 
-                <div class="panel-body">
-                                        
-                    
-                    <ul class="nav nav-tabs">
-                      <li role="presentation"><a href="home">Home</a></li>
-                      <li role="presentation" class="active"><a href="#">Agendamentos</a></li>
-                      <li role="presentation"><a href="pacientes">Pacientes</a></li>
-                      <li role="presentation"><a href="medicos">Medicos</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
