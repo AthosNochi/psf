@@ -62,6 +62,22 @@ class AgendamentosController extends Controller
      *
      * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
+
+
+    public function create()
+    {
+        $method = 'post';
+        $agendamento = new Agendamento();
+        $pacientes = Paciente::all();
+        $medicos = Medico::all();
+
+        return view('agendamentos.form')->with('pacientes', $pacientes)
+                                        ->with('medicos', $medicos)
+                                        ->with('method', $method)
+                                        ->with('agendamento', $agendamento);
+    }
+
+    
     public function store(AgendamentoCreateRequest $request)
     {
         try {

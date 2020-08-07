@@ -11,15 +11,18 @@ use Prettus\Repository\Traits\TransformableTrait;
  *
  * @package namespace App\Entities;
  */
-class Agendamento extends Model implements Transformable
+class Agendamento extends Model
 {
-    use TransformableTrait;
+    //
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [];
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class, 'id_doctor');
+    }
 
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class, 'id_patient');
+    }
+    
 }

@@ -24,7 +24,7 @@ class Doctor extends Authenticatable
 
    public 	 $timestamps   =  true;
    protected $table        = 'doctors';
-   protected $fillable     = ['cpf', 'name', 'rg', 'phone', 'email', 'password', 'crm'];
+   protected $fillable     = ['cpf', 'name', 'rg', 'phone', 'email', 'password', 'crm', 'specialty'];
    protected $hidden       = ['password', 'remember_token'];
 
 

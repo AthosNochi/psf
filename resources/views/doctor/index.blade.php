@@ -12,6 +12,7 @@
         @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder' => "Email"]])
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
         @include('templates.formulario.input', ['input' => 'crm', 'attributes' => ['placeholder' => "CRM"]])
+        @include('templates.formulario.input', ['input' => 'specialty', 'attributes' => ['placeholder' => "Especialidade"]])
         @include('templates.formulario.submit', ['input' => 'Cadastrar'])
     {!! Form::close() !!}
     <table class="default-table">
@@ -23,6 +24,7 @@
                 <th>CRM</th>
                 <th>Telefone</th>
                 <th>Email</th>
+                <th>Especialidade</th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +36,7 @@
                 <td>{{ $doctor->crm }}</td>
                 <td>{{ $doctor->phone }}</td>
                 <td>{{ $doctor->email }}</td>
+                <td>{{ $doctor->specialty }}</td>
                 <td>
                     {!! Form::open(['route' => ['doctor.destroy', $doctor->id], 'method' => 'DELETE']) !!}
                     {!! Form::submit('Remover') !!}
