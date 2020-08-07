@@ -33,11 +33,7 @@
 
                         <div class="form-group">
                             <label for="patient_id">Paciente</label>
-                            <select name="patient_id" class="form-control" id="patient_id" value="{{ $agendamento->id_patient }}">
-                                @foreach($patients as $patient)
-                                {{ Form::select('patient_id', $client, Input::old('patient_id')) }}
-                                @endforeach
-                            </select>
+                            {{ Form::select('patient_id', $client, Input::old('patient_id')) }}
                         </div>
 
                         <div class="form-group">
