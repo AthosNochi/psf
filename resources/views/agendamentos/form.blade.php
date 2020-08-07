@@ -18,14 +18,9 @@
                     </div>
                 @endif
                 <div class="panel-body">
-                    @if($method == 'put')
-                    <form action="{{ route('agendamentos.update', $agendamento->id) }}" method="post">
-                        {{ csrf_field() }}                        
-                        {{ method_field('PUT') }}
-                    @else
+                    
                     <form action="{{ route('agendamentos.store') }}" method="post">
                         {{ csrf_field() }}
-                    @endif
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
                             <input id="descricao" type="text" name="descricao" class="form-control" value="{{ $agendamento->descricao }}"/>
