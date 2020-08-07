@@ -82,13 +82,13 @@ class AgendamentosController extends Controller
 
     public function store(AgendamentoCreateRequest $request)
     {
-        $agendamento = new Agendamento();
-            $agendamento->descricao = $request->input('descricao');
-            $agendamento->datahora = $request->input('datahora');
-            $agendamento->id_paciente = $request->input('patient_id');
-            $agendamento->id_medico = $request->input('doctor_id');
-            $agendamento->legenda = $request->input('legenda');
-            $agendamento->save();
+        $agendamentos = new Agendamento();
+            $agendamentos->descricao = $request->input('descricao');
+            $agendamentos->datahora = $request->input('datahora');
+            $agendamentos->id_paciente = $request->input('patient_id');
+            $agendamentos->id_medico = $request->input('doctor_id');
+            $agendamentos->legenda = $request->input('legenda');
+            $agendamentos->save();
 
             return redirect()->route('agendamentos.index');
         

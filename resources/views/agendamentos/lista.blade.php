@@ -10,10 +10,6 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading painel_cab">
-                    Agendamentos
-                    <a class="btn btn-primary pull-right" href="{{ route('agendamentos.create') }}">Novo</a>
-                </div>
                 <div class="panel-body">
                     @if(count($agendamentos) > 0)
                     <table id="agendamento_table" class="table table-striped table-hover" cellspacing="0" width="100%">
