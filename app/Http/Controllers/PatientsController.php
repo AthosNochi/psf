@@ -10,6 +10,7 @@ use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\PatientCreateRequest;
 use App\Http\Requests\PatientUpdateRequest;
 use App\Repositories\PatientRepository;
+use App\Repositories\AgendamentoRepository;
 use App\Validators\PatientValidator;
 use App\Services\PatientService;
 use App\Entities\Patient;

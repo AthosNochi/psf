@@ -14,7 +14,7 @@ class AgendamentoService
     private $repository;
     private $validator;
 
-    public function __construct(AgendaRepository $repository, AgendaValidator $validator)
+    public function __construct(AgendamentoRepository $repository, AgendamentoValidator $validator)
     {
         $this->repository   = $repository;
         $this->validator    = $validator;

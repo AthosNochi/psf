@@ -10,6 +10,7 @@ use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\AgendamentoCreateRequest;
 use App\Http\Requests\AgendamentoUpdateRequest;
 use App\Repositories\AgendamentoRepository;
+use App\Repositories\PatientRepository;
 use App\Validators\AgendamentoValidator;
 use App\Services\AgendamentoService;
 use App\Entities\Agendamento;
@@ -51,7 +52,7 @@ class AgendamentosController extends Controller
      */
     public function index()
     {
-        $agendamentos =$this->repository->all();
+        $agendamentos = $this->repository->all();
 
         $patient_list = \App\Entities\Patient::pluck('name', 'id')->all();
 
