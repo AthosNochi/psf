@@ -70,11 +70,11 @@ class AgendamentosController extends Controller
     {
         $method = 'post';
         $agendamento = new Agendamento();
-        $pacientes = Paciente::all();
-        $medicos = Medico::all();
+        $patients = Patient::all();
+        $doctors = Doctor::all();
 
-        return view('agendamentos.form')->with('pacientes', $pacientes)
-                                        ->with('medicos', $medicos)
+        return view('agendamentos.form')->with('patients', $patients)
+                                        ->with('doctors', $doctors)
                                         ->with('method', $method)
                                         ->with('agendamento', $agendamento);
     }
