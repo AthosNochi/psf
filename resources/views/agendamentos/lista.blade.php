@@ -74,7 +74,7 @@
 
 @section('external_js')
 
-@if(count('agendamentos') > 0)
+@foreach ($agendamentos as $agendamento)
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
@@ -88,5 +88,5 @@
         } );   
     </script> 
 
-@endif
+@endforeach
 @endsection
