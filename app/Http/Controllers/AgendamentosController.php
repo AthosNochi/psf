@@ -91,7 +91,7 @@ class AgendamentosController extends Controller
             $agendamento->save();
 
             return redirect()->route('agendamentos.index');
-        }
+        
     }
 
     /**
@@ -101,18 +101,10 @@ class AgendamentosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
-        $agendamento = $this->repository->find($id);
-
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $agendamento,
-            ]);
-        }
-
-        return view('agendamentos.show', compact('agendamento'));
+        //
     }
 
     /**
