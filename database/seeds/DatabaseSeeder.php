@@ -18,8 +18,6 @@ class DatabaseSeeder extends Seeder
         	'name' 			=> 'athos',
             'phone' 		=> '1971025399',
             'rg'            => '251478523',
-        	'birth' 		=> '1997-07-08',
-        	'gender' 		=> 'M',
         	'email' 		=> 'athos@sistemas.com',
         	'password'		=> env('PASSWORD_HASH') ? bcrypt('123456') : '123456',
         ]);

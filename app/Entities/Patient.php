@@ -46,9 +46,14 @@ class Patient extends Authenticatable
         return substr($rg, 0, 2). '.' . substr($rg, 2, 3). '.' . substr($rg, 5, 3). '-' . substr($rg, -1);
    }
 
-   public function getBirthAttribute()
+   
+
+   public function setDataAttribute($value)
    {
-        $birth = $this->attributes['birth'];
-        return date('d/m/Y', strtotime($birth));
+     $dia = substr($value, 8, 2);
+     $mes = substr($value, 5, 2);
+     $ano = substr($value, 0, 4);
+
+     $this->attributes['data'] = Carbon::create($ano, $mes, $dia, 0, 0);
    }
 }
