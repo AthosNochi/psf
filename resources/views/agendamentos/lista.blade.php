@@ -12,7 +12,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading painel_cab">
                     Agendamentos
-                    <a class="btn btn-primary pull-right" href="{{ route('agendamentos.create') }}">Novo</a>
+                    <a class="btn btn-primary pull-right" href="{{ route('agendamento.create') }}">Novo</a>
                 </div>
                 <div class="panel-body">
                     @if(count($agendamentos) > 0)
