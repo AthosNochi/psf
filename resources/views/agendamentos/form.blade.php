@@ -19,7 +19,7 @@
                 @endif
                 <div class="panel-body">
                     
-                    {!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
+                    {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
