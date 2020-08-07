@@ -1,9 +1,4 @@
 
-@section('external_css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="css/jquery.bootpop.css" rel="stylesheet" type="text/css">
-@endsection
 @section('conteudo-view')
 
 <div class="container">
@@ -70,23 +65,4 @@
         </div>
       </div>
     </footer>
-@endsection
-
-@section('external_js')
-
-@foreach ($agendamentos as $agendamento)
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#agendamento_table').DataTable( {
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
-                }
-            } );            
-        } );   
-    </script> 
-
-@endforeach
 @endsection
