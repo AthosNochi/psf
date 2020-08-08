@@ -94,8 +94,8 @@ class AgendamentosController extends Controller
         $agendamentos = new Agendamento();
             $agendamentos->descricao = $request->input('descricao');
             $agendamentos->datahora = $request->input('datahora');
-            $agendamentos->id_paciente = $request->input('patient_id');
-            $agendamentos->id_medico = $request->input('doctor_id');
+            $agendamentos->id_patient = $request->input('patient_id');
+            $agendamentos->id_doctor = $request->input('doctor_id');
             $agendamentos->legenda = $request->input('legenda');
             $agendamentos->save();
 
