@@ -61,6 +61,16 @@ class UsersController extends Controller
         $usuario = $request ['success'] ? $request['data'] : null;
         $usuario = User::create($request->all());
         
+        $gravar=$data->prepare("insert into usuario (adm) values(?)");
+        if($gravar->execute(array($isAdm)))
+        {
+            echo "Registro Gravado com Suceso";
+        }
+        else
+        {
+            echo "Erro ao cadastrar o Registro";
+        }
+
         session()->flash('success', [
             'success'  => $request['success'],
             'messages' => $request['messages']
