@@ -4,10 +4,14 @@
 
     {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
         @include('templates.formulario.input', ['input' => 'descricao', 'attributes' => ['placeholder' => "Descrição"]])
-        @include('templates.formulario.input', ['input' => 'datahora', 'attributes' => ['placeholder' => "Data/Hora"]])
+        @include('templates.formulario.datetime', ['input' => 'datahora', 'attributes' => ['placeholder' => "Senha"]])
         @include('templates.formulario.select', ['select' => 'id_patient', 'data' => $patient_list, 'attributes' => ['placeholder' => "Paciente"]])
         @include('templates.formulario.select', ['select' => 'id_doctor', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])               
         @include('templates.formulario.input', ['input' => 'legenda', 'attributes' => ['placeholder' => "Legenda"]])
+        
+         <!-- <input id="datahora" type="datetime-local" name="birthdaytime"> -->
+        
+      
                         
                         <!-- <div class="radio">
                           <label>

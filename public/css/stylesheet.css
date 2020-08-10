@@ -95,8 +95,6 @@ section#conteudo-view form input [type = "submit"]{
 	
 }
 
-
-
 /**
  * ======================================*
  * stylesheet to Menu Lateral
@@ -200,6 +198,16 @@ form.form-padrao label.submit input{
 	color: #f9f9f9;
 }
 
+form.form-padrao label datetime-local{
+	float: left;
+	width: 100%;
+	color: #5c5c5c;
+	font: 400 1.25em 'Arial';
+	background: transparent;
+}
+
+
+
 
 
 
@@ -230,6 +238,16 @@ form.form-padrao label.submit input{
 }
 .default-table tbody tr{
 	height: 20px;
+}
+
+
+/*------------agendamento----------------------*/
+.form-padrao.form{
+	float: left;
+	width: 100%;
+	color: #5c5c5c;
+	font: 400 1.25em 'Arial';
+	background: transparent;
 }
 
 
