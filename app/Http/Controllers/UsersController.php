@@ -39,7 +39,7 @@ class UsersController extends Controller
 
     public function index()
     {
-        $isAdm ['isAdm'];
+        $isAdm ['$isAdm'];
         $users = $this->repository->all();
         return view('user.index')->with([
             'users'=>$users,
