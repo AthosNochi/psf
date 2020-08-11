@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
            $table->string('password', 254)->nullable();
 
             //Permission
-		   $table->boolean('isAdm')->DEFAULT->CHARSET=utf8;
+		   $table->boolean('isAdm')->null();
 		   $table->bigInteger('adminId')->nullable();
 
            $table->rememberToken();
