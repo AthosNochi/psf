@@ -18,10 +18,9 @@
         @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
 
-            <label for="isAdm">Administrador
-            <input type="checkbox" id="isAdm" name="isAdm"
-                   checked>
-            </label>
+        <input type="checkbox" id="isAdm" name="isAdm"
+            checked>
+        <label for="isAdm">Administrador</label>
         
 
         @include('templates.formulario.submit', ['input' => 'Cadastrar'])    

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
@@ -14,7 +13,7 @@ use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
 use App\Services\UserService;
 use App\Entities\User;
-use Auth;
+
 /**
  * Class UsersController.
  *
@@ -56,12 +55,26 @@ class UsersController extends Controller
      *
      * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function store(Request $req){
-        $dados = (object)$req->all();
-        $user = User::saveNew($dados);
-  
-        return redirect()->route('user.index',$user->id);
-      }
+    public function store(UserCreateRequest $request)
+    {
+        //$request = $this->service->store($request->all());//
+        $usuario = $request ['success'] ? $request['data'] : null;
+
+        $isAdm = $_POST['isAdm']; //recebe a informação do html
+        if(!strcmp ( $isAdm , 'on' ))
+            $isAdm=1;
+        else
+            $isAdm=0;
+
+        $usuario = User::create($request->all());
+
+        session()->flash('success', [
+            'success'  => $request['success'],
+            'messages' => $request['messages']
+        ]);
+        
+        return redirect()->route('user.index');
+    }
 
     /**
      * Display the specified resource.
