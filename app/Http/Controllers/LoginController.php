@@ -22,7 +22,7 @@ class LoginController extends Controller
               }
               return redirect()->route('userN.index');
             }
-        return view('user.login');
+        return view('home');
     }
 
 }

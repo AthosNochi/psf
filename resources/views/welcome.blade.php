@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{!! Form :: open(['route' => 'user.login', 'method' => 'get']) !!}
+{!! Form :: open(['route' => 'user.index', 'method' => 'get']) !!}
 {!! Form::submit('Login') !!}
 
 

@@ -11,27 +11,4 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-
-    public function homepage()
-    {
-    	$variavel = "homepage do sistema de PSF";
-
-    	return view('welcome', [
-    		'title' => $variavel
-    	]);
-    }
-
-    public function cadastrar()
-    {
-    	echo "tela de cadastro";
-    }
-
-    public function register(){
-        return view('auth.register');
-    }  
-
-
-    
-    
-    
 }

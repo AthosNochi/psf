@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', ['uses' => 'Controller@homepage']);
+Route::get('/', ['uses' => 'LoginController@fazerLogin']);
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
 /*
@@ -42,3 +42,7 @@ Route::resource('psf', 'PsfsController');
 Route::resource('doctor', 'DoctorsController');
 Route::resource('patient', 'PatientsController');
 Route::resource('agendamento', 'AgendamentosController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
