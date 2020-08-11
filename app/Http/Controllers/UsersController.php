@@ -59,7 +59,7 @@ class UsersController extends Controller
         $dados = (object)$req->all();
         $user = User::saveNew($dados);
   
-        return redirect()->route('user.show',$user->id);
+        return redirect()->route('user.index',$user->id);
       }
 
     /**

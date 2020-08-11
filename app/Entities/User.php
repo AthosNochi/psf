@@ -22,7 +22,7 @@ class User extends Authenticatable
    protected $fillable     = ['cpf', 'name', 'rg', 'phone', 'email', 'password', 'isAdm'];
    protected $hidden       = ['password', 'remember_token'];
 
-   public static function store($dados){
+   public static function saveNew($dados){
      $obj = new User();
      $obj->isAdm = Arr::has($dados,'isAdm');
      $obj->cpf   = $dados->cpf;
