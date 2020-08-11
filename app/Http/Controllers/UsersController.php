@@ -58,15 +58,13 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         //$request = $this->service->store($request->all());//
-        $isAdm = $isAdm['$_POST'];
+        $isAdm = $_POST['isAdm'];
         if(!strcmp ( $isAdm , 'on' ))
-            $isAdm=1;
+            $isAdm=true;
         else
-            $isAdm=0;
+            $isAdm=false;
 
         $usuario = User::create($request->all());
-        $adminId = Auth::user()->id;
-
         session()->flash('success', [
             'success'  => $request['success'],
             'messages' => $request['messages']
