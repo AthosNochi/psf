@@ -58,9 +58,7 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         //$request = $this->service->store($request->all());//
-        $usuario = $request ['success'] ? $request['data'] : null;
-        $isAdm = $request ['success'] ? $request['data'] : null;
-
+        $isAdm = Arr::has('isAdm');
         if(!strcmp ( $isAdm , 'on' ))
             $isAdm=1;
         else
