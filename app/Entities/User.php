@@ -5,6 +5,9 @@ namespace App\Entities;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Arr;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -18,6 +21,19 @@ class User extends Authenticatable
    protected $table        = 'users';
    protected $fillable     = ['cpf', 'name', 'rg', 'phone', 'email', 'password', 'isAdm'];
    protected $hidden       = ['password', 'remember_token'];
+
+   public static function saveNew($dados){
+     $obj = new User();
+     $obj->isAdm = Arr::has($dados,'isAdm');
+     $obj->cpf   = $dados->cpf;
+     $obj->name  = $dados->name;
+     $obj->rg    = $dados->rg;
+     $obj->phone  = $dados->phone;
+     $obj->email = $dados->email;
+     $obj->password = bcrypt('123');
+     $obj->adminId = Auth::user()->id;
+     $obj->save();
+   }
 
 
    public function setPasswordAttribute ($value)
@@ -42,4 +58,6 @@ class User extends Authenticatable
         $rg = $this->attributes['rg'];
         return substr($rg, 0, 2). '.' . substr($rg, 2, 3). '.' . substr($rg, 5, 3). '-' . substr($rg, -1);
    }
+
+   
 }

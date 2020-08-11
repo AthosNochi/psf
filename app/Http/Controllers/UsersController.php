@@ -55,27 +55,12 @@ class UsersController extends Controller
      *
      * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function store(UserCreateRequest $request)
-    {
-        //$request = $this->service->store($request->all());//
-        $usuario = $request ['success'] ? $request['data'] : null;
-        if(execute(array($isAdm)))
-        {
-            echo "Registro Gravado com Suceso";
-        }
-        else
-        {
-            echo "Erro ao cadastrar o Registro";
-        }
-        $usuario = User::create($request->all());
-
-        session()->flash('success', [
-            'success'  => $request['success'],
-            'messages' => $request['messages']
-        ]);
-        
-        return redirect()->route('user.index');
-    }
+    public function saveNew(Request $req){
+        $dados = (object)$req->all();
+        $user = User::saveNew($dados);
+  
+        return redirect()->route('user.show',$user->id);
+      }
 
     /**
      * Display the specified resource.

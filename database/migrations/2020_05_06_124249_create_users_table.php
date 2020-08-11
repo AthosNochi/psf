@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
            $table->string('password', 254)->nullable();
 
             //Permission
-           $table->char('isAdm', 2);
+           $table->boolean('isAdm');
 
            $table->rememberToken();
 		   $table->timestamps();
