@@ -99,10 +99,7 @@ class AgendamentosController extends Controller
             $agendamentos->legenda = $request->input('legenda');
             $agendamentos->save();
 
-            return view('agendamentos.form', [
-                'patient_list'      => $patient_list,
-                'doctor_list'      => $doctor_list,
-            ]);
+            return redirect()->route('agendamento.index');
         
     }
 
