@@ -1,5 +1,7 @@
 @extends('templates.master')
 
+@extends('login.app')
+
 @section('css-view')
 @endsection
 
