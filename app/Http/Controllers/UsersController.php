@@ -58,11 +58,12 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         //$request = $this->service->store($request->all());//
-        if(isset($isAdm) && !strcmp($isAdm,'on')){
+        if(isset($request->isAdm) && !strcmp($request->isAdm,'on')){
             $isAdm=true;
         }else{
             $isAdm=false;
         }
+        $request->merge(["isAdm"=>$isAdm]);
         
         $usuario = User::create($request->all());
         session()->flash('success', [
