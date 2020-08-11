@@ -59,8 +59,7 @@ class UsersController extends Controller
     {
         //$request = $this->service->store($request->all());//
         $usuario = $request ['success'] ? $request['data'] : null;
-
-        $isAdm = $_POST['isAdm']; //recebe a informação do html
+        
         if(!strcmp ( $isAdm , 'on' ))
             $isAdm=1;
         else
