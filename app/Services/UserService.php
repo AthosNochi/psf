@@ -25,7 +25,7 @@ class UserService
     {
         try
         {
-            $adm = $_POST['adm']; //recebe a informação do html
+            $isAdm = $_POST['isAdm']; //recebe a informação do html
                 if(!strcmp ( $adm , 'on' )){
                     $adm=1;
                 }else{
