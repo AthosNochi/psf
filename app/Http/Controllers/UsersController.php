@@ -59,7 +59,7 @@ class UsersController extends Controller
     {
         //$request = $this->service->store($request->all());//
         $usuario = $request ['success'] ? $request['data'] : null;
-        if($gravar->execute(array($isAdm)))
+        if(execute(array($isAdm)))
         {
             echo "Registro Gravado com Suceso";
         }
