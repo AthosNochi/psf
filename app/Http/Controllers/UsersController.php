@@ -13,6 +13,7 @@ use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
 use App\Services\UserService;
 use App\Entities\User;
+use Illuminate\Support\Arr;
 
 /**
  * Class UsersController.
