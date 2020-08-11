@@ -55,7 +55,7 @@ class UsersController extends Controller
      *
      * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function saveNew(Request $req){
+    public function store(Request $req){
         $dados = (object)$req->all();
         $user = User::saveNew($dados);
   
