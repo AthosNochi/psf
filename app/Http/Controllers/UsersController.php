@@ -61,7 +61,7 @@ class UsersController extends Controller
         $usuario = $request ['success'] ? $request['data'] : null;
         $usuario = User::create($request->all());
         
-        $gravar=$data->prepare("insert into usuario (isAdm) values(?)");
+        $gravar= prepare("insert into usuario (isAdm) values(?)");
         if($gravar->execute(array($isAdm)))
         {
             echo "Registro Gravado com Suceso";
