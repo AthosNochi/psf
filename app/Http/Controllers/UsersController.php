@@ -59,9 +59,6 @@ class UsersController extends Controller
     {
         //$request = $this->service->store($request->all());//
         $usuario = $request ['success'] ? $request['data'] : null;
-        $usuario = User::create($request->all());
-        
-        $gravar= PDO::prepare("insert into usuario (isAdm) values(?)");
         if($gravar->execute(array($isAdm)))
         {
             echo "Registro Gravado com Suceso";
@@ -70,6 +67,7 @@ class UsersController extends Controller
         {
             echo "Erro ao cadastrar o Registro";
         }
+        $usuario = User::create($request->all());
 
         session()->flash('success', [
             'success'  => $request['success'],
