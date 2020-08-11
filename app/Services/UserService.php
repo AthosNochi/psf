@@ -25,6 +25,13 @@ class UserService
     {
         try
         {
+            $adm = $_POST['adm']; //recebe a informação do html
+                if(!strcmp ( $adm , 'on' )){
+                    $adm=1;
+                }else{
+                    $adm=0;
+                }
+
             $this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_CREATE);
             $usuario = $this->repository->create($data);
 
