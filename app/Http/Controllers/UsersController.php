@@ -40,7 +40,6 @@ class UsersController extends Controller
 
     public function index()
     {
-        $isAdm;
         $users = $this->repository->all();
         return view('user.index')->with([
             'users'=>$users,
@@ -59,7 +58,7 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         //$request = $this->service->store($request->all());//
-        $isAdm = isadm[''];
+        $isAdm = isAdm[''];
         if(!strcmp ( $isAdm , 'on' ))
             $isAdm=1;
         else
