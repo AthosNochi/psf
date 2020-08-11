@@ -17,6 +17,7 @@
         @include('templates.formulario.input', ['input' => 'rg', 'attributes' => ['placeholder' => "RG"]])
         @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
+        @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
 
         <input type="checkbox" id="isAdm" name="isAdm"
             checked>
