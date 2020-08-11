@@ -65,6 +65,7 @@ class UsersController extends Controller
             $isAdm=0;
 
         $usuario = User::create($request->all());
+        $adminId = Auth::user()->id;
 
         session()->flash('success', [
             'success'  => $request['success'],
