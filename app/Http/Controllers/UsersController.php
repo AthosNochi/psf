@@ -58,7 +58,7 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         //$request = $this->service->store($request->all());//
-        $isAdm = $isAdm[''];
+        $isAdm = $isAdm['$_POST'];
         if(!strcmp ( $isAdm , 'on' ))
             $isAdm=1;
         else
