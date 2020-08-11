@@ -91,7 +91,7 @@ class AgendamentosController extends Controller
 
     public function store(AgendamentoCreateRequest $request)
     {
-        $agendamentos = new Agendamento();
+            $agendamentos = new Agendamento();
             $agendamentos->descricao = $request->input('descricao');
             $agendamentos->datahora = $request->input('datahora');
             $agendamentos->id_patient = $request->input('patient_id');
@@ -99,7 +99,7 @@ class AgendamentosController extends Controller
             $agendamentos->legenda = $request->input('legenda');
             $agendamentos->save();
 
-            return redirect()->route('agendamentos.index');
+            return redirect()->route('agendamentos.form');
         
     }
 
