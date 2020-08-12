@@ -25,4 +25,21 @@ class LoginController extends Controller
         return view('home');
     }
 
+    public function enter(Request $req){
+      $info = (object)$req->all();
+      if(Auth::attempt(['email'=>$info->email,'password'=>$info->password])){
+        if(Auth::user()->isAdm){
+          return redirect()->route('user.index');
+        }else{
+          return redirect()->route('userN.index');
+        }
+      }
+      return redirect()->route('login.index');
+    }
+
+    public function logout(){
+      Auth::logout();
+      return redirect()->route('login.index');
+    }
+
 }
