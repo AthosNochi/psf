@@ -19,9 +19,9 @@ class CreateDoctorsTable extends Migration
            $table->increments('id');
 
             //People data
-           $table->string('cpf', 11)->unique()->nullable();
+           $table->integer('cpf', 11)->unique()->nullable();
 		   $table->string('name', 50);
-		   $table->string('rg', 50)->unique()->nullable();
+		   $table->integer('rg', 50)->unique()->nullable();
            $table->char('phone', 11);
 		   $table->char('crm', 50)->unique()->nullable();
 		   $table->char('specialty', 50)->nullable();
