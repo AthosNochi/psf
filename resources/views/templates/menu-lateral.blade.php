@@ -30,6 +30,12 @@
                 <h3>Agendamento</h3>
             </a>
         </li>
+        <li>
+            <a href="{{ route('logout') }}">
+                <i class"""></i>
+                <h3>Sair</h3>
+            </a>
+        </li>
     </ul>
 
     
