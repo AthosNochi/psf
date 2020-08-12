@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ['uses' => 'LoginController@fazerLogin']);
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
+Route :: group ([ 'middleware' => 'auth' ], function () {
+    Route :: get ( '/ login / logout' , [ 'as' => 'login.logout' , 'usa' => 'LoginController @ logout' ]);
+    Route :: get ( '/ changePassword' , [ 'as' => 'login.changePassword' , 'uses' => 'LoginController @ changePassword' ]);
+    Route :: post ( '/ changePassword / save' , [ 'as' => 'login.saveNewPassword' , 'uses' => 'LoginController @ savePassword' ]);
+  });
+
 /*
 ------------------------------
 Rotas de parte administrativa
