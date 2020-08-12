@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Auth;
 use Illuminate\Support\Arr;
 
 class AdminMiddleware
@@ -17,10 +17,13 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next, $guard = null)
     {
-      if (\Auth::guard($guard)->check() && \Auth::user()->isAdm && Arr::has(\Auth::user(),'email_verified_at')) {
+      if (Auth::guard($guard)->check() && !Auth::user()->isAdm && Arr::has(Auth::user(),'email_verified_at')) {
         return $next($request);
       }else{
-        return redirect()->route('user.login');
+        if(!Arr::has(Auth::user(),'email_verified_at')){
+          return redirect()->route('login.changePassword');
+        }
+        return redirect()->route('login.index');
       }
     }
 }
