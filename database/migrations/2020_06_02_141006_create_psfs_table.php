@@ -19,7 +19,7 @@ class CreatePsfsTable extends Migration
             $table->increments('id');
 			$table->string('name', 50);
 			$table->string('endereco', 80);
-			$table->char('phone', 30);
+			$table->integer('phone');
 			$table->string('regiao', 50);
             $table->timestamps();
 		});
