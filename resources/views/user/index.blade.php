@@ -12,16 +12,10 @@
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
-        @include('templates.formulario.input', ['label' => 'CPF','input' => 'cpf', 'attributes' => ['placeholder' => "CPF"]])
         @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
         @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder' => "Email"]])
-        @include('templates.formulario.input', ['input' => 'rg', 'attributes' => ['placeholder' => "RG"]])
-        @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
         @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
-
-        
-        
 
         @include('templates.formulario.submit', ['input' => 'Cadastrar'])    
     {!! Form::close() !!}
