@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', ['uses' => 'LoginController@fazerLogin']);
+
+Auth::routes();
+
+Route::get('/', 'IndexController@login');
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
 Route :: group ([ 'middleware' => 'auth' ], function () {
