@@ -23,7 +23,7 @@ class LoginController extends Controller
               }
               return redirect()->route('userN.index');
             }
-        return view('home');
+        return view('auth.login');
     }
 
     public function enter(Request $req){
