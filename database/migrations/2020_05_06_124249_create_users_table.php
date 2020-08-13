@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
            $table->increments('id');
 
             //People data
-		   $table->string('name', 50);
+		   $table->string('name');
 
             //Auth data
            $table->string('email', 80)->unique();
