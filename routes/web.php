@@ -16,7 +16,7 @@ Route::get('/', ['uses' => 'LoginController@fazerLogin']);
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
 Route :: group ([ 'middleware' => 'auth' ], function () {
-    Route :: post ( '/ login / logout' , [ 'as' => 'login.logout' , 'uses' => 'LoginController@logout' ]);
+    Route :: get ( '/ login / logout' , [ 'as' => 'login.logout' , 'uses' => 'LoginController@logout' ]);
     Route :: get ( '/ changePassword' , [ 'as' => 'login.changePassword' , 'uses' => 'LoginController@changePassword' ]);
     Route :: post ( '/ changePassword / save' , [ 'as' => 'login.saveNewPassword' , 'uses' => 'LoginController@savePassword' ]);
   });
