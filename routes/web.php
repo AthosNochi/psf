@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'IndexController@login');
+Route::get('/entrar', 'IndexController@login');
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
 Route :: group ([ 'middleware' => 'auth' ], function () {
