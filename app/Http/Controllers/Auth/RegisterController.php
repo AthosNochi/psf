@@ -69,7 +69,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data, UserCreateRequest $request)
+    protected function create(UserCreateRequest $request)
     {
          //$request = $this->service->store($request->all());//
          if(isset($request->isAdm) && !strcmp($request->isAdm,'on')){
