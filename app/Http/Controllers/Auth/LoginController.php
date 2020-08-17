@@ -22,10 +22,10 @@ class LoginController extends Controller
 
 
     public function index(){
-    	return view('user.dashboard');    
+    	return view('user.index');    
     }
 
-    public function auth(Request $request){
+    public function login(Request $request){
     	
     	$data = [
     		'email' => $request->get('username'),
@@ -54,7 +54,7 @@ class LoginController extends Controller
                 \Auth::login($user);
             }
 
-    		return redirect()->route('user.dashboard');
+    		return redirect()->route('user.index');
     	}
 		catch (\Exception $e)
     	{
