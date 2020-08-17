@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'IndexController@index');
-Route::get('/entrar', 'IndexController@login');
 Route::get('/cadastrar', 'IndexController@register');
 
-Route::get('/home', 'HomeController@principal');
+Route::get('/login', ['uses' => 'Controller@fazerLogin']);
+Route::post('/login', ['as' => 'user.login', 'uses' => 'Controller@auth']);
 
 Route::resource('/user', 'UsersController');
 
