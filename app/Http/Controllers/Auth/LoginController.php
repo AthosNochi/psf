@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
-use App\Http\Controllers;
-use App\Http\Controllers\Auth\Controller;
+use App\Http\Controllers\Controller;
 
 class LoginController extends Controller{
     private $repository;
