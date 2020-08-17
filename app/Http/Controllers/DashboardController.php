@@ -21,7 +21,7 @@ class DashboardController extends Controller
 
 
     public function index(){
-    	return view('user.dashboard');    
+    	return view('user.index');    
     }
 
     public function auth(Request $request){
@@ -36,7 +36,7 @@ class DashboardController extends Controller
             if(env('PASSWORD_HASH'))
             {
                 $attempt = Auth::attempt($data);
-                
+
                 if(! $attempt) {  
                 throw new Exception("Error Processing Request", 1);
                 }
