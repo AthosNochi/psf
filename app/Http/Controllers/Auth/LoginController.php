@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Auth\Exception;
 
 class LoginController extends Controller{
     private $repository;
@@ -35,9 +34,9 @@ class LoginController extends Controller{
             if(env('PASSWORD_HASH'))
             {
                 $attempt = \Auth::attempt($data);
-                
+
                 if(! $attempt) {  
-                throw new Exception("Error Processing Request", 1); 
+                throw new \Exception("Error Processing Request", 1); 
                 }
             }
 
