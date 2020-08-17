@@ -22,7 +22,7 @@ class LoginController extends Controller{
     	return view('user.dashboard');    
     }
 
-    public function auth(Request $request){
+    public function login(Request $request){
     	
     	$data = [
     		'email' => $request->get('username'),
