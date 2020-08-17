@@ -10,7 +10,7 @@ class IndexController extends Controller
         return view('user.login');
     }
 
-    public function fazerLogin(){
+    public function Login(){
         return view("tela de login");
     }
 
