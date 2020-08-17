@@ -22,7 +22,7 @@ class DashboardController extends Controller
 
 
     public function index(){
-    	return view("estamos na dashboardindex");    
+    	return view('login');    
     }
 
     public function auth(Request $request)
