@@ -15,28 +15,44 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'Controller@homepage');
-Route::get('/cadastro', 'Controller@cadastrar');
+Route::get('/', 'IndexController@login');
+Route::get('/entrar', 'IndexController@login');
+Route::get('/home', 'HomeController@principal');
+Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 
-Route::get('/login', ['uses' => 'Controller@fazerLogin']);
-Route::post('/login', ['as' => 'user.login', 'uses' => 'Controller@login']);
-Route::post('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardController@index']);
+Route :: group ([ 'middleware' => 'auth' ], function () {
+    Route :: get ( '/ login / logout' , [ 'as' => 'login.logout' , 'uses' => 'LoginController@logout' ]);
+    Route :: get ( '/ changePassword' , [ 'as' => 'login.changePassword' , 'uses' => 'LoginController@changePassword' ]);
+    Route :: post ( '/ changePassword / save' , [ 'as' => 'login.saveNewPassword' , 'uses' => 'LoginController@savePassword' ]);
+  });
 
-Route::resource('/user', 'UsersController');
+/*
+------------------------------
+Rotas de parte administrativa
+------------------------------
+*/
+Route::group(['middleware'=>'admin'],function(){
+Route::get('/admin',['as'=>'user.index','uses'=>'Controller@index']);
+  
+});
 
-Route::resource('/psf', 'PsfsController');
+/**
+----------------------------------------------------------------------------
+routes to user auth
+----------------------------------------------------------------------------
+**/
 
-Route::resource('/doctor', 'DoctorsController');
-
-Route::resource('/patient', 'PatientsController');
-Route::resource('/agendamento', 'AgendamentosController');
-
-//Route::resource('/agendamentos/agenda', 'AgendaController');--teste
+Route::get('/login', ['uses' => 'LoginController@fazerLogin']);
+Route::post('/login', ['as' => 'user.login', 'uses' => 'DashboardController@auth']);
+Route::get('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardController@index']);
 
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('user', 'UsersController');
+Route::resource('psf', 'PsfsController');
+Route::resource('doctor', 'DoctorsController');
+Route::resource('patient', 'PatientsController');
+Route::resource('agendamento', 'AgendamentosController');
 
 Auth::routes();
 
