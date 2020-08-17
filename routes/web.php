@@ -17,7 +17,6 @@ Auth::routes();
 
 Route::get('/', 'IndexController@index');
 Route::get('/entrar', 'IndexController@login');
-Route::get('/home', 'DashboardController@auth');
 Route::get('/cadastrar', 'IndexController@register');
 
 Route::get('/home', 'HomeController@principal');
