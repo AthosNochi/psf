@@ -43,7 +43,7 @@ class LoginController extends Controller{
 
 
                 if(!$user)
-                    throw new \Exception("O email informado é invalido");
+                throw new \Exception("O email informado é invalido");
 
 
                if($user->password == $request->get('password'))
