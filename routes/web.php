@@ -19,6 +19,8 @@ Route::get('/', 'IndexController@index');
 Route::get('/entrar', 'IndexController@login');
 Route::get('/cadastrar', 'IndexController@register');
 
+route::post('/login', ['as' => 'user.login', 'uses' => 'Controller@auth']);
+
 Route::get('/home', 'HomeController@principal');
 
 Route :: group ([ 'middleware' => 'auth' ], function () {
