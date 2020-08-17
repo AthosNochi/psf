@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'IndexController@index');
-Route::get('/cadastrar', 'IndexController@register');
+Route::get('/', 'Controller@homepage');
+Route::get('/cadastro', 'Controller@cadastrar');
 
-Route::get('/login', ['uses' => 'IndexController@fazerLogin']);
+Route::get('/login', ['uses' => 'Controller@fazerLogin']);
 Route::post('/login', ['as' => 'user.login', 'uses' => 'DashboardController@auth']);
 Route::post('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardController@index']);
 
