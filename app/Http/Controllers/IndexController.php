@@ -11,7 +11,7 @@ class IndexController extends Controller
     }
 
     public function login(){
-        return view('auth.login');
+        return view('user.index');
     }
 
     public function register(){
