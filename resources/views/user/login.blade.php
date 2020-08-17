@@ -12,7 +12,7 @@
         {!! Form::open(['route' => 'user.login', 'method' => 'get']) !!}
 
         {!! Form::text('username', null, ['class' => 'input', 'placeholder' => "Usuario"]) !!}
-        {!! Form::password('password', ['palceholder' => "Senha"])}
+        {!! Form::password('password', ['palceholder' => "Senha"]) !!}
 
         {!! Form::submit('Login') !!}
 
