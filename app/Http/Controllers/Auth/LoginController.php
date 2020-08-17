@@ -33,7 +33,7 @@ class LoginController extends Controller{
     	{
             if(env('PASSWORD_HASH'))
             {
-                var_dump ($data);
+                dd(Auth::attempt($data));
                 \Auth::attempt($data, false);
             }
 
