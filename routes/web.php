@@ -21,33 +21,18 @@ Route::get('/cadastrar', 'IndexController@register');
 
 Route::get('/home', 'HomeController@principal');
 
-Route :: group ([ 'middleware' => 'auth' ], function () {
-    Route :: get ( '/ login / logout' , [ 'as' => 'login.logout' , 'uses' => 'LoginController@logout' ]);
-    Route :: get ( '/ changePassword' , [ 'as' => 'login.changePassword' , 'uses' => 'LoginController@changePassword' ]);
-    Route :: post ( '/ changePassword / save' , [ 'as' => 'login.saveNewPassword' , 'uses' => 'LoginController@savePassword' ]);
-  });
-
-/*
-------------------------------
-Rotas de parte administrativa
-------------------------------
-*/
-
-
-
-
-/**
-----------------------------------------------------------------------------
-routes to user auth
-----------------------------------------------------------------------------
-**/
-
-
 Route::resource('/user', 'UsersController');
+
 Route::resource('/psf', 'PsfsController');
+
 Route::resource('/doctor', 'DoctorsController');
+
 Route::resource('/patient', 'PatientsController');
+
 Route::resource('/agendamento', 'AgendamentosController');
+
+//Route::resource('/agendamentos/agenda', 'AgendaController');--teste
+
 
 Auth::routes();
 
