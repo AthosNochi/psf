@@ -9,7 +9,7 @@
     <body>
 
     <section id="conteudo-view" class="login">
-        {!! Form::open(['route' => 'login', 'method' => 'post']) !!}
+        {!! Form::open(['route' => 'user.login', 'method' => 'post']) !!}
 
         {!! Form::text('username', null, ['class' => 'input', 'placeholder' => "Usuario"]) !!}
         {!! Form::password('password', ['palceholder' => "Senha"]) !!}
