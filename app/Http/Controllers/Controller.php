@@ -11,6 +11,14 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public function homepage(){
+        return view ('welcome');
+    }
+
+    public function cadastrar(){
+        
+    }
+
 
     public function fazerLogin(){
         return view('user.login');
