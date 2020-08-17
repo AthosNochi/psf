@@ -35,6 +35,7 @@ class LoginController extends Controller{
             if(env('PASSWORD_HASH'))
             {
                 $attempt = \Auth::attempt($data);
+                
                 if(! $attempt) {  
                 throw new Exception("Error Processing Request", 1); 
                 }
