@@ -36,7 +36,7 @@ class DashboardController extends Controller
     	try
     	{
             Auth::attempt($data, false);
-            return redirect()->route('user.dashboard');
+            return redirect()->route('user.index');
         }
 		catch (\Exception $e)
     	{
