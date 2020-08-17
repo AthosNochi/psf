@@ -2,28 +2,63 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Auth;
 use Illuminate\Http\Request;
-use App\Entities\User;
-use App\Http\Controllers\Controller;
+use App\Repositories\UserRepository;
+use App\Validators\UserValidator;
+use App\Http\Controllers;
 
-class LoginController extends Controller
-{
+class LoginController extends Controller{
+    private $repository;
+	private $validator;
 
-    public function index(){
-    	return view('user.index');    
+    public function __construct(UserRepository $repository, UserValidator $validator)
+    {
+        $this->repository = $repository;
+        $this->validator  = $validator;
     }
 
-    public function login(Request $request){
-        
-        if($data = ['email' => $request->get('username'),'password' => $request->get('password')]){
-          if(Auth::user()->isAdm == 1){
-            return redirect()->route('user.index');
-          }else{
-            return redirect()->route('userN.index');
-          }
-        }
-        return redirect()->route('login.index');
+
+    public function index(){
+    	return view('user.dashboard');    
+    }
+
+    public function auth(Request $request){
+    	
+    	$data = [
+    		'email' => $request->get('username'),
+    		'password' => $request->get('password')
+    	];
+
+    	try
+    	{
+            if(env('PASSWORD_HASH'))
+            {
+                \Auth::attempt($data, false);
+            }
+
+    		else
+            {
+               $user = $this->repository->findWhere(['email' => $request->get('username')])->first();
+
+
+                if(!$user)
+                    throw new \Exception("O email informado é invalido");
+
+
+               if($user->password == $request->get('password'))
+                throw new \Exception("A senha informada é invalida");
+
+                \Auth::login($user);
+            }
+
+    		return redirect()->route('user.dashboard');
+    	}
+		catch (\Exception $e)
+    	{
+    		return $e->getMessage();
+    	}
+
+    	dd($request->all());
     	
     }
 }
