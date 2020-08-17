@@ -71,10 +71,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+         //$request = $this->service->store($request->all());//
+         if(isset($request->isAdm) && !strcmp($request->isAdm,'on')){
+            $isAdm=true;
+        }else{
+            $isAdm=false;
+        }
+        $request->merge(["isAdm"=>$isAdm]);
+        
+        return $usuario = User::create($request->all());
+        session()->flash('success', [
+            'success'  => $request['success'],
+            'messages' => $request['messages']
         ]);
     }
 }
