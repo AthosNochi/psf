@@ -15,13 +15,8 @@ class LoginController extends Controller
     }
 
     public function login(Request $request){
-    	
-        $data = [
-    		'email' => $request->get('username'),
-    		'password' => $request->get('password')
-        ];
         
-        if(Auth::attempt(['email'=>$data->email,'password'=>$data->password])){
+        if($data = ['email' => $request->get('username'),'password' => $request->get('password')]){
           if(Auth::user()->isAdm){
             return redirect()->route('user.index');
           }else{
