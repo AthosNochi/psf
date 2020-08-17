@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index(){
-        return view('user.login');
+        return view('login.app');
     }
 
     public function login(){
