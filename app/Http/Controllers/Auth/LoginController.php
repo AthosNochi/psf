@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
 use App\Http\Controllers;
+use App\Http\Controllers\Auth\Controller;
 
 class LoginController extends Controller{
     private $repository;
