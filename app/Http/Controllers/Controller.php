@@ -13,6 +13,6 @@ class Controller extends BaseController
 
 
     public function fazerLogin(){
-        return view('');
+        return view('user.login');
     }
 }
