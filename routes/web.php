@@ -19,7 +19,7 @@ Route::get('/', 'Controller@homepage');
 Route::get('/cadastro', 'Controller@cadastrar');
 
 Route::get('/login', ['uses' => 'Controller@fazerLogin']);
-Route::post('/login', ['as' => 'user.login', 'uses' => 'DashboardController@auth']);
+Route::post('/login', ['as' => 'user.login', 'uses' => 'Controller@login']);
 Route::post('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardController@index']);
 
 Route::resource('/user', 'UsersController');
