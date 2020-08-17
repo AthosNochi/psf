@@ -11,7 +11,7 @@ class IndexController extends Controller
     }
 
     public function Login(){
-        return view("tela de login");
+        echo ("tela de login");
     }
 
     public function register(){
