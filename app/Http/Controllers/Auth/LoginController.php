@@ -33,8 +33,10 @@ class LoginController extends Controller{
     	{
             if(env('PASSWORD_HASH'))
             {
-                dd(\Auth::attempt($data));
-                \Auth::attempt($data, false);
+                $attempt = Auth::attempt($data);
+                if(! $attempt) {  
+                throw new Exception("Error Processing Request", 1); 
+                }
             }
 
     		else
