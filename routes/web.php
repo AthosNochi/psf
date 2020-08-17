@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'IndexController@login');
+Route::get('/', 'IndexController@index');
 Route::get('/entrar', 'IndexController@login');
 Route::get('/home', 'HomeController@principal');
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
