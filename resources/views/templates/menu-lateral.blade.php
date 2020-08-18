@@ -25,6 +25,12 @@
             </a>
         </li>
         <li>
+            <a href="{{ route('enfermeiro.index') }}">
+                <i class"""></i>
+                <h3>Enfermeiro</h3>
+            </a>
+        </li>
+        <li>
             <a href="{{ route('agendamento.index') }}">
                 <i class"""></i>
                 <h3>Agendamento</h3>
