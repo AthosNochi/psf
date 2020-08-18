@@ -58,7 +58,7 @@ class AgendamentosController extends Controller
         $doctor_list = \App\Entities\Doctor::pluck('name', 'id', 'specialty')->all();
         
 
-        return view('agendamentos.lista', [
+        return view('agendamentos.form', [
             'patient_list'      => $patient_list,
             'doctor_list'      => $doctor_list,
         ]);
