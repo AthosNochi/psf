@@ -58,7 +58,7 @@ class AgendamentosController extends Controller
         $doctor_list = \App\Entities\Doctor::pluck('name', 'id', 'specialty')->all();
         
 
-        return view('agendamentos.form', [
+        return view('agendamentos.lista', [
             'patient_list'      => $patient_list,
             'doctor_list'      => $doctor_list,
         ]);
@@ -91,13 +91,13 @@ class AgendamentosController extends Controller
 
     public function store(AgendamentoCreateRequest $request)
     {
-            $agendamentos = new Agendamento();
-            $agendamentos->descricao = $request->input('descricao');
-            $agendamentos->datahora = $request->input('datahora');
-            $agendamentos->id_patient = $request->input('patient_id');
-            $agendamentos->id_doctor = $request->input('doctor_id');
-            $agendamentos->legenda = $request->input('legenda');
-            $agendamentos->save();
+            $agendamento = new Agendamento();
+            $agendamento->descricao = $request->input('descricao');
+            $agendamento->datahora = $request->input('datahora');
+            $agendamento->id_patient = $request->input('patient_id');
+            $agendamento->id_doctor = $request->input('doctor_id');
+            $agendamento->legenda = $request->input('legenda');
+            $agendamento->save();
 
             return redirect()->route('agendamento.index');
         
