@@ -19,10 +19,10 @@ class CreateEnfermeirosTable extends Migration
 			$table->increments('id');
 
 			 //People data
-			 $table->integer('cpf')->unique()->nullable();
+			 $table->string('cpf', 11)->unique()->nullable();
 			 $table->string('name', 50);
-			 $table->integer('rg')->unique()->nullable();
-			 $table->integer('phone');
+			 $table->string('rg', 50)->unique()->nullable();
+			 $table->string('phone', 11);
 			
 			 //Auth data
 			 $table->string('email', 80)->unique();
@@ -43,6 +43,8 @@ class CreateEnfermeirosTable extends Migration
 	 */
 	public function down()
 	{
+		Schema::table('enfermeiros', function (Blueprint $table) {
+		});
 		Schema::drop('enfermeiros');
 	}
 }

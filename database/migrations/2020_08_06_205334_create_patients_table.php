@@ -15,28 +15,27 @@ class CreatePatientsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('patients', function (Blueprint $table){
-           $table->increments('id');
+		Schema::create('patients', function(Blueprint $table) {
+			$table->increments('id');
 
-            //People data
-           $table->integer('cpf', 11)->unique()->nullable();
-		   $table->string('name', 50);
-		   $table->integer('rg')->unique()->nullable();
-		   $table->integer('phone');
-		   $table->char('birth', 30);
-		   $table->char('gender', 20);
-		   $table->string('notes', 100);
+			 //People data
+			 $table->string('cpf', 11)->unique()->nullable();
+			 $table->string('name', 50);
+			 $table->string('rg', 50)->unique()->nullable();
+			 $table->string('phone', 11);
+			 $table->char('gender', 11);
+			 $table->string('notes', 50);
 
-            //Auth data
-           $table->string('email', 80)->unique();
-           $table->string('password', 254)->nullable();
-
-            //Permission
-           //---//
-
-           $table->rememberToken();
-		   $table->timestamps();
-		   $table->softDeletes();
+			
+			 //Auth data
+			 $table->string('email', 80)->unique();
+			 $table->string('password', 254)->nullable();
+  
+			  //Permission
+			 //---//
+  			 $table->rememberToken();
+			 $table->timestamps();
+			 $table->softDeletes();
 		});
 	}
 
@@ -48,7 +47,6 @@ class CreatePatientsTable extends Migration
 	public function down()
 	{
 		Schema::table('patients', function (Blueprint $table) {
-
 		});
 		Schema::drop('patients');
 	}

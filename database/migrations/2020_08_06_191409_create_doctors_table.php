@@ -47,10 +47,7 @@ class CreateDoctorsTable extends Migration
 	public function down()
 	{
 		Schema::table('doctors', function (Blueprint $table) {
-
 		});
 		Schema::drop('doctors');
-
-
 	}
 }
