@@ -11,6 +11,7 @@ use App\Http\Requests\EnfermeiroCreateRequest;
 use App\Http\Requests\EnfermeiroUpdateRequest;
 use App\Repositories\EnfermeiroRepository;
 use App\Validators\EnfermeiroValidator;
+use App\Services\EnfermeiroService;
 
 /**
  * Class EnfermeirosController.
