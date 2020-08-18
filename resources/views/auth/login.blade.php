@@ -1,3 +1,4 @@
+@extends('login.app')
 
 @section('content')
 <div class="container">
