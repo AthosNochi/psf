@@ -71,7 +71,7 @@ class UsersController extends Controller
             'messages' => $request['messages']
         ]);
         
-        return redirect()->route('register');
+        return redirect()->route('user.index');
     }
 
     /**
