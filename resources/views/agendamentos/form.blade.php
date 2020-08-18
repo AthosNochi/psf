@@ -63,7 +63,7 @@
               <td>{{ $agendamento->legenda }}</td>
 
               <td>
-                  {!! Form::open(['route' => ['enfermeiro.destroy', $enfermeiro->id], 'method' => 'DELETE']) !!}
+                  {!! Form::open(['route' => ['agendamento.destroy', $agendamento->id], 'method' => 'DELETE']) !!}
                   {!! Form::submit('Remover') !!}
                   {!! Form::close() !!}
               </td>
