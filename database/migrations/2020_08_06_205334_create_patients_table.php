@@ -19,7 +19,7 @@ class CreatePatientsTable extends Migration
            $table->increments('id');
 
             //People data
-           $table->integer('cpf')->unique()->nullable();
+           $table->integer('cpf', 11)->unique()->nullable();
 		   $table->string('name', 50);
 		   $table->integer('rg')->unique()->nullable();
 		   $table->integer('phone');
