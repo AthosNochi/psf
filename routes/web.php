@@ -30,6 +30,8 @@ Route::resource('/doctor', 'DoctorsController');
 
 Route::resource('/patient', 'PatientsController');
 
+Route::resource('/enfermeiro', 'EnfermeirosController');
+
 Route::resource('/agendamento', 'AgendamentosController');
 
 Auth::routes();
