@@ -36,17 +36,17 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($users as $user)
+            @foreach ($enfermeiros as $enfermeiro)
             <tr>
-                <td>{{ $user->id }}</td>
-                <td>{{ $user->cpf }}</td>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->rg }}</td>
-                <td>{{ $user->phone }}</td>
-                <td>{{ $user->email }}</td>
-                
+                <td>{{ $enfermeiro->id }}</td>
+                <td>{{ $enfermeiro->cpf }}</td>
+                <td>{{ $enfermeiro->name }}</td>
+                <td>{{ $enfermeiro->rg }}</td>
+                <td>{{ $enfermeiro->phone }}</td>
+                <td>{{ $enfermeiro->email }}</td>
+
                 <td>
-                    {!! Form::open(['route' => ['user.destroy', $user->id], 'method' => 'DELETE']) !!}
+                    {!! Form::open(['route' => ['enfermeiro.destroy', $enfermeiro->id], 'method' => 'DELETE']) !!}
                     {!! Form::submit('Remover') !!}
                     {!! Form::close() !!}
                 </td>
