@@ -7,7 +7,7 @@
 
       <label for="datahora">Data/hora:
       <input type="datetime-local" name="datahora"/>
-        </label>
+      </label>
         
       @include('templates.formulario.select', ['select' => 'id_patient', 'data' => $patient_list, 'attributes' => ['placeholder' => "Paciente"]])
       @include('templates.formulario.select', ['select' => 'id_doctor', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])               
@@ -39,6 +39,19 @@
 
       @include('templates.formulario.submit', ['input' => 'Salvar'])
     {!! Form::close() !!}
+
+    <table class="default-table">
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Descrição</th>
+              <th>Data/Hora</th>
+              <th>Paciente</th>
+              <th>Médico</th>
+              <th>Legenda</th>
+          </tr>
+      </thead>
+    </table>
 
 
  <!-- Footer -->

@@ -1,21 +1,11 @@
-@extends('templates.master')
-@section('conteudo-view')
-@if (session('success'))
-<h3>{{ session('success')['messages'] }}</h3>
-@endif
-
-    @foreach ($agendamentos as $agendamento)
-        <table id="agendamento_table" class="table table-striped table-hover" cellspacing="0" width="100%">
+        <table class="default-table">
             <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Descrição</th>
                     <th>Data/Hora</th>
                     <th>Paciente</th>
-                    <th>Descrição</th>
                     <th>Médico</th>
-                    <th>Especialidade</th>
-                    <th>Editar</th>
-                    <th>Excluir</th>
                     <th>Legenda</th>
                 </tr>
             </thead>
@@ -43,7 +33,7 @@
                 @endforeach
             </tbody>
         </table>
-        @endforeach
+       
 
  <!-- Footer -->
     <footer class="footer bg-light">
