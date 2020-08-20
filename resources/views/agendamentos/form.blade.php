@@ -59,7 +59,7 @@
               <td>{{ $agendamento->id }}</td>
               <td>{{ $agendamento->descricao }}</td>
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-              <td>{{ $agendamento->patient->['name'] }}</td>
+              <td>{{ $agendamento->patient->name }}</td>
               <td>{{ $agendamento->doctor->name }}</td>
               <td>{{ $agendamento->doctor->specialty }}</td>
               <td>{{ $agendamento->legenda }}</td>
