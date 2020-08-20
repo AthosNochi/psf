@@ -18,7 +18,7 @@ class Agendamento extends Model
     protected $fillable = ['name', 'patient_id', 'doctor_id'];
 
 
-    public function user()
+    public function patient()
     {
         return $this->belongsTo(Patient::class, 'patient_id');
     }
