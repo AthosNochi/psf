@@ -15,16 +15,16 @@ class Agendamento extends Model
 {
     //
 
-    protected $fillable = ['name', 'doctor_id', 'patient_id'];
+    protected $fillable = ['name', 'patient_id', 'doctor_id'];
 
 
-    public function owner()
+    public function user()
     {
         return $this->belongsTo(Patient::class, 'patient_id');
     }
 
     public function doctor()
     {
-        return $this->belongsTo(Doctor::class);
+        return $this->belongsTo(Doctor::class, 'doctor_id');
     }
 }
