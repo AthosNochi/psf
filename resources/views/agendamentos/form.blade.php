@@ -59,9 +59,8 @@
               <td>{{ $agendamento->id }}</td>
               <td>{{ $agendamento->descricao }}</td>
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-              <td>{{ $agendamento->patient_list->name }}</td>
-              <td>{{ $agendamento->doctor_list->name}}</td>
-              <td>{{ $agendamento->doctor->specialty }}</td>
+          
+              
               <td>{{ $agendamento->legenda }}</td>
 
               <td><a href="{{ route('agendamentos.edit', $agendamento->id) }}" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></a></td>
