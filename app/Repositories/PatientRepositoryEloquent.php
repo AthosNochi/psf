@@ -16,7 +16,7 @@ use App\Validators\PatientValidator;
 class PatientRepositoryEloquent extends BaseRepository implements PatientRepository
 {
 
-    public function selectBoxList($descricao = 'name', $chave = 'id')
+    public function selectBoxList(string $descricao = 'name', string $chave = 'id')
     {
         return $this->model->pluck($descricao, $chave)->all();
     }
