@@ -52,15 +52,16 @@ class AgendamentosController extends Controller
      */
     public function index()
     {
-        $agendamentos = $this->repository->all();
+        $agendamentos       = $this->repository->all();
 
-        $patient_list = \App\Entities\Patient::pluck('name', 'id')->all();
-        $doctor_list = \App\Entities\Doctor::pluck('name', 'id', 'specialty')->all();
+        $patient_list       = \App\Entities\Patient::pluck('name', 'id')->all();
+        $doctor_list        = \App\Entities\Doctor::pluck('name', 'id', 'specialty')->all();
         
 
         return view('agendamentos.form', [
+            'agendamentos'      =>$agendamentos,
             'patient_list'      => $patient_list,
-            'doctor_list'      => $doctor_list,
+            'doctor_list'       => $doctor_list,
         ]);
     }
 
@@ -77,10 +78,10 @@ class AgendamentosController extends Controller
 
     public function create()
     {
-        $method = 'post';
-        $agendamento = new Agendamento();
-        $patients = Patient::all();
-        $doctors = Doctor::all();
+        $method         = 'post';
+        $agendamento    = new Agendamento();
+        $patients       = Patient::all();
+        $doctors        = Doctor::all();
 
         return view('agendamentos.form')->with('patients', $patients)
                                         ->with('doctors', $doctors)
@@ -92,11 +93,11 @@ class AgendamentosController extends Controller
     public function store(AgendamentoCreateRequest $request)
     {
             $agendamento = new Agendamento();
-            $agendamento->descricao = $request->input('descricao');
-            $agendamento->datahora = $request->input('datahora');
-            $agendamento->id_patient = $request->input('patient_id');
-            $agendamento->id_doctor = $request->input('doctor_id');
-            $agendamento->legenda = $request->input('legenda');
+            $agendamento->descricao     = $request->input('descricao');
+            $agendamento->datahora      = $request->input('datahora');
+            $agendamento->id_patient    = $request->input('patient_id');
+            $agendamento->id_doctor     = $request->input('doctor_id');
+            $agendamento->legenda       = $request->input('legenda');
             $agendamento->save();
 
             return redirect()->route('agendamento.index');
