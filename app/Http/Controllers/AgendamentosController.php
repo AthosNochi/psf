@@ -41,7 +41,7 @@ class AgendamentosController extends Controller
      * @param AgendamentoRepository $repository
      * @param AgendamentoValidator $validator
      */
-    public function __construct(AgendamentoRepository $repository, AgendamentoValidator $validator, AgendamentoService $service, PatientRepository $patientRepository, DoctorRepositoy $doctorRepository)
+    public function __construct(AgendamentoRepository $repository, AgendamentoValidator $validator, AgendamentoService $service, PatientRepository $patientRepository, DoctorRepository $doctorRepository)
     {
         $this->repository           = $repository;
         $this->validator            = $validator;
