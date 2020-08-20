@@ -15,11 +15,12 @@ use App\Validators\PatientValidator;
  */
 class PatientRepositoryEloquent extends BaseRepository implements PatientRepository
 {
-    /**
-     * Specify Model class name
-     *
-     * @return string
-     */
+
+    public function selectBoxList($descricao = 'name', $chave = 'id')
+    {
+        return $this->model->pluck($descricao, $chave)->all();
+    }
+
     public function model()
     {
         return Patient::class;

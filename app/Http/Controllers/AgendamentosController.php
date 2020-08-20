@@ -11,11 +11,13 @@ use App\Http\Requests\AgendamentoCreateRequest;
 use App\Http\Requests\AgendamentoUpdateRequest;
 use App\Repositories\AgendamentoRepository;
 use App\Repositories\PatientRepository;
+use App\Repositories\DoctorRepository;
 use App\Validators\AgendamentoValidator;
 use App\Services\AgendamentoService;
 use App\Entities\Agendamento;
 use App\Entities\Patient;
 use App\Entities\Doctor;
+
 
 /**
  * Class AgendamentosController.
@@ -31,6 +33,7 @@ class AgendamentosController extends Controller
     protected $validator;
     protected $service;
     protected $patientRepository;
+    protected $doctorRepository;
 
     /**
      * AgendamentosController constructor.
@@ -38,11 +41,13 @@ class AgendamentosController extends Controller
      * @param AgendamentoRepository $repository
      * @param AgendamentoValidator $validator
      */
-    public function __construct(AgendamentoRepository $repository, AgendamentoValidator $validator, AgendamentoService $service)
+    public function __construct(AgendamentoRepository $repository, AgendamentoValidator $validator, AgendamentoService $service, PatientRepository $patientRepository, DoctorRepositoy $doctorRepository)
     {
-        $this->repository = $repository;
-        $this->validator  = $validator;
-        $this->service    = $service;
+        $this->repository           = $repository;
+        $this->validator            = $validator;
+        $this->service              = $service;
+        $this->patientRepository    = $patientRepository;
+        $this->doctorRepository     = $doctorRepository;
     }
 
     /**
@@ -53,9 +58,8 @@ class AgendamentosController extends Controller
     public function index()
     {
         $agendamentos       = $this->repository->all();
-
-        $patient_list       = \App\Entities\Patient::pluck('name', 'id')->all();
-        $doctor_list        = \App\Entities\Doctor::pluck('name', 'id', 'specialty')->all();
+        $patient_list       = $this->patientRepository->selecBoxList();
+        $doctor_list        = $this->doctorRepository->selectBoxList();
         
 
         return view('agendamentos.form', [

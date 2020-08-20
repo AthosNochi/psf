@@ -15,11 +15,13 @@ use App\Validators\DoctorValidator;
  */
 class DoctorRepositoryEloquent extends BaseRepository implements DoctorRepository
 {
-    /**
-     * Specify Model class name
-     *
-     * @return string
-     */
+
+    public function selectBoxList(string $descricao = 'name', string $chave = 'id')
+    {
+        return $this->model->pluck($descricao, $chave)->all();
+    }
+
+
     public function model()
     {
         return Doctor::class;
