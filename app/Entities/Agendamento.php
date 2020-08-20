@@ -13,18 +13,14 @@ use Prettus\Repository\Traits\TransformableTrait;
  */
 class Agendamento extends Model
 {
-    //
-
-    protected $fillable = ['name', 'patient_id', 'doctor_id'];
-
-
-    public function owner()
+    
+    public function patient()
     {
-        return $this->belongsTo(Patient::class, 'patient_id');
+        return $this->belongsTo(Patient::class, 'id_patient');
     }
 
     public function doctor()
     {
-        return $this->belongsTo(Doctor::class, 'doctor_id');
+        return $this->belongsTo(Doctor::class, 'id_doctor');
     }
 }
