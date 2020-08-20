@@ -22,7 +22,7 @@ class Agendamento extends Model
         return $this->belongsTo(Doctor::class);
     }
 
-    public function patient()
+    public function owner()
     {
         return $this->belongsTo(Patient::class, 'id_patient');
     }
