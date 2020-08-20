@@ -36,16 +36,5 @@
                 @endforeach
             </tbody>
         </table>
-       
 
- <!-- Footer -->
-    <footer class="footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <p class="text-muted small mb-4 mb-lg-0">&copy; Renato de Oliveira Lucena 2018</p>
-          </div>
-        </div>
-      </div>
-    </footer>
 @endsection
