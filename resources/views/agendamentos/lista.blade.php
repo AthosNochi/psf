@@ -21,16 +21,6 @@
                     <td>{{ $agendamento->doctor->name }}</td>
                     <td>{{ $agendamento->doctor->specialty }}</td>
                     <td>{{ $agendamento->legenda }}</td>
-
-                    <td><a href="{{ route('agendamentos.edit', $agendamento->id) }}" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></a></td>
-                        <td>
-                        <form action="{{ route('agendamentos.destroy', $agendamento->id ) }}" method="POST">
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
-                            <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></button>
-                        </form>
-                    </td> 
-                        <td>{{ $agendamento->legenda }}</td>
                 <!-- <td><button class="btn btn-info demo" >Status</button></td> -->        
                 </tr>
                 @endforeach
