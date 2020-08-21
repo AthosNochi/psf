@@ -63,11 +63,9 @@ class AgendamentosController extends Controller
         
 
         return view('agendamentos.form', [
-            'name' => $agendamentos->name,
             'agendamentos'      => $agendamentos,
             'patient_list'      => $patient_list,
             'doctor_list'       => $doctor_list,
-            dd('name'),
         ]);
     }
 
