@@ -13,6 +13,9 @@
         @include('templates.formulario.input', ['input' => 'birth', 'attributes' => ['placeholder' => "Nascimento"]])
         @include('templates.formulario.input', ['input' => 'gender', 'attributes' => ['placeholder' => "Genero"]])
         @include('templates.formulario.input', ['input' => 'notes', 'attributes' => ['placeholder' => "Notas"]])
+        @include('templates.formulario.input', ['input' => 'sus', 'attributes' => ['placeholder' => "Cartão do SUS"]])
+        @include('templates.formulario.input', ['input' => 'address', 'attributes' => ['placeholder' => "Endereço"]])
+
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
         
         @include('templates.formulario.submit', ['input' => 'Cadastrar'])    
@@ -30,6 +33,8 @@
                 <td>Nascimento</td>
                 <td>Genero</td>
                 <td>Notas</td>
+                <td>Cartão do SUS</td>
+                <td>Endereço</td>
                 
                 <td>Menu</td>
             </tr>
@@ -46,6 +51,8 @@
                 <td>{{ $patient->birth }}</td>
                 <td>{{ $patient->gender }}</td>
                 <td>{{ $patient->notes }}</td>
+                <td>{{ $patient->sus }}</td>
+                <td>{{ $patient->address }}</td>
                 <td>
                     {!! Form::open(['route' => ['patient.destroy', $patient->id], 'method' => 'DELETE']) !!}
                     {!! Form::submit('Remover') !!}

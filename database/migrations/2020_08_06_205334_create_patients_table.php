@@ -26,6 +26,8 @@ class CreatePatientsTable extends Migration
 			 $table->char('gender', 11);
 			 $table->string('notes', 50);
 			 $table->string('birth', 11);
+			 $table->string('sus', 50);
+			 $table->string('address', 80);
 
 			
 			 //Auth data

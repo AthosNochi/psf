@@ -19,7 +19,7 @@ class Patient extends Authenticatable
 
    public 	 $timestamps   =  true;
    protected $table        = 'patients';
-   protected $fillable     = ['cpf', 'name', 'rg', 'phone', 'birth', 'gender', 'notes', 'email', 'password'];
+   protected $fillable     = ['cpf', 'name','sus', 'address' 'rg', 'phone', 'birth', 'gender', 'notes', 'email', 'password'];
    protected $hidden       = ['password', 'remember_token'];
 
 
