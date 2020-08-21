@@ -57,7 +57,7 @@
               <td>{{ $agendamento->id }}</td>
               <td>{{ $agendamento->descricao }}</td>
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-              <td>{{$agendamento->patient->name)}}</td>
+              <td>{{$agendamento->patient->name}}</td>
               
               <td>{{ $agendamento->legenda }}</td>
           <!-- <td><button class="btn btn-info demo" >Status</button></td> -->        
