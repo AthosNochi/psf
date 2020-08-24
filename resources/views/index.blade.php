@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
-
+    
   </head>
 
   <body>
@@ -31,28 +31,6 @@
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
     </nav>
-
-    <!-- Masthead -->
-    <header class="masthead text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Aproveite os benefícios de um sistema médico que atende todas as suas necessidades</h1>
-          </div>			
-        </div>
-		  <div class="row">
-			<div class="col-12 col-md-12">
-        <a class="btn btn-primary" href="{{ url('/cadastrar') }}">Cadastre-se gratuitamente</a>
-			</div>
-		  </div>
-      </div>
-    </header>
-
-
-    
-
-    
 
     <!-- Footer -->
     <footer class="footer bg-light">
