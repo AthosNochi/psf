@@ -64,7 +64,7 @@
                 <td>{{ $psf->phone }}</td>
                 <td>{{ $psf->regiao }}</td>
                 <td>
-                    {!! Form::open(['route' => ['user.destroy', $user->id], 'method' => 'DELETE']) !!}
+                    {!! Form::open(['route' => ['psf.destroy', $psf->id], 'method' => 'DELETE']) !!}
                     <input class="btn btn-primary" type="submit" name="submit" value="Remover">
                     {!! Form::close() !!}
                 </td>
