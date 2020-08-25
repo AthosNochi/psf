@@ -66,8 +66,6 @@
                 <td>#</td>
                 <td>Nome</td>
                 <td>Email</td>
-                <td>CPF</td>
-                <td>RG</td>
                 <td>Telefone</td>
                 <td>Administrador</td>
                 <td>Menu</td>
@@ -79,8 +77,6 @@
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
-                <td>{{ $user->cpf }}</td>
-                <td>{{ $user->rg }}</td>
                 <td>{{ $user->phone }}</td>
                 <td>{{ $user->isAdm }}</td>
                 <td>
