@@ -6,10 +6,15 @@
     <link rel="stylesheet" href="{{ asset('css\stylesheet.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
+    
     @yield('css-view')
 </head>
 <body>
-    @include('templates.menu-lateral')
+    <script src="{{ asset('site/jquery.js') }}"></script>
+    <script src="{{ asset('site/bootstrap.js') }}"></script>
+
+    @include('templates.menu-superior')
 
     <section id="view-conteudo">
         @yield('conteudo-view')

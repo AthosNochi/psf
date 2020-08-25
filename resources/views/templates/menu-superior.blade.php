@@ -1,5 +1,5 @@
-<div class="alert alert-dark" role="alert">
-<nav id="principal">
+
+<nav id="principal" class="navbar navbar-dark bg-dark static-top">
     <ul>
         <li>
         <a href="{{ route('user.index') }}">
@@ -45,5 +45,3 @@
         </li>
     </ul>
 </nav>
-
-</div>
