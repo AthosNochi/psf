@@ -18,19 +18,21 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
+        <label for="phone" class="col-sm-4 col-form-label"> Telefone:</label>
         <div class="col-sm-6">
             <input type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
         </div>
     </div>
-    <div class="form-group">
-        <label for="regiao">Região</label>
-        <select class="form-control" id="regiao">
-          <option>Sul</option>
-          <option>Norte</option>
-          <option>Leste</option>
-          <option>Oeste</option>
-        </select>
+    <div class="form-group row">
+        <label for="regiao" class="col-sm-4 col-form-label"> Região</label>
+        <div class="col-sm-6">
+            <select class="form-control" id="regiao">
+            <option>Sul</option>
+            <option>Norte</option>
+            <option>Leste</option>
+            <option>Oeste</option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
