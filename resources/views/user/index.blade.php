@@ -11,7 +11,9 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
+    
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+    <div class="modal-body mx-3">
     <div class="form-group">
         <div class="form-check">
         <label for="nome">Nome</label>
@@ -53,6 +55,8 @@
         <label for="isAdm">Administrador</label>
         @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
         </div>
+    </div>
+
     </div>
     <button type="submit" class="btn btn-primary">Cadastrar</button>    {!! Form::close() !!}
 
