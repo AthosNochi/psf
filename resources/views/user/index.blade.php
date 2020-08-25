@@ -14,22 +14,25 @@
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group">
         <div class="form-check">
-        <label for="telefone">Nome</label>
+        <label for="nome">Nome</label>
         @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
+        <label for="email">Email</label>
         @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder' => "Email"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
+        <label for="password">Senha</label>
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
+        <label for="isAdm">Administrador</label>
         @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
         </div>
     </div>
