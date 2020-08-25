@@ -1,4 +1,5 @@
 @extends('templates.master')
+@extends('login.app')
 
 @section('conteudo-view')
 
