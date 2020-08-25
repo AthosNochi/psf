@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
 
             //People data
 		   $table->string('name');
-		   $table->string('phone', 11);
+		   $table->char('phone', 11);
 
             //Auth data
            $table->string('email', 80)->unique();

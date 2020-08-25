@@ -24,4 +24,10 @@ class User extends Authenticatable
    {
    		$this->attributes['password'] = env('PASSWORD_HASH') ? bcrypt('$value') : '$value';
    } 
+
+   public function getPhoneAttribute()
+   {
+       $phone = $this->attributes['phone'];
+       return "(" . substr($phone, 0, 2) . ")" . substr($phone, 2, 4) . "-" . substr($phone, -4) ;
+   }
 }
