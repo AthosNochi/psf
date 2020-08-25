@@ -23,4 +23,10 @@ class Psf extends Model implements Transformable
     protected $fillable     = ['name', 'endereco', 'phone', 'regiao'];
     public $timestamps      = true;
 
+    public function getPhoneAttribute()
+   {
+       $phone = $this->attributes['phone'];
+       return "(" . substr($phone, 0, 2) . ")" . substr($phone, 2, 4) . "-" . substr($phone, -4) ;
+   }
+
 }
