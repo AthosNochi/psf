@@ -12,6 +12,12 @@
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+    <div class="form-group row">
+        <label for="Nome" class="col-sm-4 col-form-label">* Nome:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
+        </div>
+    </div>
     <div class="form-group">
         <div class="form-check">
         <label for="Nome" class="col-sm-4 col-form-label">Nome:</label>
