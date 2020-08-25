@@ -23,13 +23,8 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('agendamento.index') }}">Agendamentos</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Menu
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="{{ route('logout') }}">Sair</a>
-          </div>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}">SAIR</a>
         </li>
       </ul>
     </div>
