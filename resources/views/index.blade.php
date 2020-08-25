@@ -29,7 +29,7 @@
   <script src="{{ asset('site/bootstrap.js') }}"></script>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-light bg-dark static-top">
+    <nav class="navbar navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">Sistema de Agendamento em PSF</a>
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
