@@ -1,5 +1,7 @@
 @extends('templates.master')
 
+@section('conteudo-view')
+
     <form action="{{ route('user.store') }}" method="post">
 
         <div class="form-group">
@@ -73,3 +75,4 @@
             @endforeach
         </tbody>
     </table>
+@endsection
