@@ -1,5 +1,4 @@
 <div class="alert alert-dark" role="alert">
-
 <nav id="principal">
     <ul>
         <li>
@@ -39,7 +38,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('logout') }}">
+            <a href="{{ route('logout') }}" class="alert-link">
                 <i class"""></i>
                 <h3>Sair</h3>
             </a>
