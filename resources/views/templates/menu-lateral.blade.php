@@ -1,3 +1,5 @@
+<div class="alert alert-dark" role="alert">
+
 <nav id="principal">
     <ul>
         <li>
@@ -43,8 +45,6 @@
             </a>
         </li>
     </ul>
-
-    
-        
-    
 </nav>
+
+</div>
