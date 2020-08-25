@@ -18,13 +18,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    
+  <link rel="stylesheet" href= "{{ asset('site/bootstrap.css') }}">
 
   </head>
 
   <body>
 
   <script src="{{ asset('site/jquery.js') }}"></script>
+  <script src="{{ asset('site/bootstrap.js') }}"></script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
