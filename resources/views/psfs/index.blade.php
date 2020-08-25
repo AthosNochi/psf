@@ -33,7 +33,7 @@
     <div class="form-group row">
         <label for="regiao" class="col-sm-4 col-form-label"> Região:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="regiao" placeholder="Região" required>
+            <input type="text" class="form-control" maxlength="255" name="regiao" placeholder="Exemplo: Norte, Sul, Leste, Oeste" required>
         </div>
     </div>
     
