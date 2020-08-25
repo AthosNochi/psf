@@ -16,7 +16,7 @@
         <input type="password" name="password" class="form-control mb-4" placeholder="Senha">
         <input type="submit" class="btn btn-info btn-block my-4" value="Enviar"/>
         <div class="form-group">
-            <div class="btn btn-info btn-block my-4">
+            <div class="my-4">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
