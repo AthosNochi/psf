@@ -1,3 +1,3 @@
-<label class="{{ $class ?? "btn btn-primary"}} submit">
+<label class="{{ $class ?? null }} submit">
 {!! Form::submit($input) !!}
 </label>
