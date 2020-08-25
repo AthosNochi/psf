@@ -14,6 +14,7 @@
         <p class="h4 mb-4">Login</p>
         <input type="email" name="email" class="form-control mb-4" placeholder="email@dominio.com">
         <input type="password" name="password" class="form-control mb-4" placeholder="Senha">
+        <input type="submit" class="btn btn-info btn-block my-4" value="Enviar"/>
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <div class="checkbox">
@@ -24,12 +25,8 @@
             </div>
         </div>
 
-        <div class="form-control mb-4">
+        <div class="form-group">
             <div class="col-md-8 col-md-offset-4">
-                <button type="submit" class="btn btn-primary">
-                    Login
-                </button>
-
                 <a class="btn btn-link" href="{{ route('password.request') }}">
                     Forgot Your Password?
                 </a>
