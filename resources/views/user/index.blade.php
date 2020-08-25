@@ -85,7 +85,9 @@
                 <td>{{ $user->isAdm }}</td>
                 <td>
                     {!! Form::open(['route' => ['user.destroy', $user->id], 'method' => 'DELETE']) !!}
-                    {!! Form::submit('Remover') !!}
+                    <div class="modal-footer d-flex justify-content-center">
+                        <input class="btn btn-primary" type="submit" name="submit" value="Remover">
+                    </div>
                     {!! Form::close() !!}
                 </td>
             </tr>
