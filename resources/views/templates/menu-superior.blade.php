@@ -1,5 +1,5 @@
 
-<nav id="principal" class="navbar navbar-dark bg-dark static-top">
+<nav id="principal" class="navbar navbar-light bg-light">
     <ul>
         <li>
         <a href="{{ route('user.index') }}">
