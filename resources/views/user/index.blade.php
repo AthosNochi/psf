@@ -36,8 +36,7 @@
         @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
         </div>
     </div>
-        @include('templates.formulario.submit', ['input' => 'Cadastrar', 'class' => "btn btn-primary"])    
-    {!! Form::close() !!}
+    <button type="submit" class="btn btn-primary">Cadastrar</button>    {!! Form::close() !!}
 
     <table class="default-table">
         <thead>
