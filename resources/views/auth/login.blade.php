@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="center">
-      <h2 class="text-center">Ouvidoria Mec</h2>
+      <h2 class="text-center">Sistema de Agendamento em PSF</h2>
 
       <hr>
 
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-control mb-4">
             <div class="col-md-8 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
                     Login
