@@ -45,7 +45,7 @@
     <div class="form-group row">
         <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" maxlength="11" name="phone" placeholder="(99)9999-9999" required>
+            <input type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
         </div>
     </div>
     <div class="form-group row">
