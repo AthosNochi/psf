@@ -63,12 +63,12 @@
         <table class="table" align="center">
             <thead>
             <tr>
-                <td>#</td>
-                <td>Nome</td>
-                <td>Email</td>
-                <td>Telefone</td>
-                <td>Administrador</td>
-                <td>Menu</td>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Email</td>
+                <th>Telefone</th>
+                <th>Administrador</th>
+                <th>Menu</th>
             </tr>
         </thead>
         <tbody>
