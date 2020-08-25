@@ -45,11 +45,6 @@
             <h1 class="mb-5">Aproveite os benefícios de um sistema médico que atende todas as suas necessidades</h1>
           </div>			
         </div>
-		  <div class="row">
-			<div class="col-12 col-md-12">
-        <a class="btn btn-primary" href="{{ url('/cadastrar') }}">Cadastre-se gratuitamente</a>
-			</div>
-		  </div>
       </div>
     </header>
 
