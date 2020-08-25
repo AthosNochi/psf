@@ -68,7 +68,7 @@
                 <th>Email</td>
                 <th>Telefone</th>
                 <th>Administrador</th>
-                <th>Menu</th>
+                <th>Opções</th>
             </tr>
         </thead>
         <tbody>
