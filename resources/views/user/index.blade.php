@@ -1,6 +1,6 @@
 @extends('templates.master')
 
-    <form action="{{ route('user.store', $user->id) }}" method="post">
+    <form action="{{ route('user.store') }}" method="post">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
