@@ -36,6 +36,66 @@
       </div>
     </nav>
 
+     <!-- Navigation -->
+     <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Sistema de Agendamento</a>
+        <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Aproveite os benefícios de um sistema médico que atende todas as suas necessidades</h1>
+          </div>			
+        </div>
+		  <div class="row">
+			<div class="col-12 col-md-12">
+        <a class="btn btn-primary" href="{{ url('/cadastrar') }}">Cadastre-se gratuitamente</a>
+			</div>
+		  </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-screen-desktop m-auto text-primary"></i>
+              </div>
+              <h3>Multiplataforma</h3>
+              <p class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-layers m-auto text-primary"></i>
+              </div>
+              <h3>Online</h3>
+              <p class="lead mb-0">Sistema online 24hrs por dia, 7 dias por semana</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-check m-auto text-primary"></i>
+              </div>
+              <h3>Intuitivo</h3>
+              <p class="lead mb-0">Sistema intuitivo de fácil utilização, não requer nenhum treinamento</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer bg-light">
       <div class="container">
