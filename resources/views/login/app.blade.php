@@ -11,14 +11,16 @@
     <title>{{ config('app.name', 'PSF') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('site/jquery.js') }}"></script>
+    <script src="{{ asset('site/bootstrap.js') }}"></script>
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
 </head>
 <body>
     <div id="app">
