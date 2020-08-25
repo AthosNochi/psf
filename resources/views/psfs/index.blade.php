@@ -33,6 +33,7 @@
     <div class="form-group row">
         <label for="regiao" class="col-sm-4 col-form-label"> Região</label>
         <div class="col-sm-6">
+            <input type="submit">
             <select class="form-control" id="regiao">
             <option>Sul</option>
             <option>Norte</option>
