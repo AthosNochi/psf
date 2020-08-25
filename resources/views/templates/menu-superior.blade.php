@@ -1,24 +1,13 @@
 
 <nav class="navbar navbar-dark bg-dark static-top">
-    <ul>
-        <li>
-        <a href="{{ route('user.index') }}">
-                <i class="fa fa-address-card"></i>
-                <h3>Usuários</h3>
-            </a>
-        </li>
-        <li>
-        <a href="{{ route('psf.index') }}">
-                <i class"""></i>
-                <h3>Psf</h3>
-            </a>
-        </li>
-        <li>
-            <a href="{{ route('doctor.index') }}">
-                <i class"""></i>
-                <h3>Médicos</h3>
-            </a>
-        </li>
+    <div class="container">
+        <a class="navbar-brand" href="{{ route('user.index') }}">Usuários</a>
+        <a class="navbar-brand" href="{{ route('psf.index') }}">Psf</a>
+        <a class="navbar-brand" href="{{ route('doctor.index') }}">Médicos</a>
+        <a class="navbar-brand" href="{{ route('patient.index') }}">Pacientes</a>
+    </div>
+      
+        
         <li>
             <a href="{{ route('patient.index') }}">
                 <i class"""></i>
