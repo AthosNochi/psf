@@ -9,7 +9,7 @@
 
       <br>
 
-      <form class="text-center border border-light p-5" method="post" action={{route('login.enter')}}>
+      <form class="text-center border border-light p-5" method="post" action={{route('login')}}>
         @csrf
         <p class="h4 mb-4">Login</p>
         <input type="email" name="email" class="form-control mb-4" placeholder="email@dominio.com">
@@ -39,4 +39,5 @@
 
     </div>
 </div>
+@endsection
 @endsection
