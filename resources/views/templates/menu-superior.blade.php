@@ -6,31 +6,29 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="navbar-link" href="{{ route('user.index') }}">Usuários</a>
+            <a class="nav-link" href="{{ route('user.index') }}">Usuários</a>
         </li>
         <li class="nav-item">
-            <a class="navbar-link" href="{{ route('psf.index') }}">Psf</a>
+            <a class="nav-link" href="{{ route('psf.index') }}">Psf</a>
         </li>
         <li class="nav-item">
-            <a class="navbar-link" href="{{ route('doctor.index') }}">Médicos</a>
+            <a class="nav-link" href="{{ route('doctor.index') }}">Médicos</a>
         </li>
         <li class="nav-item">
-            <a class="navbar-link" href="{{ route('patient.index') }}">Pacientes</a>
+            <a class="nav-link" href="{{ route('patient.index') }}">Pacientes</a>
         </li>
         <li class="nav-item">
-            <a class="navbar-link" href="{{ route('enfermeiro.index') }}">Efermeiros</a>
+            <a class="nav-link" href="{{ route('enfermeiro.index') }}">Efermeiros</a>
         </li>
         <li class="nav-item">
-            <a class="navbar-link" href="{{ route('agendamento.index') }}">Agendamentos</a>
+            <a class="nav-link" href="{{ route('agendamento.index') }}">Agendamentos</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
+            Menu
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
       </ul>
