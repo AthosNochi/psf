@@ -27,7 +27,7 @@
     <div class="form-group row">
         <label for="password" class="col-sm-4 col-form-label"> Senha:</label>
         <div class="col-sm-8">
-            <input type="password" class="form-control" maxlength="255" name="password" placeholder="exemplo@email.com" required>
+            <input type="password" class="form-control" maxlength="255" name="password" placeholder="Escolha uma senha" required>
         </div>
     </div>
     <div class="form-group row">
