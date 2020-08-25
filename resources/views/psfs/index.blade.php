@@ -31,17 +31,12 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="regiao" class="col-sm-4 col-form-label"> Região</label>
-        <div class="col-sm-6">
-            <input type="submit">
-            <select class="form-control" id="regiao">
-            <option>Sul</option>
-            <option>Norte</option>
-            <option>Leste</option>
-            <option>Oeste</option>
-            </select>
+        <label for="regiao" class="col-sm-4 col-form-label"> Região:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="regiao" placeholder="Região" required>
         </div>
     </div>
+    
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
     </div>
@@ -68,7 +63,6 @@
                 <td>{{ $psf->endereco }}</td>
                 <td>{{ $psf->phone }}</td>
                 <td>{{ $psf->regiao }}</td>
-                <td>{{ $psf->permission }}</td>
                 <td>
                     {!! Form::open(['route' => ['psf.destroy', $psf->id], 'method' => 'DELETE']) !!}
                     {!! Form::submit('Remover') !!}
