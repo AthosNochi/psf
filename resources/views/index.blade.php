@@ -31,7 +31,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-dark static-top">
       <div class="container">
-        <a class="navbar-brand bg-light" href="#">Sistema de Agendamento em PSF</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Sistema de Agendamento em PSF <span class="sr-only">(current)</span></a>
+        </li>
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
     </nav>
