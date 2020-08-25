@@ -66,8 +66,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-layers m-auto text-primary"></i>
               </div>
-              <h3>Online</h3>
-              <p class="lead mb-0">Sistema online 24hrs por dia, 7 dias por semana</p>
+              <h3>Acessível</h3>
+              <p class="lead mb-0">Sistema acessível para todos </p>
             </div>
           </div>
           <div class="col-lg-4">
