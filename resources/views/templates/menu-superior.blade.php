@@ -28,7 +28,7 @@
             Menu
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="{{ route('logout') }}">Sair</a>
           </div>
         </li>
       </ul>
