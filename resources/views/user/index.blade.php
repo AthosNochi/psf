@@ -54,7 +54,10 @@
           <input type="checkbox" name="isAdm" id="isAdm" onchange="administratorCheckbox()">
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>    {!! Form::close() !!}
+    <div class="modal-footer d-flex justify-content-center">
+        <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+    </div>    
+    {!! Form::close() !!}
 
     <table class="default-table">
         <thead>
