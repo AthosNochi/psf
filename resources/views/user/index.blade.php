@@ -11,52 +11,48 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-    
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
-    <div class="modal-body mx-3">
     <div class="form-group">
         <div class="form-check">
-        <label for="nome">Nome</label>
+        <label for="Nome" class="col-sm-4 col-form-label">Nome:</label>
         @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
-        <label for="email">Email</label>
+        <label for="Nome" class="col-sm-4 col-form-label">Email:</label>
         @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder' => "Email"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
-        <label for="password">Senha</label>
+        <label for="Nome" class="col-sm-4 col-form-label">Senha</label>
         @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
-        <label for="cpf">CPF</label>
+        <label for="Nome" class="col-sm-4 col-form-label">CPF:</label>
         @include('templates.formulario.input', ['input' => 'cpf', 'attributes' => ['placeholder' => "CPF"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
-        <label for="rg">RG</label>
+        <label for="Nome" class="col-sm-4 col-form-label">RG:</label>
         @include('templates.formulario.input', ['input' => 'rg', 'attributes' => ['placeholder' => "RG"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
-        <label for="phone">Telefone</label>
+        <label for="Nome" class="col-sm-4 col-form-label">Telefone:</label>
         @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
         </div>
     </div>
     <div class="form-group">
         <div class="form-check">
-        <label for="isAdm">Administrador</label>
+        <label for="Nome" class="col-sm-4 col-form-label">Admnistrador:</label>
         @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
         </div>
-    </div>
-
     </div>
     <button type="submit" class="btn btn-primary">Cadastrar</button>    {!! Form::close() !!}
 
