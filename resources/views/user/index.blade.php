@@ -30,18 +30,18 @@
             <input type="password" class="form-control" maxlength="255" name="password" placeholder="Escolha uma senha" required>
         </div>
     </div>
-    <div class="form-group row">
+  <!--  <div class="form-group row">
         <label for="cpf" class="col-sm-4 col-form-label">* CPF:</label>
         <div class="col-sm-5">
             <input type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
         </div>
-    </div>
-    <div class="form-group row">
+    </div> -->
+ <!--   <div class="form-group row">
         <label for="rg" class="col-sm-4 col-form-label">* RG:</label>
         <div class="col-sm-5">
             <input type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
         </div>
-    </div>
+    </div> -->
     <div class="form-group row">
         <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
         <div class="col-sm-6">
