@@ -10,7 +10,7 @@
     <title>Sistema de Agendamento</title>
     <!-- Custom styles for this template -->
     
-    <link rel="stylesheet" href= "{{ asset('site/bootstrap.css') }}">
+  <link rel="stylesheet" href= "{{ asset('site/bootstrap.css') }}">
   </head>
 
   <body>
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
         <a class="navbar-brand" href="#">Sistema de Agendamento</a>
-        <a class="btn btn-lg btn-success" href="{{ url('/entrar') }}">Entrar</a>
+        <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
     </nav>
 
