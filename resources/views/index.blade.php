@@ -36,14 +36,6 @@
       </div>
     </nav>
 
-     <!-- Navigation -->
-     <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Sistema de Agendamento</a>
-        <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
-      </div>
-    </nav>
-
     <!-- Masthead -->
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
