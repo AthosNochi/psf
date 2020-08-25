@@ -3,11 +3,6 @@
 @section('content')
 <div class="container">
     <div class="center">
-      <h2 class="text-center">Sistema de Agendamento em PSF</h2>
-
-      <hr>
-
-      <br>
 
       <form class="text-center border border-light p-5" method="post" action={{route('login')}}>
         @csrf
