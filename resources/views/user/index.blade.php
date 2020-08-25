@@ -59,8 +59,9 @@
     </div>    
     {!! Form::close() !!}
 
-    <table class="default-table">
-        <thead>
+    <div class="panel">
+        <table class="table" align="center">
+            <thead>
             <tr>
                 <td>#</td>
                 <td>Nome</td>
@@ -91,4 +92,5 @@
             @endforeach
         </tbody>
     </table>
+</div>
 @endsection
