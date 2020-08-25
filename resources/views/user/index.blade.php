@@ -32,6 +32,24 @@
     </div>
     <div class="form-group">
         <div class="form-check">
+        <label for="cpf">CPF</label>
+        @include('templates.formulario.input', ['input' => 'cpf', 'attributes' => ['placeholder' => "CPF"]])
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+        <label for="rg">RG</label>
+        @include('templates.formulario.input', ['input' => 'rg', 'attributes' => ['placeholder' => "RG"]])
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+        <label for="phone">Telefone</label>
+        @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
         <label for="isAdm">Administrador</label>
         @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
         </div>
@@ -42,11 +60,11 @@
         <thead>
             <tr>
                 <td>#</td>
-                <td>CPF</td>
                 <td>Nome</td>
+                <td>Email</td>
+                <td>CPF</td>
                 <td>RG</td>
                 <td>Telefone</td>
-                <td>Email</td>
                 <td>Administrador</td>
                 <td>Menu</td>
             </tr>
@@ -55,11 +73,11 @@
             @foreach ($users as $user)
             <tr>
                 <td>{{ $user->id }}</td>
-                <td>{{ $user->cpf }}</td>
                 <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->cpf }}</td>
                 <td>{{ $user->rg }}</td>
                 <td>{{ $user->phone }}</td>
-                <td>{{ $user->email }}</td>
                 <td>{{ $user->isAdm }}</td>
                 <td>
                     {!! Form::open(['route' => ['user.destroy', $user->id], 'method' => 'DELETE']) !!}
