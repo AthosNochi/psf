@@ -4,7 +4,7 @@
 
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input id="nome" type="text" name="nome"  value="{{ $paciente->nome }}" class="form-control"/>
+            <input id="nome" type="text" name="nome"  value="{{ $user->name }}" class="form-control"/>
         </div>
 
         <div class="form-group">
