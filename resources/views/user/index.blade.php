@@ -13,51 +13,45 @@
     @endif
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
-        <label for="Nome" class="col-sm-4 col-form-label">* Nome:</label>
+        <label for="name" class="col-sm-4 col-form-label">* Nome:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
         </div>
     </div>
-    <div class="form-group">
-        <div class="form-check">
-        <label for="Nome" class="col-sm-4 col-form-label">Nome:</label>
-        @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
+    <div class="form-group row">
+        <label for="email" class="col-sm-4 col-form-label">* E-mail:</label>
+        <div class="col-sm-8">
+            <input type="email" class="form-control" maxlength="255" name="email" placeholder="exemplo@email.com" required>
         </div>
     </div>
-    <div class="form-group">
-        <div class="form-check">
-        <label for="Nome" class="col-sm-4 col-form-label">Email:</label>
-        @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder' => "Email"]])
+    <div class="form-group row">
+        <label for="password" class="col-sm-4 col-form-label"> Senha:</label>
+        <div class="col-sm-8">
+            <input type="password" class="form-control" maxlength="255" name="password" placeholder="exemplo@email.com" required>
         </div>
     </div>
-    <div class="form-group">
-        <div class="form-check">
-        <label for="Nome" class="col-sm-4 col-form-label">Senha</label>
-        @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
+    <div class="form-group row">
+        <label for="cpf" class="col-sm-4 col-form-label">* CPF:</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
         </div>
     </div>
-    <div class="form-group">
-        <div class="form-check">
-        <label for="Nome" class="col-sm-4 col-form-label">CPF:</label>
-        @include('templates.formulario.input', ['input' => 'cpf', 'attributes' => ['placeholder' => "CPF"]])
+    <div class="form-group row">
+        <label for="rg" class="col-sm-4 col-form-label">* RG:</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
         </div>
     </div>
-    <div class="form-group">
-        <div class="form-check">
-        <label for="Nome" class="col-sm-4 col-form-label">RG:</label>
-        @include('templates.formulario.input', ['input' => 'rg', 'attributes' => ['placeholder' => "RG"]])
+    <div class="form-group row">
+        <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" maxlength="11" name="phone" placeholder="(99)9999-9999" required>
         </div>
     </div>
-    <div class="form-group">
-        <div class="form-check">
-        <label for="Nome" class="col-sm-4 col-form-label">Telefone:</label>
-        @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="form-check">
-        <label for="Nome" class="col-sm-4 col-form-label">Admnistrador:</label>
-        @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
+    <div class="form-group row">
+        <label for="isAdm" class="col-sm-4 col-form-label">Administrador:</label>
+        <div class="col-sm-8">
+          <input type="checkbox" name="isAdm" id="isAdm" onchange="administratorCheckbox()">
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Cadastrar</button>    {!! Form::close() !!}
