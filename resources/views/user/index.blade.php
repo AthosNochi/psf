@@ -1,24 +1,26 @@
 @extends('templates.master')
 
-
-@section('css-view')
-@endsection
-
-@section('js-conteudo-view')
-@endsection
-
-@section('conteudo-view')
-    @if (session('success'))
-        <h3>{{ session('success')['messages'] }}</h3>
-    @endif
-    {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
-        @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
-        @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder' => "Email"]])
-        @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
-        @include('templates.formulario.checkbox', ['input' => 'isAdm', 'attributes' => ['placeholder' => "isAdm"]])
-
-        @include('templates.formulario.submit', ['input' => 'Cadastrar'])    
-    {!! Form::close() !!}
+    <form action="{{ route('user.store', $user->id) }}" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="isAdm">
+            <label class="form-check-label" for="gridCheck">
+              Administrador
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
 
     <table class="default-table">
         <thead>
