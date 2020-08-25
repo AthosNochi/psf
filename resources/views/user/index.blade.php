@@ -14,6 +14,7 @@
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group">
         <div class="form-check">
+        <label for="telefone">Nome</label>
         @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
         </div>
     </div>
