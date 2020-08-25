@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     
-  <link rel="stylesheet" href= "{{ asset('site/bootstrap.css') }}">
+  <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
 
   </head>
 
