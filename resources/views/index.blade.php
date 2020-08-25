@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Sistema de Agendamento em PSF</a>
+        <a class="navbar-brand navbar-dark bg-dark" href="#">Sistema de Agendamento em PSF</a>
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
     </nav>
