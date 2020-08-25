@@ -4,14 +4,40 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-    {!! Form::open(['route' => 'psf.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
-        @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
-        @include('templates.formulario.input', ['input' => 'endereco', 'attributes' => ['placeholder' => "Endereço"]])
-        @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
-        @include('templates.formulario.input', ['input' => 'regiao', 'attributes' => ['placeholder' => "Região"]])
-        @include('templates.formulario.submit', ['input' => 'Cadastrar'])
-    {!! Form::close() !!}
-    <table class="default-table">
+
+    <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label"> Nome:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="address" class="col-sm-4 col-form-label"> Endereço:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="address" placeholder="Endereço" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="regiao">Região</label>
+        <select class="form-control" id="regiao">
+          <option>Sul</option>
+          <option>Norte</option>
+          <option>Leste</option>
+          <option>Oeste</option>
+        </select>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+        <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+    </div>
+
+    <div class="panel">
+        <table class="table" align="center">
         <thead>
             <tr>
                 <th>#</th>
@@ -40,4 +66,5 @@
             @endforeach
         </tbody>
     </table>
+    </div>
 @endsection
