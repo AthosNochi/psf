@@ -11,7 +11,7 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-    {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
+    {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group">
         <div class="form-check">
         @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
