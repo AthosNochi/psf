@@ -8,7 +8,7 @@
     <div class="form-group row">
         <label for="name" class="col-sm-4 col-form-label">* Nome:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
+            <input type="text" class="form-control" maxlength="255" name="name" placeholder="Insira seu nome completo" required>
         </div>
     </div>
     <div class="form-group row">
@@ -71,6 +71,10 @@
             <input type="text" class="form-control" maxlength="255" name="notes" placeholder="Diabetes, pressão alta, etc..." required>
         </div>
     </div>
+    <div class="modal-footer d-flex justify-content-center">
+        <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+    </div>
+
     {!! Form::close() !!}
 
     <div class="panel">
