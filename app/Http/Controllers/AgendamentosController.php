@@ -105,7 +105,7 @@ class AgendamentosController extends Controller
             $agendamento->id_doctor     = $request->input('doctor_id');
             $agendamento->save();
 
-            return redirect()->route('agendamento.index');
+            return redirect()->route('agendamentos.index');
         
     }
 
