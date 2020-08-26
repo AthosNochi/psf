@@ -4,7 +4,7 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-    {!! Form::open(['route' => 'psf.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+    {!! Form::open(['route' => 'doctor.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
         <label for="name" class="col-sm-4 col-form-label"> Nome:</label>
         <div class="col-sm-8">
