@@ -50,7 +50,7 @@
     <div class="form-group row">
         <label for="specialty" class="col-sm-4 col-form-label"> Especialidade:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="specialty" placeholder="Endereço" required>
+            <input type="text" class="form-control" maxlength="255" name="specialty" placeholder="Especialidade" required>
         </div>
     </div>
     <div class="modal-footer d-flex justify-content-center">
