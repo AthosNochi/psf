@@ -19,7 +19,7 @@
   <label for="paciente_id">Paciente</label>
   <select name="patient_id" class="form-control" id="patient_id" value="{{ $agendamentos->id_patient }}">
     @foreach($patients as $patient)
-      <option value="{{ $patient->id }}" {{ $patient->id == $agendamentos->id_patient ? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
+      <option value="{{ $patient->id }}" {{ $patient->id == $agendamentos->patient_id? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
     @endforeach
   </select>
 </div>
