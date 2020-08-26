@@ -2,7 +2,7 @@
 
 @section('conteudo-view')
 
-  {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+  {!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
   <div class="form-group row">
       <label for="descricao" class="col-sm-4 col-form-label"> Descrição:</label>
       <div class="col-sm-8">
