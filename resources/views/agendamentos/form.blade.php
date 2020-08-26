@@ -2,7 +2,7 @@
 
 @section('conteudo-view')
 
-    {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
+  {!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
       <label for="descricao" class="col-sm-4 col-form-label"> Descrição:</label>
       <div class="col-sm-8">
@@ -30,7 +30,7 @@
   <div class="modal-footer d-flex justify-content-center">
     <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
   </div>
-    {!! Form::close() !!}
+  {!! Form::close() !!}
 
 
   <div class="panel">
