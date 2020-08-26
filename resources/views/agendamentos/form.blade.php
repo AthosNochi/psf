@@ -16,10 +16,12 @@
   </div>
 </div>
 <div class="form-group row">
-  <label for="id_patient" class="col-sm-4 col-form-label">* Paciente:</label>
-  <div class="col-sm-8">
-      <select class="form-control" id="$patient_list" required>
-  </div>
+  <label for="paciente_id">Paciente</label>
+  <select name="patient_id" class="form-control" id="patient_id" value="{{ $agendamento->id_patient }}">
+    @foreach($patients as $patient)
+      <option value="{{ $patient->id }}" {{ $patient->id == $agendamento->id_patient ? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
+    @endforeach
+  </select>
 </div>
 <div class="form-group row">
   <label for="id_doctor" class="col-sm-4 col-form-label"> Médico:</label>
