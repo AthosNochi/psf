@@ -26,13 +26,7 @@
     <div class="col-sm-8">
       @include('templates.formulario.select', ['select' => 'id_doctor', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])
     </div>
-  </div>   
-  <div class="form-group row">
-    <label for="legenda" class="col-sm-4 col-form-label"> Legenda:</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" maxlength="255" name="legenda" placeholder="Insira uma breve descrição" required>
-    </div>
-</div>                          
+  </div>                             
   <div class="modal-footer d-flex justify-content-center">
     <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
   </div>
@@ -46,9 +40,9 @@
               <th>Id</th>
               <th>Descrição</th>
               <th>Data/Hora</th>
-
+              <th>Paciente</th>
               
-              <th>Legenda</th>
+             
               <th>Opções</th>
           </tr>
       </thead>
@@ -60,7 +54,7 @@
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
               <td>{{$agendamento->patient->name}}</td>
               
-              <td>{{ $agendamento->legenda }}</td>
+              
           <!-- <td><button class="btn btn-info demo" >Status</button></td> -->        
           </tr>
           @endforeach
