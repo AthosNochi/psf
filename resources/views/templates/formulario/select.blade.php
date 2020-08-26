@@ -1,2 +1,1 @@
-
-    {!! Form::select($select, $data ?? []) !!}
+{!! Form::select($select, $class, $data ?? []) !!}
