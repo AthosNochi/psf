@@ -2,7 +2,9 @@
 
 @section('conteudo-view')
 
-{!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+<form action="{{ route('agendamentos.store') }}" method="post">
+  {{ csrf_field() }}
+@endif
 <div class="form-group row">
     <label for="descricao" class="col-sm-4 col-form-label"> Descrição:</label>
     <div class="col-sm-8">
@@ -39,7 +41,7 @@
   <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
 </div>
 
-{!! Form::close() !!}
+</form>
          <!-- <input id="datahora" type="datetime-local" name="birthdaytime"> -->
         
       
