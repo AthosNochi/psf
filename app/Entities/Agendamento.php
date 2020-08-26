@@ -16,11 +16,11 @@ class Agendamento extends Model
     
     public function patient()
     {
-        return $this->belongsTo('App\Entities\Patient', 'id_patient');
+        return $this->belongsTo(Patient::class, 'id_patient');
     }
 
     public function doctor()
     {
-        return $this->belongsTo('App\Entities\Doctor', 'id_doctor');
+        return $this->belongsTo(Doctor::class, 'id_doctor');
     }
 }
