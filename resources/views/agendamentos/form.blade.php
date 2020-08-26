@@ -46,7 +46,7 @@
               <th>Id</th>
               <th>Descrição</th>
               <th>Data/Hora</th>
-              <td>{{ $agendamento->paciente->nome }}</td>
+
               
               <th>Legenda</th>
               <th>Opções</th>
