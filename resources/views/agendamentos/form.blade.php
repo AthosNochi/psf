@@ -2,9 +2,7 @@
 
 @section('conteudo-view')
 
-<form action="{{ route('agendamentos.store') }}" method="post">
-  {{ csrf_field() }}
-  
+{!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
 <div class="form-group row">
     <label for="descricao" class="col-sm-4 col-form-label"> Descrição:</label>
     <div class="col-sm-8">
@@ -19,9 +17,9 @@
 </div>
 <div class="form-group row">
   <label for="paciente_id">Paciente</label>
-  <select name="patient_id" class="form-control" id="patient_id" value="{{ $agendamento->id_patient }}">
+  <select name="patient_id" class="form-control" id="patient_id">
     @foreach($patients as $patient)
-      <option value="{{ $patient->id }}" {{ $patient->id == $agendamento->id_patient ? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
+      <option value="{{ $patient_list }}" {{ $patient->id == $agendamento->id_patient ? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
     @endforeach
   </select>
 </div>
@@ -41,7 +39,7 @@
   <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
 </div>
 
-</form>
+{!! Form::close() !!}
          <!-- <input id="datahora" type="datetime-local" name="birthdaytime"> -->
         
       
