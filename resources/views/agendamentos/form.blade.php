@@ -10,6 +10,12 @@
       </div>
   </div>
   <div class="form-group row">
+    <label for="legenda" class="col-sm-4 col-form-label"> Legenda:</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" maxlength="255" name="legenda" placeholder="Legenda" required>
+    </div>
+</div>
+  <div class="form-group row">
     <label for="datahora" class="col-sm-4 col-form-label">* Data/Hora:</label>
     <div class="col-sm-8">
         <input type="datetime-local" class="form-control" maxlength="255" name="datahora" required>
@@ -38,6 +44,7 @@
       <thead>
           <tr>
               <th>Id</th>
+              <th>Legenda</th>
               <th>Descrição</th>
               <th>Data/Hora</th>
               <th>Paciente</th>
@@ -50,11 +57,9 @@
           @foreach($agendamentos as $agendamento)
           <tr>
               <td>{{ $agendamento->id }}</td>
+              <td>{{ $agendamento->legenda}}</td>
               <td>{{ $agendamento->descricao }}</td>
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-              <td>{{$agendamento->patient->name}}</td>
-              
-              
           <!-- <td><button class="btn btn-info demo" >Status</button></td> -->        
           </tr>
           @endforeach
