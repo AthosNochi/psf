@@ -1,3 +1,3 @@
-<label class="{{ $class ?? "text-center border border-light p-5" }}">
+<label class="{{ $class ?? null }}">
     {{!! Form::select($select, $data ?? []) !!}}
 </label>
