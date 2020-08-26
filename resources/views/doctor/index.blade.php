@@ -82,12 +82,11 @@
                 <td>{{ $doctor->email }}</td>
                 <td>{{ $doctor->specialty }}</td>
                 <td>
-                    <td>
-                        {!! Form::open(['route' => ['doctor.destroy', $doctor->id], 'method' => 'DELETE']) !!}
-                        <input class="btn btn-primary" type="submit" name="submit" value="Remover">
-                        {!! Form::close() !!}
-                    </td>
+                    {!! Form::open(['route' => ['doctor.destroy', $doctor->id], 'method' => 'DELETE']) !!}
+                    <input class="btn btn-primary" type="submit" name="submit" value="Remover">
+                    {!! Form::close() !!}
                 </td>
+                
             </tr>
             @endforeach
         </tbody>
