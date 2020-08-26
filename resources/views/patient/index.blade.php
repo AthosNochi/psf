@@ -107,8 +107,8 @@
                 <td>{{ $patient->sus }}</td>
                 <td>{{ $patient->address }}</td>
                 <td>
-                    {!! Form::open(['route' => ['patient.destroy', $patient->id], 'method' => 'DELETE']) !!}
-                    {!! Form::submit('Remover') !!}
+                    {!! Form::open(['route' => ['psf.destroy', $psf->id], 'method' => 'DELETE']) !!}
+                    <input class="btn btn-primary" type="submit" name="submit" value="Remover">
                     {!! Form::close() !!}
                 </td>
             </tr>
