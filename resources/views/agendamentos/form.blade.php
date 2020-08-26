@@ -24,7 +24,7 @@
   <div class="form-group row">
     <label for="id_doctor" class="col-sm-4 col-form-label">* Médico:</label>
     <div class="col-sm-8">
-      @include('templates.formulario.select', ['select' => 'id_doctor', 'class' => 'form-control', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])
+      @include('templates.formulario.select', class="form-control" ['select' => 'id_doctor', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])
     </div>
   </div>   
   <div class="form-group row">
