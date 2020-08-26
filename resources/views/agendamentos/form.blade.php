@@ -2,7 +2,7 @@
 
 @section('conteudo-view')
 
-  {!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+    {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
       <label for="descricao" class="col-sm-4 col-form-label"> Descrição:</label>
       <div class="col-sm-8">
@@ -16,13 +16,13 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="datahora" class="col-sm-4 col-form-label">* Data/Hora:</label>
+    <label for="id_patient" class="col-sm-4 col-form-label">* Paciente:</label>
     <div class="col-sm-8">
       @include('templates.formulario.select', ['select' => 'id_patient', 'data' => $patient_list, 'attributes' => ['placeholder' => "Paciente"]])
     </div>
   </div>
   <div class="form-group row">
-    <label for="datahora" class="col-sm-4 col-form-label">* Data/Hora:</label>
+    <label for="id_doctor" class="col-sm-4 col-form-label">* Médico:</label>
     <div class="col-sm-8">
       @include('templates.formulario.select', ['select' => 'id_doctor', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])
     </div>
@@ -30,7 +30,7 @@
   <div class="modal-footer d-flex justify-content-center">
     <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
   </div>
-  {!! Form::close() !!}
+    {!! Form::close() !!}
 
 
   <div class="panel">
