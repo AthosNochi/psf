@@ -33,23 +33,11 @@
       <input type="text" class="form-control" maxlength="255" name="Legenda" placeholder="Legenda" required>
   </div>
 </div>
-
+<div class="modal-footer d-flex justify-content-center">
+  <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+</div>
 
 {!! Form::close() !!}
-
-
-    {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
-      @include('templates.formulario.input', ['input' => 'descricao', 'attributes' => ['placeholder' => "Descrição"]])
-
-      <label for="datahora">Data/hora:
-      <input type="datetime-local" name="datahora"/>
-      </label>
-        
-      @include('templates.formulario.select', ['select' => 'id_patient', 'data' => $patient_list, 'attributes' => ['placeholder' => "Paciente"]])
-      @include('templates.formulario.select', ['select' => 'id_doctor', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])               
-      @include('templates.formulario.input', ['input' => 'legenda', 'attributes' => ['placeholder' => "Legenda"]])
-        
-
          <!-- <input id="datahora" type="datetime-local" name="birthdaytime"> -->
         
       
@@ -73,9 +61,6 @@
                           </label>
                         </div>   -->                
 
-      @include('templates.formulario.submit', ['input' => 'Salvar'])
-    {!! Form::close() !!}
-
     <table class="default-table">
       <thead>
           <tr>
@@ -96,6 +81,11 @@
               
               
               <td>{{ $agendamento->legenda }}</td>
+              <td>
+                {!! Form::open(['route' => ['agendamento.destroy', $agendamento->id], 'method' => 'DELETE']) !!}
+                <input class="btn btn-primary" type="submit" name="submit" value="Remover">
+                {!! Form::close() !!}
+            </td>
           <!-- <td><button class="btn btn-info demo" >Status</button></td> -->        
           </tr>
           @endforeach
