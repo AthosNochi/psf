@@ -61,7 +61,7 @@ class AgendamentosController extends Controller
         $agendamento        = Agendamento::all();
         $patient_list       = $this->patientRepository->selectBoxList();
         $doctor_list        = $this->doctorRepository->selectBoxList();
-        dd( $agendamentos );
+        //dd( $agendamentos );
         
 
         return view('agendamentos.form', [
