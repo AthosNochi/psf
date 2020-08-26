@@ -21,6 +21,19 @@
       <select class="form-control" id="$patient_list" required>
   </div>
 </div>
+<div class="form-group row">
+  <label for="id_doctor" class="col-sm-4 col-form-label"> Médico:</label>
+  <div class="col-sm-8">
+      <select class="form-control" id="$doctor_list" required>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="legenda" class="col-sm-4 col-form-label"> Legenda:</label>
+  <div class="col-sm-8">
+      <input type="text" class="form-control" maxlength="255" name="Legenda" placeholder="Legenda" required>
+  </div>
+</div>
+
 
 {!! Form::close() !!}
 
