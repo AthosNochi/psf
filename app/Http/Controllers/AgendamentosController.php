@@ -103,7 +103,6 @@ class AgendamentosController extends Controller
             $agendamento->datahora      = $request->input('datahora');
             $agendamento->id_patient    = $request->input('patient_id');
             $agendamento->id_doctor     = $request->input('doctor_id');
-            $agendamento->legenda       = $request->input('legenda');
             $agendamento->save();
 
             return redirect()->route('agendamento.index');
