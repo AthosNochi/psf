@@ -2,7 +2,7 @@
 
 @section('conteudo-view')
 
-{!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+{!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
 <div class="form-group row">
     <label for="descricao" class="col-sm-4 col-form-label"> Descrição:</label>
     <div class="col-sm-8">
@@ -17,7 +17,7 @@
 </div>
 <div class="form-group row">
   <label for="paciente_id">Paciente</label>
-  <select name="patient_id" class="form-control" id="patient_id">
+  <select name="patient_id" class="form-control" id="patient_id" value="{{ $agendamento->id_patient }}">
     @foreach($patients as $patient)
       <option value="{{ $patient->id }}" {{ $patient->id == $agendamento->id_patient ? 'selected="selected"' : ''}}> {{ $patient->name }} </option>
     @endforeach
