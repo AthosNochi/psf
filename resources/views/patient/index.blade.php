@@ -54,9 +54,9 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="endereco" class="col-sm-4 col-form-label"> Endereço:</label>
+        <label for="address" class="col-sm-4 col-form-label"> Endereço:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="endereco" placeholder="Endereço" required>
+            <input type="text" class="form-control" maxlength="255" name="address" placeholder="Endereço" required>
         </div>
     </div>
     <div class="form-group row">
