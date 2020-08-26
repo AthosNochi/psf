@@ -2,6 +2,27 @@
 
 @section('conteudo-view')
 
+{!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+<div class="form-group row">
+    <label for="name" class="col-sm-4 col-form-label">* Nome:</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" maxlength="255" name="name" placeholder="Insira seu nome completo" required>
+    </div>
+</div>
+<div class="form-group row">
+  <label for="datahora" class="col-sm-4 col-form-label">* Data/Hora:</label>
+  <div class="col-sm-8">
+      <input type="datetime-local" class="form-control" maxlength="255" name="datahora" required>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="id_patient" class="col-sm-4 col-form-label">* Paciente:</label>
+  <div class="col-sm-8">
+      <select class="form-control" name="id_patient" data-="$patient_list" placeholder="Paciente" required>
+  </div>
+</div>
+
+
     {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
       @include('templates.formulario.input', ['input' => 'descricao', 'attributes' => ['placeholder' => "Descrição"]])
 
@@ -57,7 +78,7 @@
               <td>{{ $agendamento->id }}</td>
               <td>{{ $agendamento->descricao }}</td>
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-              <td>{{$agendamento->patient->name}}</td>
+              
               
               <td>{{ $agendamento->legenda }}</td>
           <!-- <td><button class="btn btn-info demo" >Status</button></td> -->        
