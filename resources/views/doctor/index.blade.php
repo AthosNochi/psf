@@ -4,18 +4,62 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-    {!! Form::open(['route' => 'doctor.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
-    @include('templates.formulario.input', ['label' => 'CPF','input' => 'cpf', 'attributes' => ['placeholder' => "CPF"]])
-        @include('templates.formulario.input', ['input' => 'name', 'attributes' => ['placeholder' => "Nome"]])
-        @include('templates.formulario.input', ['input' => 'rg', 'attributes' => ['placeholder' => "RG"]])
-        @include('templates.formulario.input', ['input' => 'phone', 'attributes' => ['placeholder' => "Telefone"]])
-        @include('templates.formulario.input', ['input' => 'email', 'attributes' => ['placeholder' => "Email"]])
-        @include('templates.formulario.password', ['input' => 'password', 'attributes' => ['placeholder' => "Senha"]])
-        @include('templates.formulario.input', ['input' => 'crm', 'attributes' => ['placeholder' => "CRM"]])
-        @include('templates.formulario.input', ['input' => 'specialty', 'attributes' => ['placeholder' => "Especialidade"]])
-        @include('templates.formulario.submit', ['input' => 'Cadastrar'])
+    {!! Form::open(['route' => 'psf.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
+    <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label"> Nome:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="email" class="col-sm-4 col-form-label">* E-mail:</label>
+        <div class="col-sm-8">
+            <input type="email" class="form-control" maxlength="255" name="email" placeholder="exemplo@email.com" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="password" class="col-sm-4 col-form-label"> Senha:</label>
+        <div class="col-sm-8">
+            <input type="password" class="form-control" maxlength="255" name="password" placeholder="Escolha uma senha" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="cpf" class="col-sm-4 col-form-label">* CPF:</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="rg" class="col-sm-4 col-form-label">* RG:</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
+        </div>
+    </div> 
+    <div class="form-group row">
+        <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="crm" class="col-sm-4 col-form-label"> CRM:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="crm" placeholder="CRM" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="specialty" class="col-sm-4 col-form-label"> Especialidade:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="specialty" placeholder="Endereço" required>
+        </div>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+        <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+    </div>
     {!! Form::close() !!}
-    <table class="default-table">
+
+    <div class="panel">
+        <table class="table" align="center">
         <thead>
             <tr>
                 <th>#</th>
@@ -45,5 +89,6 @@
             </tr>
             @endforeach
         </tbody>
-    </table>
+        </table>
+    </div>
 @endsection
