@@ -21,7 +21,7 @@
             <a class="nav-link" href="{{ route('enfermeiro.index') }}">Efermeiros</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('agendamento.index') }}">Agendamentos</a>
+            <a class="nav-link" href="{{ route('agendamentos.index') }}">Agendamentos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}">SAIR</a>
