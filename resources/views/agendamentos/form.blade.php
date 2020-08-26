@@ -22,6 +22,8 @@
   </div>
 </div>
 
+{!! Form::close() !!}
+
 
     {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
       @include('templates.formulario.input', ['input' => 'descricao', 'attributes' => ['placeholder' => "Descrição"]])
