@@ -32,7 +32,7 @@ Route::resource('/patient', 'PatientsController');
 
 Route::resource('/enfermeiro', 'EnfermeirosController');
 
-Route::resource('/agendamento', 'AgendamentosController');
+Route::resource('/agendamentos', 'AgendamentosController');
 
 Auth::routes();
 
