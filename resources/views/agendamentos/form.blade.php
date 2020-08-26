@@ -4,9 +4,9 @@
 
 {!! Form::open(['route' => 'agendamento.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
 <div class="form-group row">
-    <label for="name" class="col-sm-4 col-form-label">* Nome:</label>
+    <label for="descricao" class="col-sm-4 col-form-label"> Descrição:</label>
     <div class="col-sm-8">
-        <input type="text" class="form-control" maxlength="255" name="name" placeholder="Insira seu nome completo" required>
+        <input type="text" class="form-control" maxlength="255" name="descricao" placeholder="Descrição" required>
     </div>
 </div>
 <div class="form-group row">
