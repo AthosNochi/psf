@@ -18,7 +18,7 @@
 <div class="form-group row">
   <label for="id_patient" class="col-sm-4 col-form-label">* Paciente:</label>
   <div class="col-sm-8">
-      <select class="form-control" name="id_patient" data-="$patient_list" placeholder="Paciente" required>
+      <select class="form-control" id="$patient_list" required>
   </div>
 </div>
 
