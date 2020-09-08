@@ -1,4 +1,4 @@
-function myFunction() 
+function myFunction(onclick) 
 { 
     document.body.style.backgroundColor= "black";        
 } 
