@@ -38,9 +38,8 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <script src="cor.js"></script>
+          <script src="cor"></script>
           <button type="button" onclick="myFunction()">Auto contraste</button> 
-          
         </li>
       </ul>
     </nav>
