@@ -44,7 +44,11 @@
             <script> 
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "green";
-              } 
+              }
+
+              function mudaCorP(){
+                document.getElementsByTagName('p').css('color','white');
+              }
             </script>
         </li>
       </ul>
