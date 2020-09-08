@@ -36,7 +36,7 @@
       </div>
 
       <div class="container">
-        <a class="navbar-brand" href="#" onclick="changeCSS('style2.css', 0);"></a>
+        <a class="navbar-brand" href="#" onclick="changeCSS('style2.css', 0);">Auto Contraste</a>
       </div>
     </nav>
 
