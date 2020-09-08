@@ -40,8 +40,6 @@
       </div>
     </nav>
 
-    <input type="submit" class="btn btn-info btn-block my-4" value="Enviar"/>
-
     <!-- Masthead -->
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
