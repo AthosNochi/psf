@@ -43,8 +43,8 @@
           <button type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
             <script> 
               function mudaCorDeFundo() {
-                document.body.style.backgroundColor= "green";
-                document.getElementsByTagName('p').css('color','white');
+                document.body.style.backgroundColor= "black";
+                document.body.p.style.color= "white";
               }
             </script>
         </li>
