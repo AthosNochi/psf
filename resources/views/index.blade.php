@@ -28,8 +28,10 @@
 
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
-
-    <!-- Navigation -->
+  <script src="{{ asset('site/cor.js') }}"></script>
+ 
+ 
+  <!-- Navigation -->
     <nav class="navbar navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">PSF</a>
@@ -39,7 +41,8 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <button type="button" onclick="myFunction()">Auto contraste</button> 
-          <script src="cor.js"></script>
+
+          
         </li>
       </ul>
     </nav>
