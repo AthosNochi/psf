@@ -21,7 +21,7 @@
     
   <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
   <?php 
-    $a = @$_POST['cor'];
+    $a = @$request['cor'];
     $b = "#66DAA"; // cor inicial
   ?>
 
