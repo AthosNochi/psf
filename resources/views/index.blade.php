@@ -38,8 +38,7 @@
 
       <div class="container">
           <button type="button" onclick="myFunction()">Auto contraste</button> 
-          <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
-          <script> function myFunction() { document.getElementById("div").querySelectorAll("p")= "black"; } </script>
+  <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
       </div>
     </nav>
     
