@@ -37,7 +37,7 @@
 
       <div class="container">
         <form method="post">
-          <input class="btn btn-primary" type="color" name="cor"/>
+          <input type="color" name="cor"/>
           <input type="submit" value="Mudar cor"/>
         </form>
       </div>
