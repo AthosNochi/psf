@@ -40,7 +40,7 @@
         <form method="post">
           <button type="button" onclick="myFunction()">Change Color</button> 
           <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
-          <script> function myFunction() { document.getElementsByTagName('p').style.color = 'red'; } </script>
+          
         </form>
       </div>
     </nav>
