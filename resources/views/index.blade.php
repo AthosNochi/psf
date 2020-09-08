@@ -36,7 +36,7 @@
       </div>
 
       <div class="container">
-        <input class="navbar-brand" type="color" name="cor"/>
+        <input class="btn btn-primary" type="color" name="cor"/>
       </div>
     </nav>
 
