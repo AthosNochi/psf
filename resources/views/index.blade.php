@@ -34,7 +34,13 @@
         <a class="navbar-brand" href="#">PSF</a>
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
+
+      <div class="container">
+        <input class="navbar-brand" type="color" name="cor"/>
+      </div>
     </nav>
+
+    <input type="submit" class="btn btn-info btn-block my-4" value="Enviar"/>
 
     <!-- Masthead -->
     <header class="masthead text-white text-center">
