@@ -24,7 +24,7 @@
 
   </head>
 
-  <body>
+  <body id="body">
 
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
@@ -38,7 +38,9 @@
 
       <div class="container">
         <form method="post">
-          <button type="button" onclick="myFunction()">Change Color</button> <script> function myFunction() { document.body.style.backgroundColor= "green"; } </script>
+          <button type="button" onclick="myFunction()">Change Color</button> 
+          <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
+          <script> function myFunction() { document.getElementsByTagName('p').style.color = 'red'; } </script>
         </form>
       </div>
     </nav>
