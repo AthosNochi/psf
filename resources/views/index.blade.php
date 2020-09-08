@@ -46,10 +46,9 @@
       </div>
 
       <div class="container">
-        <form method="post">
-          <input type="color" name="cor"/>
-          <input type="submit" value="Mudar cor"/>
-        </form>
+        <button type="button" 
+        onclick="document.getElementById.style.background-color = 'red'">
+        Click Me!</button>
       </div>
     </nav>
 
