@@ -36,7 +36,7 @@
       </div>
 
       <div class="container">
-        <a href="#" onclick="changeCSS('style2.css', 0);"></a>
+        <a class="navbar-brand" href="#" onclick="changeCSS('style2.css', 0);"></a>
       </div>
     </nav>
 
