@@ -46,7 +46,7 @@
       </div>
 
       <div class="container">
-        <form method="post">
+        <form method="post" action="index.blade.php">
           <input type="color" name="cor"/>
           <input type="submit" value="Mudar cor"/>
         </form>
