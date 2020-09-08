@@ -41,12 +41,11 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <button type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
-          <script> 
-            function mudaCorDeFundo() 
-            {
-              document.getElementsByTagName('body').css('background','black');
-            }
-          </script>
+            <script> 
+              function mudaCorDeFundo() {
+                document.body.style.backgroundColor= "green";
+              } 
+            </script>
         </li>
       </ul>
     </nav>
