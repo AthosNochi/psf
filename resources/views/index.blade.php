@@ -39,19 +39,13 @@
       <div class="container">
           <button type="button" onclick="myFunction()">Auto contraste</button> 
           <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
-      </div>
-
-      <div>
-        <button type="button" 
-          onclick="document.getElementsByClassName('lead mb-0').style.color = 'white'">
-          Click Me!
-        </button>
+          <script> function myFunction() { document.getElementById("div").querySelectorAll("p")= "black"; } </script>
       </div>
     </nav>
     
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
-      <div class="container">
+      <div id="div" class="container">
         <div class="row">
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
