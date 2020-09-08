@@ -20,17 +20,7 @@
     <!-- Custom styles for this template -->
     
   <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
-  <?php 
-    $a = @$request['cor'];
-    $b = "#66DAA"; // cor inicial
-  ?>
-
-  <style>
-    body {
-      background-color: <?php switch ($a){case "": echo $b;break; default: echo $a;
-        break;} ?>;
-  </style>
-
+  <link rel="stylesheet" href= "{{ asset('site/style2.css') }}">
   </head>
 
   <body>
@@ -46,9 +36,7 @@
       </div>
 
       <div class="container">
-        <button type="button" 
-        onclick="document.getElementById.style.background-color = 'red'">
-        Click Me!</button>
+        <a href="#" onclick="changeCSS('style2.css', 0);"></a>
       </div>
     </nav>
 
