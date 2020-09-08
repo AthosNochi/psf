@@ -40,7 +40,7 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <button type="button" onclick="myFunction()">Auto contraste</button> 
+          <button type="button" onclick="mudaCordeFundo()">Auto contraste</button> 
 
           
         </li>

@@ -1,5 +1,8 @@
-function myFunction() 
+
+
+function mudaCordeFundo() 
 { 
-    document.getElementsByTagName('body').css('background','black');
+    alert('entrou na funcao');
+    //document.getElementsByTagName('body').css('background','black');
     //document.body.style.backgroundColor= "black";        
 } 
