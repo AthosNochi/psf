@@ -29,7 +29,7 @@
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
   <script src="{{ asset('site/cor.js') }}"></script>
- 
+ <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
     <nav class="navbar navbar-dark bg-dark static-top">
@@ -40,9 +40,13 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <button type="button" onclick="mudaCordeFundo()">Auto contraste</button> 
-
-          
+          <button type="button" onclick="myFunction()">Auto contraste</button> 
+          <script> 
+            function mudaCorDeFundo() 
+            {
+              document.getElementsByTagName('body').css('background','black');
+            }
+          </script>
         </li>
       </ul>
     </nav>
