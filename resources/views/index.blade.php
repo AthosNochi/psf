@@ -36,6 +36,7 @@
       </div>
 
       <div class="container">
+        <form method="post">
         <input class="btn btn-primary" type="color" name="cor"/>
       </div>
     </nav>
