@@ -20,6 +20,16 @@
     <!-- Custom styles for this template -->
     
   <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
+  <?php 
+    $a = $_POST['cor'];
+    $b = "#66DAA"; // cor inicial
+  ?>
+
+  <style>
+    body {
+      background-color: <?php switch ($a){case "": echo $b;break; default: echo $a;
+        break;} ?>;
+  </style>
 
   </head>
 
