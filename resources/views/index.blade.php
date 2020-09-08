@@ -20,16 +20,7 @@
     <!-- Custom styles for this template -->
     
   <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
-  <?php 
-    $a = @$_POST['cor'];
-    $b = "#66DAA"; // cor inicial
-  ?>
-
-  <style>
-    body {
-      background-color: <?php switch ($a){case "": echo $b;break; default: echo $a;
-        break;} ?>;
-  </style>
+  
 
   </head>
 
@@ -46,9 +37,8 @@
       </div>
 
       <div class="container">
-        <form method="post" action="index.blade.php">
-          <input type="color" name="cor"/>
-          <input type="submit" value="Mudar cor"/>
+        <form method="post">
+          <button type="button" onclick="myFunction()">Change Color</button> <script> function myFunction() { document.body.style.backgroundColor= "green"; } </script>
         </form>
       </div>
     </nav>
