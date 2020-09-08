@@ -24,7 +24,7 @@
 
   </head>
 
-  <body id="body">
+  <body>
 
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
@@ -37,26 +37,18 @@
       </div>
 
       <div class="container">
-        <form method="post">
-          <button type="button" onclick="myFunction()">Change Color</button> 
+          <button type="button" onclick="myFunction()">Auto contraste</button> 
           <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
-          
-        </form>
+      </div>
+
+      <div>
+        <button type="button" 
+          onclick="document.getElementsByTagName('p').style.color = 'white'">
+          Click Me!
+        </button>
       </div>
     </nav>
-
-    <!-- Masthead -->
-    <header class="masthead text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Aproveite os benefícios de um sistema médico que atende todas as suas necessidades</h1>
-          </div>			
-        </div>
-      </div>
-    </header>
-
+    
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
       <div class="container">
