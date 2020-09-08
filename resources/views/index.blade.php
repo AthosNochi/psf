@@ -36,10 +36,12 @@
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
 
-      <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item">
           <button type="button" onclick="myFunction()">Auto contraste</button> 
           <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
-      </div>
+        </li>
+      </ul>
     </nav>
     
     <!-- Icons Grid -->
