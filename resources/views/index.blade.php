@@ -43,7 +43,7 @@
 
       <div>
         <button type="button" 
-          onclick="document.getElementsByTagName('p').style.color = 'white'">
+          onclick="document.getElementsByClassName('lead mb-0').style.color = 'white'">
           Click Me!
         </button>
       </div>
