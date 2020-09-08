@@ -38,7 +38,7 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <button class="nav-link" type="button" onclick="myFunction()">Auto contraste</button> 
+          <button type="button" onclick="myFunction()">Auto contraste</button> 
           <script> function myFunction() { document.body.style.backgroundColor= "black"; } </script>
         </li>
       </ul>
