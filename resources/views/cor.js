@@ -1,6 +1,4 @@
-<script> 
 function myFunction() 
 { 
-    document.body.style.backgroundColor= "black"         
+    document.body.style.backgroundColor= "black";        
 } 
-</script>
