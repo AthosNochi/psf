@@ -42,10 +42,10 @@
           <button type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
             <script> 
               function mudaCorDeFundo() {
-                document.getElementById('muda1').style.color = 'yellow';
                 document.body.style.backgroundColor= "black";
+                document.getElementById('muda1').style.color = 'white';
                 document.getElementsByTagName('h3').css('color','black');
-                document.getElementById("mudap").querySelectorAll("p").style.color = 'yellow'; 
+                document.getElementById('mudacor').style.color = 'white'; 
               }
             </script>
         </li>
@@ -54,15 +54,15 @@
     
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
-      <div class="container">
+      <div id="mudacor" class="container">
         <div class="row">
           <div class="col-lg-4">
-            <div id="mudap" class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3 id="muda1"> Multiplataforma</h3>
-              <p id= class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!</p>
+              <p class="lead mb-0"Layout responsivo, adapta a qualquer tamanho de tela!</p>
             </div>
           </div>
           <div class="col-lg-4">
