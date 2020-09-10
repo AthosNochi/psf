@@ -59,7 +59,7 @@
 
                 document.getElementById('mudanav').style.backgroundColor = 'black';
 
-                //document.getElementsByTagName('h3').css('color','black');
+                document.getElementsByTagName('nav').css('backgroundColor','black');
                 //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
               }
             </script>
