@@ -45,8 +45,13 @@
                 document.body.style.backgroundColor= "black";
                 document.getElementById('muda1').style.color = 'white';
                 document.getElementById('muda2').style.color = 'white';
-                document.getElementsByTagName('h3').css('color','black');
-                document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
+                document.getElementById('muda3').style.color = 'white';
+                document.getElementById('muda4').style.color = 'white';
+                document.getElementById('muda5').style.color = 'white';
+                document.getElementById('muda6').style.color = 'white';
+
+                //document.getElementsByTagName('h3').css('color','black');
+                //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
               }
             </script>
         </li>
@@ -71,8 +76,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-layers m-auto text-primary"></i>
               </div>
-              <h3>Acessível</h3>
-              <p class="lead mb-0">Sistema acessível para todos </p>
+              <h3 id="muda3">Acessível</h3>
+              <p id="muda4" class="lead mb-0">Sistema acessível para todos </p>
             </div>
           </div>
           <div class="col-lg-4">
@@ -80,8 +85,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-check m-auto text-primary"></i>
               </div>
-              <h3>Intuitivo</h3>
-              <p class="lead mb-0">Sistema intuitivo de fácil utilização, não requer nenhum treinamento</p>
+              <h3 id="muda5">Intuitivo</h3>
+              <p id="muda6" class="lead mb-0">Sistema intuitivo de fácil utilização, não requer nenhum treinamento</p>
             </div>
           </div>
         </div>
