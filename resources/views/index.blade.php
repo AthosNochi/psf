@@ -28,7 +28,6 @@
 
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
-  <script src="{{ asset('site/cor.js') }}"></script>
  <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
