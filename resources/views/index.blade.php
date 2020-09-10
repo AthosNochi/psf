@@ -44,7 +44,7 @@
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "black";
                 document.getElementById('muda1').style.color = 'white';
-                document.getElementById('mudap').style.color = 'white';
+                document.getElementById('muda2').style.color = 'white';
                 document.getElementsByTagName('h3').css('color','black');
                 document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
               }
@@ -59,11 +59,11 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div id="mudatudo" class="features-icons-icon d-flex">
+              <div class="features-icons-icon d-flex">
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3 id="muda1"> Multiplataforma</h3>
-              <p id="mudap" class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!></p>
+              <p id="muda2" class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!></p>
             </div>
           </div>
           <div class="col-lg-4">
