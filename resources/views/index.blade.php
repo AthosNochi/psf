@@ -31,14 +31,19 @@
  <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
-    
+    <nav class="navbar navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">PSF</a>
+        <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
+      </div>
 
-      <ul class="navbar-nav">
+      <ul id="mudanav" class="navbar-nav">
         <li class="nav-item">
           <button type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
             <script> 
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "black";
+                document.getElementById('mudanav').style.backgroundColor = 'white';
                 document.getElementById('muda1').style.color = 'white';
                 document.getElementById('muda1').style.fontFamily = "Arial";
                 document.getElementById('muda1').style.fontSize = "larger";
