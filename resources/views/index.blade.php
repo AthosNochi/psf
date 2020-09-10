@@ -67,7 +67,7 @@
     </nav>
     
     <!-- Icons Grid -->
-    <section class="features-icons bg-light text-center">
+    <section class="features-icons bg-dark text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
