@@ -43,7 +43,8 @@
             <script> 
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "black";
-                document.getElementById('mudacor').style.backgroundColor = 'black';
+                document.getElementById('mudacor1').style.backgroundColor = 'black';
+                document.getElementById('mudacor2').style.backgroundColor = 'black';
                 document.getElementById('muda1').style.color = 'white';
                 document.getElementById('muda1').style.fontFamily = "Arial";
                 document.getElementById('muda1').style.fontSize = "larger";
@@ -70,8 +71,8 @@
     <section class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
-          <div id="mudacor" class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div id="mudacor1" class="col-lg-4">
+            <div id="mudacor2"class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
