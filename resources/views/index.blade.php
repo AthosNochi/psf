@@ -31,7 +31,7 @@
  <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
-    <nav id="mudanav" class="navbar navbar-dark bg-black static-top">
+    <nav id="mudanav" class="navbar navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">PSF</a>
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
@@ -44,6 +44,9 @@
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "black";
                 document.getElementById('muda1').style.color = 'white';
+                document.getElementById('muda1').style.fontFamily = "Arial";
+                document.getElementById('muda1').style.fontSize = "larger";
+
                 document.getElementById('muda2').style.color = 'white';
                 document.getElementById('muda3').style.color = 'white';
                 document.getElementById('muda4').style.color = 'white';
