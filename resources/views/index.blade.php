@@ -45,7 +45,7 @@
                 document.body.style.backgroundColor= "black";
                 document.getElementById('muda1').style.color = 'white';
                 document.getElementsByTagName('h3').css('color','black');
-                document.getElementById('mudacor').style.color = 'white'; 
+                document.getElementById('mudacor').querySelectorAll('p').style.color = 'yellow'; 
               }
             </script>
         </li>
