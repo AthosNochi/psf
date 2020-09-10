@@ -44,7 +44,7 @@
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "black";
                 document.getElementsByTagName('h3').css('color','black');
-                document.getElementById("mudap").querySelectorAll("p"); 
+                document.getElementById("mudap").querySelectorAll("p").style.color = 'yellow'; 
               }
             </script>
         </li>
@@ -61,7 +61,7 @@
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3>Multiplataforma</h3>
-              <p class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!</p>
+              <p id="p2" class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!</p>
             </div>
           </div>
           <div class="col-lg-4">
