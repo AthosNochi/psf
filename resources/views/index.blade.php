@@ -44,7 +44,8 @@
             <script> 
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "black";
-                document.body.p.style.color= "white";
+                document.getElementsByTagName('h3').css('color','black');
+                document.getElementById("mudap").querySelectorAll("p"); 
               }
             </script>
         </li>
@@ -53,10 +54,10 @@
     
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
-      <div id="div" class="container">
+      <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div id="mudap" class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
