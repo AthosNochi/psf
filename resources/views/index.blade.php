@@ -62,7 +62,7 @@
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3 id="muda1"> Multiplataforma</h3>
-              <p class="lead mb-0"Layout responsivo, adapta a qualquer tamanho de tela!</p>
+              <p class="lead mb-0"Layout responsivo, adapta a qualquer tamanho de tela!></p>
             </div>
           </div>
           <div class="col-lg-4">
