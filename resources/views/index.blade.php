@@ -31,11 +31,7 @@
  <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
-    <nav class="navbar navbar-dark bg-dark static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">PSF</a>
-        <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
-      </div>
+    
 
       <ul class="navbar-nav">
         <li class="nav-item">
