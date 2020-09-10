@@ -34,19 +34,24 @@
     <nav class="navbar navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">PSF</a>
-        <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
+        <a id="mudabotao" class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
 
       <ul id="mudanav" class="navbar-nav">
         <li class="nav-item">
-          <button type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
+          <button id="mudabotao2" class="btn btn-primary" type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
             <script> 
               function mudaCorDeFundo() {
                 document.body.style.backgroundColor= "black";
+
+                document.getElementById('mudabotao').style.backgroundColor = 'black';
+                document.getElementById('mudabotao2').style.backgroundColor = 'black';
+
                 document.getElementById('mudacor1').style.backgroundColor = 'black';
                 document.getElementById('mudacor2').style.backgroundColor = 'black';
                 document.getElementById('mudacor3').style.backgroundColor = 'black';
-                document.getElementById('mudacor4').style.backgroundColor = 'black';
+                
+
                 document.getElementById('muda1').style.color = 'white';
                 document.getElementById('muda1').style.fontFamily = "Arial";
                 document.getElementById('muda1').style.fontSize = "larger";
@@ -60,12 +65,12 @@
                 document.getElementById('muda3').style.fontSize = "larger";
 
                 document.getElementById('muda4').style.color = 'white';
-                document.getElementById('muda6').style.fontFamily = "Arial";
-                document.getElementById('muda6').style.fontSize = "larger";
+                document.getElementById('muda4').style.fontFamily = "Arial";
+                document.getElementById('muda4').style.fontSize = "larger";
 
                 document.getElementById('muda5').style.color = 'white';
-                document.getElementById('muda6').style.fontFamily = "Arial";
-                document.getElementById('muda6').style.fontSize = "larger";
+                document.getElementById('muda5').style.fontFamily = "Arial";
+                document.getElementById('muda5').style.fontSize = "larger";
 
                 document.getElementById('muda6').style.color = 'white';
                 document.getElementById('muda6').style.fontFamily = "Arial";
@@ -89,7 +94,7 @@
                 <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3 id="muda1"> Multiplataforma</h3>
-              <p id="muda2" class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!></p>
+              <p id="muda2" class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!</p>
             </div>
           </div>
           <div id="mudacor2" class="col-lg-4">
