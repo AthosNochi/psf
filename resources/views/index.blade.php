@@ -57,7 +57,7 @@
 
                 document.getElementById('muda6').style.color = 'white';
 
-                document.getElementById('mudanav').style.background = 'black';
+                document.getElementById('mudanav').style.backgroundColor = 'black';
 
                 //document.getElementsByTagName('h3').css('color','black');
                 //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
