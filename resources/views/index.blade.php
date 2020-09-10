@@ -37,7 +37,7 @@
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
 
-      <ul class="navbar-nav">
+      <ul id="mudanavbar" class="navbar-nav">
         <li class="nav-item">
           <button type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
             <script> 
@@ -48,11 +48,16 @@
                 document.getElementById('muda1').style.fontSize = "larger";
 
                 document.getElementById('muda2').style.color = 'white';
+
                 document.getElementById('muda3').style.color = 'white';
+
                 document.getElementById('muda4').style.color = 'white';
+
                 document.getElementById('muda5').style.color = 'white';
+
                 document.getElementById('muda6').style.color = 'white';
-                document.getElementById('mudanav').style.color = 'black';
+
+                document.getElementById('mudanavbar').style.color = 'black';
 
                 //document.getElementsByTagName('h3').css('color','black');
                 //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
