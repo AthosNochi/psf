@@ -45,19 +45,31 @@
                 document.body.style.backgroundColor= "black";
                 document.getElementById('mudacor1').style.backgroundColor = 'black';
                 document.getElementById('mudacor2').style.backgroundColor = 'black';
+                document.getElementById('mudacor3').style.backgroundColor = 'black';
+                document.getElementById('mudacor4').style.backgroundColor = 'black';
                 document.getElementById('muda1').style.color = 'white';
                 document.getElementById('muda1').style.fontFamily = "Arial";
                 document.getElementById('muda1').style.fontSize = "larger";
 
                 document.getElementById('muda2').style.color = 'white';
+                document.getElementById('muda2').style.fontFamily = "Arial";
+                document.getElementById('muda2').style.fontSize = "larger";
 
                 document.getElementById('muda3').style.color = 'white';
+                document.getElementById('muda3').style.fontFamily = "Arial";
+                document.getElementById('muda3').style.fontSize = "larger";
 
                 document.getElementById('muda4').style.color = 'white';
+                document.getElementById('muda6').style.fontFamily = "Arial";
+                document.getElementById('muda6').style.fontSize = "larger";
 
                 document.getElementById('muda5').style.color = 'white';
+                document.getElementById('muda6').style.fontFamily = "Arial";
+                document.getElementById('muda6').style.fontSize = "larger";
 
                 document.getElementById('muda6').style.color = 'white';
+                document.getElementById('muda6').style.fontFamily = "Arial";
+                document.getElementById('muda6').style.fontSize = "larger";
 
                 //document.getElementsByTagName('nav').css('backgroundColor','black');
                 //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
@@ -74,13 +86,13 @@
           <div id="mudacor1" class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-                <i id="mudacor2" class="icon-screen-desktop m-auto text-primary"></i>
+                <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3 id="muda1"> Multiplataforma</h3>
               <p id="muda2" class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!></p>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div id="mudacor2" class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="icon-layers m-auto text-primary"></i>
@@ -89,7 +101,7 @@
               <p id="muda4" class="lead mb-0">Sistema acessível para todos </p>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div id="mudacor3" class="col-lg-4">
             <div class="features-icons-item mx-auto mb-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="icon-check m-auto text-primary"></i>
@@ -101,18 +113,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <p class="text-muted small mb-4 mb-lg-0">&copy; </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-	
   </body>
 
 </html>
