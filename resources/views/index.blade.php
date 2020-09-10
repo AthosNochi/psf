@@ -45,7 +45,7 @@
                 document.body.style.backgroundColor= "black";
                 document.getElementById('muda1').style.color = 'white';
                 document.getElementsByTagName('h3').css('color','black');
-                document.getElementById("mudacor").querySelectorAll("p").style.color = 'yellow'; 
+                document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
               }
             </script>
         </li>
@@ -54,7 +54,7 @@
     
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
-      <div id="mudacor"> class="container">
+      <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
