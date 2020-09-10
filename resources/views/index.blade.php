@@ -73,8 +73,8 @@
         <div class="row">
           <div id="mudacor1" class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div id="mudacor2" class="features-icons-icon d-flex">
-                <i class="icon-screen-desktop m-auto text-primary"></i>
+              <div class="features-icons-icon d-flex">
+                <i id="mudacor2" class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3 id="muda1"> Multiplataforma</h3>
               <p id="muda2" class="lead mb-0">Layout responsivo, adapta a qualquer tamanho de tela!></p>
