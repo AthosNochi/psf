@@ -31,13 +31,13 @@
  <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
-    <nav id="mudanav" class="navbar navbar-dark bg-dark static-top">
+    <nav class="navbar navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">PSF</a>
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
       </div>
 
-      <ul id="mudanavbar" class="navbar-nav">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <button type="button" onclick="mudaCorDeFundo()">Auto contraste</button> 
             <script> 
@@ -57,9 +57,7 @@
 
                 document.getElementById('muda6').style.color = 'white';
 
-                document.getElementById('mudanav').style.backgroundColor = 'black';
-
-                document.getElementsByTagName('nav').css('backgroundColor','black');
+                //document.getElementsByTagName('nav').css('backgroundColor','black');
                 //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
               }
             </script>
