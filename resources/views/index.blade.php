@@ -31,7 +31,7 @@
  <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
-    <nav class="navbar navbar-dark bg-dark static-top">
+    <nav id="mudanav" class="navbar navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">PSF</a>
         <a class="btn btn-primary" href="{{ url('/entrar') }}">Entrar</a>
@@ -49,6 +49,7 @@
                 document.getElementById('muda4').style.color = 'white';
                 document.getElementById('muda5').style.color = 'white';
                 document.getElementById('muda6').style.color = 'white';
+                document.getElementById('mudanav').style.color = 'black';
 
                 //document.getElementsByTagName('h3').css('color','black');
                 //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
