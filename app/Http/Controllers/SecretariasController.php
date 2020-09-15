@@ -43,7 +43,7 @@ class SecretariasController extends Controller
     public function index()
     {
         $secretarias = $this->repository->all();
-        return view('secretarias.index')->with([
+        return view('secretaria.index')->with([
             'secretarias'=>$secretarias,
         ]);
     }
