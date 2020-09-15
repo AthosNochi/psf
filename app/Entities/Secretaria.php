@@ -20,6 +20,8 @@ class Secretaria extends Model implements Transformable
      *
      * @var array
      */
+
+    protected $table    = 'secretarias';
     protected $fillable = ['cpf', 'name', 'address', 'rg', 'phone', 'email', 'password'];
 
     public function setPasswordAttribute ($value)
