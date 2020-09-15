@@ -77,7 +77,7 @@
             <tr>
                 <td>{{ $secretaria->id }}</td>
                 <td>{{ $secretaria->name }}</td>
-                <td>{{ $secretaria->endereco }}</td>
+                <td>{{ $secretaria->address }}</td>
                 <td>{{ $secretaria->phone }}</td>
                 <td>
                     {!! Form::open(['route' => ['secretaria.destroy', $secretaria->id], 'method' => 'DELETE']) !!}
