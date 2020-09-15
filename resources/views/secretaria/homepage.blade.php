@@ -104,4 +104,4 @@
 
     {!! Form::close() !!}
 
-    
+@endsection
