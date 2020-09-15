@@ -18,7 +18,6 @@ Auth::routes();
 Route::get('/', 'IndexController@index');
 Route::get('/entrar', 'IndexController@login');
 Route::get('/cadastrar', 'IndexController@register');
-Route::get('/homepage-Secretaria', 'IndexController@homepageSecretaria');
 
 Route::get('/home', 'HomeController@principal');
 
@@ -38,6 +37,8 @@ Route::resource('/agendamentos', 'AgendamentosController');
 Route::resource('/secretaria', 'SecretariasController');
 
 Route::resource('/anamnese', 'AnamnesesController');
+
+Route::get('/homepage-Secretaria', 'IndexController@homepageSecretaria');
 
 Auth::routes();
 
