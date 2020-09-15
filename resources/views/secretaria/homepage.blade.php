@@ -1,4 +1,4 @@
-@extends('templates.master')
+@extends('templates.homepage.homepage-secretaria')
 
 @section('css-view')
 @endsection
@@ -10,7 +10,6 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-
 
     {!! Form::open(['route' => 'anamnese.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
