@@ -9,6 +9,9 @@
             <a class="nav-link" href="{{ route('user.index') }}">Usuários</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{{ route('secretaria.index') }}">Secretaria</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('psf.index') }}">Psf</a>
         </li>
         <li class="nav-item">

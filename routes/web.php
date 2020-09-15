@@ -34,12 +34,18 @@ Route::resource('/enfermeiro', 'EnfermeirosController');
 
 Route::resource('/agendamentos', 'AgendamentosController');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/secretaria', 'SecretariasController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/Secretaria', 'SecretariasController');
+
+
 
 
