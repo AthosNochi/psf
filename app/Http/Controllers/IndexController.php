@@ -10,6 +10,10 @@ class IndexController extends Controller
         return view('index');
     }
 
+    public function homepageSecretaria(){
+        return view ('secretaria.homepage');
+    }
+
     public function Login(){
         return view ('auth.login');
     }

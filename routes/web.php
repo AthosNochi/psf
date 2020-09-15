@@ -18,6 +18,7 @@ Auth::routes();
 Route::get('/', 'IndexController@index');
 Route::get('/entrar', 'IndexController@login');
 Route::get('/cadastrar', 'IndexController@register');
+Route::get('/homepage-Secretaria', 'IndexController@homepageSecretaria');
 
 Route::get('/home', 'HomeController@principal');
 
