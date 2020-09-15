@@ -37,6 +37,8 @@ Route::resource('/agendamentos', 'AgendamentosController');
 
 Route::resource('/secretaria', 'SecretariasController');
 
+Route::resource('/anamnese', 'AnamnesesController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
