@@ -13,25 +13,25 @@
     @endif
     {!! Form::open(['route' => 'anamnese.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
-        <label for="name" class="col-sm-4 col-form-label">* Nome:</label>
+        <label for="name" id="name" class="col-sm-4 col-form-label">* Nome:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="name" placeholder="Insira seu nome completo" >
         </div>
     </div>
     <div class="form-group row">
-        <label for="gender" class="col-sm-4 col-form-label"> Sexo:</label>
+        <label for="gender" id="gender" class="col-sm-4 col-form-label"> Genero:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="gender" placeholder="insira seu Genero" >
         </div>
     </div>
     <div class="form-group row">
-        <label for="age" class="col-sm-4 col-form-label"> Idade: </label>
+        <label for="age" id="age" class="col-sm-4 col-form-label"> Idade: </label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="age" placeholder="Insira sua idade" >
         </div>
     </div>
     <div class="form-group row">
-        <label for="corEtnia" class="col-sm-4 col-form-label"> Cor/etnia: </label>
+        <label for="corEtnia" id="corEtnia" class="col-sm-4 col-form-label"> Cor/etnia: </label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="corEtnia" placeholder="Insira sua cor/etnia" >
         </div>
