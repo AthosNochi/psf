@@ -38,7 +38,7 @@
     </div>
 
     <div class="modal-footer d-flex justify-content-center">
-        <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+        <input class="btn btn-primary" id="mudabotao1" type="submit" name="submit" value="Enviar">
     </div>
 
     {!! Form::close() !!}
