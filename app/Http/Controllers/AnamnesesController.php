@@ -58,7 +58,7 @@ class AnamnesesController extends Controller
             ]);
         }
 
-        return view('secretaria.homepage', compact('anamneses'));
+        return view('anamneses.index', compact('anamneses'));
     }
 
     /**
