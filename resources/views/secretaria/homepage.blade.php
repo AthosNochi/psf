@@ -1,4 +1,4 @@
-@extends('templates.homepage.master-homepage')
+@extends('templates.master')
 
 
 @section('css-view')
