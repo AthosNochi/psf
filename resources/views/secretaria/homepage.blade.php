@@ -1,12 +1,5 @@
 @extends('templates.homepage-master')
 
-
-@section('css-view')
-@endsection
-
-@section('js-conteudo-view')
-@endsection
-
 @section('conteudo-view')
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
@@ -30,13 +23,7 @@
             <input type="text" class="form-control" maxlength="255" name="age" placeholder="Insira sua idade" >
         </div>
     </div>
-    <div class="form-group row">
-        <label for="corEtnia" id="corEtnia" class="col-sm-4 col-form-label"> Cor/etnia: </label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="corEtnia" placeholder="Insira sua cor/etnia" >
-        </div>
-    </div>
-
+    
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" id="mudabotao1" type="submit" name="submit" value="Enviar">
     </div>
