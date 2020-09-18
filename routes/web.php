@@ -39,6 +39,7 @@ Route::resource('/secretaria', 'SecretariasController');
 Route::resource('/anamnese', 'AnamnesesController');
 
 Route::get('/homepage-Secretaria', 'IndexController@homepageSecretaria');
+Route::get('/homepage-enfermeiro', 'IndexController@homepageEnfermeiro');
 
 Auth::routes();
 
