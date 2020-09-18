@@ -14,7 +14,7 @@
     <script src="{{ asset('site/jquery.js') }}"></script>
     <script src="{{ asset('site/bootstrap.js') }}"></script>
 
-    @include('templates.homepage.homepage-menu-superior')
+    @include('templates.homepage-menu-superior')
 
     <section id="view-conteudo">
         @yield('conteudo-view')
