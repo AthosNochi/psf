@@ -17,12 +17,16 @@ class CreateAgendamentosTable extends Migration
             $table->increments('id');
             $table->integer('id_patient')->unsigned()->nullable();
             $table->integer('id_doctor')->unsigned()->nullable();
+            $table->integer('secretaria_id')->unsigned();
             $table->string('descricao');
             $table->string('legenda');
             $table->datetime('datahora');
             $table->timestamps();
+
+
             $table->foreign('id_patient')->references('id')->on('patients');
             $table->foreign('id_doctor')->references('id')->on('doctors');
+            $table->foreign('secretaria_id')->references('id')->on('secretarias');
         });
     }
 

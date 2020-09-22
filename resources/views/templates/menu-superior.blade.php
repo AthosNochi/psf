@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('user.index') }}">Usuários</a>
+            <a class="nav-link" id="usuarios" href="{{ route('user.index') }}">Usuários</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('secretaria.index') }}">Secretaria</a>
@@ -42,6 +42,7 @@
                 document.getElementById("isAdm").style.backgroundColor = 'white';
                 document.getElementById('mudabotao3').style.backgroundColor = 'black';
                 document.getElementById('mudabotao4').style.backgroundColor = 'black';
+                document.getElementById('usuarios').style.Color = 'white';
 
                 document.getElementById('mudalista').style.Color = 'white';
                 document.getElementById('mudacor2').style.backgroundColor = 'black';

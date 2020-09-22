@@ -32,6 +32,18 @@ class CreateAnamnesesTable extends Migration
 			$table->string('historicoDoenca', 200);
 			$table->string('sintomas', 100);
 
+			$table->integer('patient_id')->unsigned();
+			$table->integer('secretaria_id')->unsigned();
+			$table->integer('doctor_id')->unsigned();
+			$table->integer('enfermeiro_id')->unsigned();
+
+			$table->foreign('patient_id')->references('id')->on('patients');
+			$table->foreign('secretaria_id')->references('id')->on('secretarias');
+			$table->foreign('doctor_id')->references('id')->on('doctors');
+			$table->foreign('enfermeiro_id')->references('id')->on('enfermeiros');
+            
+			
+
             $table->timestamps();
 		});
 	}

@@ -17,6 +17,7 @@ class CreatePatientsTable extends Migration
 	{
 		Schema::create('patients', function(Blueprint $table) {
 			$table->increments('id');
+			
 
 			 //People data
 			 $table->string('cpf', 11)->unique()->nullable();
