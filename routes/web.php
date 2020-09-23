@@ -41,6 +41,7 @@ Route::resource('/anamnese', 'AnamnesesController');
 Route::get('/homepage-Secretaria', 'IndexController@homepageSecretaria');
 Route::get('/homepage-enfermeiro', 'IndexController@homepageEnfermeiro');
 Route::get('/homepage-medico', 'IndexController@homepageMedico');
+Route::get('/homepage-paciente', 'AgendamentosController@homepagePaciente');
 
 Auth::routes();
 

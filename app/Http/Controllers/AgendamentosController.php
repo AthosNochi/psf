@@ -71,6 +71,22 @@ class AgendamentosController extends Controller
         ]);
     }
 
+    public function homepagePaciente(){
+
+        $agendamentos       = $this->repository->all();
+        $agendamento        = Agendamento::all();
+        $patient_list       = $this->patientRepository->selectBoxList();
+        $doctor_list        = $this->doctorRepository->selectBoxList();
+        //dd( $agendamentos );
+        
+
+        return view('patient.homepage', [
+            'agendamentos'      => $agendamentos,
+            'patient_list'      => $patient_list,
+            'doctor_list'       => $doctor_list,
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

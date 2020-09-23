@@ -22,6 +22,10 @@ class IndexController extends Controller
         return view ('doctor.homepage');
     }
 
+    public function homepagePaciente(){
+        return view ('patient.homepage');
+    }
+
     public function Login(){
         return view ('auth.login');
     }
