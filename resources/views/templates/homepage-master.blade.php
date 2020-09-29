@@ -13,6 +13,7 @@
 <body>
     <script src="{{ asset('site/jquery.js') }}"></script>
     <script src="{{ asset('site/bootstrap.js') }}"></script>
+    <script src="{{ asset('site/cor.js') }}"></script>
 
     @include('templates.homepage-menu-superior')
 

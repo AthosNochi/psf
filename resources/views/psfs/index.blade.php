@@ -13,13 +13,13 @@
 
 {!! Form::open(['route' => 'psf.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
-        <label for="name" class="col-sm-4 col-form-label"> Nome:</label>
+        <label for="name" id="name" class="col-sm-4 col-form-label"> Nome:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
         </div>
     </div>
     <div class="form-group row">
-        <label for="endereco" class="col-sm-4 col-form-label"> Endereço:</label>
+        <label for="endereco" id="endereco" class="col-sm-4 col-form-label"> Endereço:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="endereco" placeholder="Endereço" required>
         </div>
