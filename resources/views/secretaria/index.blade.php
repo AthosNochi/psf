@@ -1,5 +1,6 @@
 @extends('templates.master')
 
+
 @section('css-view')
 @endsection
 
@@ -10,7 +11,6 @@
     @if (session('success'))
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
-
     {!! Form::open(['route' => 'secretaria.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
         <label for="name" id="name" class="col-sm-4 col-form-label">* Nome:</label>
@@ -31,13 +31,13 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="cpf" id="cpf" class="col-sm-4 col-form-label">* CPF:</label>
+        <label for="cpf" id="cpfsecretaria" class="col-sm-4 col-form-label">* CPF:</label>
         <div class="col-sm-5">
             <input type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
         </div>
     </div>
     <div class="form-group row">
-        <label for="rg" id="rg" class="col-sm-4 col-form-label">* RG:</label>
+        <label for="rg" id="rgsecretaria" class="col-sm-4 col-form-label">* RG:</label>
         <div class="col-sm-5">
             <input type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
         </div>
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="address" id="endereco" class="col-sm-4 col-form-label"> Endereço:</label>
+        <label for="address" id="enderecosecretaria" class="col-sm-4 col-form-label"> Endereço:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="address" placeholder="Endereço" required>
         </div>

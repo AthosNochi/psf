@@ -6,7 +6,7 @@
     @endif
     {!! Form::open(['route' => 'patient.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
-        <label for="name" class="col-sm-4 col-form-label">* Nome:</label>
+        <label for="name" id="name" class="col-sm-4 col-form-label">* Nome:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="name" placeholder="Insira seu nome completo" required>
         </div>

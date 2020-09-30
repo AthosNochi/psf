@@ -20,8 +20,10 @@
     <section id="view-conteudo">
         @yield('conteudo-view')
     </section>
-
-
+    
     @yield('js-view')
+    
+
+    
 
 </html>

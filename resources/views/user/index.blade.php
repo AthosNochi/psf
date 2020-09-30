@@ -61,7 +61,7 @@
 
     <div class="panel">
         <table class="table" align="center">
-            <thead>
+        <thead>
             <tr>
                 <th>#</th>
                 <th>Nome</th>
@@ -87,6 +87,6 @@
             </tr>
             @endforeach
         </tbody>
-    </table>
-</div>
+        </table>
+    </div>
 @endsection

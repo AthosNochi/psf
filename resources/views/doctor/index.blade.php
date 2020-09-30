@@ -6,7 +6,7 @@
     @endif
     {!! Form::open(['route' => 'doctor.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
-        <label for="name" class="col-sm-4 col-form-label"> Nome:</label>
+        <label for="name" id="name" class="col-sm-4 col-form-label"> Nome:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
         </div>
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="cpf" class="col-sm-4 col-form-label">* CPF:</label>
+        <label for="cpf" id="cpf" class="col-sm-4 col-form-label">* CPF:</label>
         <div class="col-sm-5">
             <input type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
         </div>
