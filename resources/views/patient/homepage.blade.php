@@ -19,50 +19,7 @@
     
         <li class="nav-item">
           <button class="btn btn-primary" type="button" id="botao2" onclick="mudaCorDeFundo()">Auto contraste</button> 
-          <script> 
-              function mudaCorDeFundo() {
-              document.body.style.backgroundColor= "black";
-    
-              document.getElementById('descricaopaciente').style.backgroundColor = 'white';
-              document.getElementById('descricaopaciente').style.fontFamily = "Arial";
-              document.getElementById('descricaopaciente').style.fontSize = "larger";
-    
-              document.getElementById("legendapaciente").style.backgroundColor = 'white';
-              document.getElementById('legendapaciente').style.fontFamily = "Arial";
-              document.getElementById('legendapaciente').style.fontSize = "larger";
-    
-              document.getElementById("datahorapaciente").style.backgroundColor = 'white';
-              document.getElementById('datahorapaciente').style.fontFamily = "Arial";
-              document.getElementById('datahorapaciente').style.fontSize = "larger";
-    
-              document.getElementById("corEtnia").style.backgroundColor = 'white';
-              document.getElementById('corEtnia').style.fontFamily = "Arial";
-              document.getElementById('corEtnia').style.fontSize = "larger";
-    
-              document.getElementById('profissao').style.backgroundColor = 'white';
-              document.getElementById('profissao').style.fontFamily = "Arial";
-              document.getElementById('profissao').style.fontSize = "larger";
-                
-              document.getElementById('hora').style.backgroundColor = 'white';
-              document.getElementById('hora').style.fontFamily = "Arial";
-              document.getElementById('hora').style.fontSize = "larger";
-              
-    
-              document.getElementById('botao1').style.backgroundColor = 'black';
-    
-              document.getElementById('botao2').style.backgroundColor = 'black';
-              document.getElementById('name').style.fontFamily = "Arial";
-            
-              document.getElementById('name').style.fontSize = "larger";
-    
-              document.getElementById('mudalista').style.Color = 'white';
-              document.getElementById('mudacor2').style.backgroundColor = 'black';
-              document.getElementById('mudacor3').style.backgroundColor = 'black';
-              
-              //document.getElementsByTagName('nav').css('backgroundColor','black');
-              //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
-            }
-          </script>
+          
     </nav>
 
   {!! Form::open(['route' => 'agendamentos.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
@@ -78,6 +35,8 @@
         <input type="text" class="form-control" maxlength="255" name="legenda" placeholder="Legenda" required>
     </div>
 </div>
+
+<!--colocar calendario somente com dia e horarios disponiveis -->
   <div class="form-group row">
     <label for="datahora" id="datahorapaciente" class="col-sm-4 col-form-label">* Data/Hora:</label>
     <div class="col-sm-8">

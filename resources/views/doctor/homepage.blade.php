@@ -77,3 +77,6 @@
     </div>
     {!! Form::close() !!}
     @endsection
+
+    <!-- salvar na anamnese quem preencheu os dados,
+    e indicar se precisa de retorno da consulta ou receituário -->
