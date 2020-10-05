@@ -41,6 +41,8 @@
             <input type="text" class="form-control" maxlength="255" name="sintomas" placeholder="Insira seus sintomas" >
         </div>
     </div>
+
+    <input type="hidden" name="id_doctor" value="{{\Session::get('id');}}">
     
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" id="botaoDoctor2" type="submit" name="submit" value="Enviar">

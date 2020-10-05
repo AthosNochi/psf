@@ -49,6 +49,8 @@
         </div>
     </div>
 
+    <input type="hidden" name="secretaria_id" value="{{\Session::get('id');}}">
+
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" id="mudabotao1" type="submit" name="submit" value="Enviar">
     </div>
