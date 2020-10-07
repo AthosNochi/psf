@@ -12,11 +12,16 @@
         </button> 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" id="anamneseDoctor" href="">Anamneses</a>
+                <a class="nav-link" id="anamneseDoctor" href="<?= url('/homepage-medico'); ?>">Anamneses</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" id="anamneseDoctor" href="<?= url('/homepage-medico'); ?>">Calendário</a>
+            </li>
+            
         </ul>
         <li class="nav-item">
-          <button class="btn btn-primary" id="botaoDoctor" type="button" id="botao2" onclick="mudaCorDeFundo()">Auto contraste</button> 
+            <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
+        </li>
     </nav>
 
     {!! Form::open(['route' => 'anamnese.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
@@ -42,7 +47,7 @@
         </div>
     </div>
 
-    <input type="hidden" name="id_doctor" value="{{\Session::get('id');}}">
+    <input type="hidden" name="id_doctor" value="{{\Session::get('id')}}">
     
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" id="botaoDoctor2" type="submit" name="submit" value="Enviar">

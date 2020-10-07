@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Sistema de agendamento de consultas">
     <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Sistema de Agendamento em PSF</title>
 
@@ -20,15 +21,18 @@
     <!-- Custom styles for this template -->
     
   <link rel="stylesheet" href= "{{ asset('site/style.css') }}">
-  
-
+  <link rel="stylesheet" href= "{{ asset('site/auto-contraste-backgrounds.css') }}">
+  <link rel="stylesheet" href= "{{ asset('site/auto-contraste-texts.css') }}">
+  <link rel="stylesheet" href= "{{ asset('site/auto-contraste-actions.css') }}">
+  <link rel="stylesheet" href= "{{ asset('site/auto-contraste-images.css') }}">
+  <link rel="stylesheet" href= "{{ asset('site/auto-contraste-forms.css') }}">
   </head>
 
   <body>
 
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
-  <script src="{{ asset('site/cor.js') }}"></script>
+  <script src="{{ asset('site/contrast.class.js') }}"></script>
 
   <div id="id01" class="modal">
     {!! Form::open(['route' => 'user.login', 'method' => 'post', 'class' => 'modal-content animate']) !!}
@@ -75,12 +79,12 @@
     <nav class="navbar navbar-dark bg-dark static-top">
       <div class="container">
       <a class="navbar-brand" href="#">PSF</a>
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
       </div>
 
       <ul id="mudanav" class="navbar-nav">
         <li class="nav-item">
-          <button id="mudabotao2" class="btn btn-primary" type="button" onclick="mudaCorDeFundo()">Auto contraste</button>
+          <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
         </li>
       </ul>
     </nav>

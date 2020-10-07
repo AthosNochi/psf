@@ -15,57 +15,13 @@
             <li class="nav-item">
                 <a class="nav-link" id="anamneseEnfermeiro" href="">Anamneses</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" id="anamneseEnfermeiro" href="">Calendário</a>
+            </li>
         </ul>
-
         <li class="nav-item">
-          <button class="btn btn-primary" id="botaoEnfermeiro" type="button" id="botao2" onclick="mudaCorDeFundo()">Auto contraste</button> 
-          <script> 
-              function mudaCorDeFundo() {
-              document.body.style.backgroundColor= "black";
-    
-              document.getElementById('corEtnia').style.backgroundColor = 'white';
-              document.getElementById('corEtnia').style.fontFamily = "Arial";
-              document.getElementById('corEtnia').style.fontSize = "larger";
-    
-              document.getElementById("estadoCivil").style.backgroundColor = 'white';
-              document.getElementById('estadoCivil').style.fontFamily = "Arial";
-              document.getElementById('estadoCivil').style.fontSize = "larger";
-    
-              document.getElementById("profissao").style.backgroundColor = 'white';
-              document.getElementById('profissao').style.fontFamily = "Arial";
-              document.getElementById('profissao').style.fontSize = "larger";
-    
-              document.getElementById("naturalidade").style.backgroundColor = 'white';
-              document.getElementById('naturalidade').style.fontFamily = "Arial";
-              document.getElementById('naturalidade').style.fontSize = "larger";
-    
-              document.getElementById('address').style.backgroundColor = 'white';
-              document.getElementById('address').style.fontFamily = "Arial";
-              document.getElementById('address').style.fontSize = "larger";
-
-              document.getElementById('nomeMae').style.backgroundColor = 'white';
-              document.getElementById('nomeMae').style.fontFamily = "Arial";
-              document.getElementById('nomeMae').style.fontSize = "larger";
-
-              document.getElementById('religiao').style.backgroundColor = 'white';
-              document.getElementById('religiao').style.fontFamily = "Arial";
-              document.getElementById('religiao').style.fontSize = "larger";
-
-              document.getElementById('alergias').style.backgroundColor = 'white';
-              document.getElementById('alergias').style.fontFamily = "Arial";
-              document.getElementById('alergias').style.fontSize = "larger";
-    
-              document.getElementById('botaoEnfermeiro').style.backgroundColor = 'black';
-              document.getElementById('botaoEnfermeiro2').style.backgroundColor = 'black';
-
-              document.getElementById('anamneseEnfermeiro').style.Color = 'white';
-              
-              document.getElementById('mudalista').style.Color = 'white';
-              
-              //document.getElementsByTagName('nav').css('backgroundColor','black');
-              //document.getElementById("muda").querySelectorAll("p").style.color = 'yellow'; 
-            }
-          </script>
+            <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
+        </li>
     </nav>
 
     {!! Form::open(['route' => 'anamnese.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
@@ -121,7 +77,7 @@
         </div>
     </div>
 
-    <input type="hidden" name="id_enfermeiro" value="{{\Session::get('id');}}">
+    <input type="hidden" name="id_enfermeiro" value="{{\Session::get('id')}}">
 
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" id="botaoEnfermeiro2" type="submit" name="submit" value="Enviar">

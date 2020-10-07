@@ -31,8 +31,9 @@
             <a class="nav-link" href="{{ route('logout') }}">SAIR</a>
         </li>
         <li class="nav-item">
-            <button class="btn btn-primary" type="button" id="mudabotao4" onclick="mudaCorDeFundo()">Auto contraste</button> 
+          <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
         </li>
       </ul>
     </div>
   </nav>
+  

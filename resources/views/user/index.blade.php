@@ -13,19 +13,19 @@
     @endif
     {!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'text-center border border-light p-5']) !!}
     <div class="form-group row">
-        <label for="name" id="name" class="col-sm-4 col-form-label"> * Nome:</label>
+        <label for="name" class="col-sm-4 col-form-label"> * Nome:</label>
         <div class="col-sm-8">
             <input type="text" class="form-control" maxlength="255" name="name" placeholder="Seu nome" required>
         </div>
     </div>
     <div class="form-group row">
-        <label for="email" id="email" class="col-sm-4 col-form-label">* E-mail:</label>
+        <label for="email" class="col-sm-4 col-form-label">* E-mail:</label>
         <div class="col-sm-8">
             <input type="email" class="form-control" maxlength="255" name="email" placeholder="exemplo@email.com" required>
         </div>
     </div>
     <div class="form-group row">
-        <label for="password" id="password" class="col-sm-4 col-form-label"> Senha:</label>
+        <label for="password" class="col-sm-4 col-form-label"> Senha:</label>
         <div class="col-sm-8">
             <input type="password" class="form-control" maxlength="255" name="password" placeholder="Escolha uma senha" required>
         </div>
@@ -43,19 +43,19 @@
         </div>
     </div> -->
     <div class="form-group row">
-        <label for="phone" id="phone" class="col-sm-4 col-form-label">* Telefone:</label>
+        <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
         <div class="col-sm-6">
             <input type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
         </div>
     </div>
     <div class="form-group row">
-        <label for="isAdm" id="isAdm" class="col-sm-4 col-form-label">Administrador:</label>
+        <label for="isAdm" class="col-sm-4 col-form-label">Administrador:</label>
         <div class="col-sm-8">
           <input type="checkbox" name="isAdm" id="isAdm" onchange="administratorCheckbox()">
         </div>
     </div>
     <div class="modal-footer d-flex justify-content-center">
-        <input class="btn btn-primary" id="mudabotao3" type="submit" name="submit" value="Enviar">
+        <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
     </div>    
     {!! Form::close() !!}
 
