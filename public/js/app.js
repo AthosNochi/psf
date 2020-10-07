@@ -1,4 +1,6 @@
-/******/ (function(modules) { // webpackBootstrap
+/******/ 
+          consign({cwd: process.cwd()+"/app"})
+          (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
