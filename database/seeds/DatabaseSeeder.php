@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Entities\User;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,12 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        dd(Hash::make('password'));
         User::create([
             'isAdm'         => true,
         	'name' 			=> 'athos',
             'email' 		=> 'athos@sistemas.com',
             'phone'         => '1971025399',
-        	'password'		=> env('PASSWORD_HASH') ? bcrypt('1234') : '1234',
+        	'password' => Hash::make('password'),
         ]);
     }
 }

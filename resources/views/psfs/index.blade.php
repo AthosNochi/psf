@@ -47,7 +47,6 @@
         <table class="table" align="center">
         <thead>
             <tr>
-                <th>#</th>
                 <th>Nome</th>
                 <th>Endereço</th>
                 <th>Telefone</th>
@@ -58,7 +57,6 @@
         <tbody>
             @foreach ($psfs as $psf)
             <tr>
-                <td>{{ $psf->id }}</td>
                 <td>{{ $psf->name }}</td>
                 <td>{{ $psf->endereco }}</td>
                 <td>{{ $psf->phone }}</td>

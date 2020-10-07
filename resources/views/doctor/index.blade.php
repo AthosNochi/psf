@@ -62,7 +62,6 @@
         <table class="table" align="center">
         <thead>
             <tr>
-                <th>#</th>
                 <th>Nome</th>
                 <th>rg</th>
                 <th>CRM</th>
@@ -74,7 +73,6 @@
         <tbody>
             @foreach ($doctors as $doctor)
             <tr>
-                <td>{{ $doctor->id }}</td>
                 <td>{{ $doctor->name }}</td>
                 <td>{{ $doctor->rg }}</td>
                 <td>{{ $doctor->crm }}</td>

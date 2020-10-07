@@ -15,12 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'IndexController@index');
-Route::get('/entrar', 'IndexController@login');
-Route::get('/cadastrar', 'IndexController@register');
-
-Route::get('/home', 'HomeController@principal');
-
+Route::get('/', 'Controller@index');
+Route::get('/login', ['uses' => 'Controller@login']);
+Route::post('/login', ['as' => 'user.login', 'uses' => 'DashboardController@auth']);
+Route::get('/dashboard', ['as' => 'user.dashboard', 'uses' => 'DashboardController@index']);
 
 Route::resource('/user', 'UsersController');
 
@@ -38,18 +36,10 @@ Route::resource('/secretaria', 'SecretariasController');
 
 Route::resource('/anamnese', 'AnamnesesController');
 
-Route::get('/homepage-Secretaria', 'IndexController@homepageSecretaria');
-Route::get('/homepage-enfermeiro', 'IndexController@homepageEnfermeiro');
-Route::get('/homepage-medico', 'IndexController@homepageMedico');
+Route::get('/homepage-Secretaria', 'Controller@homepageSecretaria');
+Route::get('/homepage-enfermeiro', 'Controller@homepageEnfermeiro');
+Route::get('/homepage-medico', 'Controller@homepageMedico');
 Route::get('/homepage-paciente', 'AgendamentosController@homepagePaciente');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/Secretaria', 'SecretariasController');
 

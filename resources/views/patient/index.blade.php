@@ -81,7 +81,6 @@
         <table class="table" align="center">
         <thead>
             <tr>
-                <td>#</td>
                 <td>CPF</td>
                 <td>RG</td>
                 <td>Nome</td>
@@ -99,7 +98,6 @@
         <tbody>
             @foreach ($patients as $patient)
             <tr>
-                <td>{{ $patient->id }}</td>
                 <td>{{ $patient->cpf }}</td>
                 <td>{{ $patient->rg }}</td>
                 <td>{{ $patient->name }}</td>

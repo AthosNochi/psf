@@ -11,16 +11,31 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function homepage(){
-        return view ('login');
+    public function index(){
+        return view('index');
     }
 
-    public function cadastrar(){
-        
+    public function homepageSecretaria(){
+        return view ('secretaria.homepage');
     }
 
-
-    public function fazerLogin(){
-        return view('user.login');
+    public function homepageEnfermeiro(){
+        return view ('enfermeiro.homepage');
     }
+
+    public function homepageMedico(){
+        return view ('doctor.homepage');
+    }
+
+    public function homepagePaciente(){
+        return view ('patient.homepage');
+    }
+
+    public function login(){
+        return view ('index');
+    }
+
+    public function register(){
+        return view('auth.register');
+    }    
 }

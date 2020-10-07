@@ -43,7 +43,6 @@
     <table class="table" align="center">
       <thead>
           <tr>
-              <th>Id</th>
               <th>Legenda</th>
               <th>Descrição</th>
               <th>Data/Hora</th>
@@ -56,7 +55,6 @@
       <tbody>
           @foreach($agendamentos as $agendamento)
           <tr>
-              <td>{{ $agendamento->id }}</td>
               <td>{{ $agendamento->legenda}}</td>
               <td>{{ $agendamento->descricao }}</td>
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>

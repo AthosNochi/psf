@@ -36,10 +36,19 @@
     </div>
 
     <div class="form-group row">
-        <label for="gender" id="gender" class="col-sm-4 col-form-label"> Genero:</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="gender" placeholder="insira seu Genero" >
-        </div>
+        <label for="name" id="name" class="col-sm-4 col-form-label"> Gênero:</label>
+        <label class="col-sm-4 col-form-label" id="masculino">Masculino
+          <input type="radio" checked="checked" name="radio">
+          <span class=""></span>
+        </label>
+        <label class="col-sm-4 col-form-label" id="feminino">Feminino
+          <input type="radio" name="radio">
+          <span class=""></span>
+        </label>
+        <label class="col-sm-4 col-form-label" id="outros">Outros
+          <input type="radio" name="radio">
+          <span class=""></span>
+        </label>
     </div>
 
     <div class="form-group row">
@@ -49,7 +58,7 @@
         </div>
     </div>
 
-    <input type="hidden" name="secretaria_id" value="{{\Session::get('id');}}">
+    <input type="hidden" name="secretaria_id" value="{{\Session::get('id')}}">
 
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" id="mudabotao1" type="submit" name="submit" value="Enviar">

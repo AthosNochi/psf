@@ -23,13 +23,13 @@ use Illuminate\Support\Arr;
 class UsersController extends Controller
 {
     
-    protected $service;
+    protected $validator;
     protected $repository;
      
-    public function __construct(UserRepository $repository, UserService $service)
+    public function __construct(UserRepository $repository, UserValidator $validator)
     {
         $this->repository   = $repository;
-        $this->service      = $service;
+        $this->service      = $validator;
     }
 
     /**
@@ -66,6 +66,7 @@ class UsersController extends Controller
         $request->merge(["isAdm"=>$isAdm]);
         
         $usuario = User::create($request->all());
+        
         session()->flash('success', [
             'success'  => $request['success'],
             'messages' => $request['messages']

@@ -65,7 +65,6 @@
         <table class="table" align="center">
         <thead>
             <tr>
-                <th>#</th>
                 <th>Nome</th>
                 <th>Endereço</th>
                 <th>Telefone</th>
@@ -75,7 +74,6 @@
         <tbody>
             @foreach ($secretarias as $secretaria)
             <tr>
-                <td>{{ $secretaria->id }}</td>
                 <td>{{ $secretaria->name }}</td>
                 <td>{{ $secretaria->address }}</td>
                 <td>{{ $secretaria->phone }}</td>
