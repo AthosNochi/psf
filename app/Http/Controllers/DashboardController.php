@@ -49,7 +49,7 @@ class DashboardController extends Controller
            
            
            if($user->password != $request->get('password'))
-                throw new \Exception("A Senha informada é invalida");
+                throw new \Exception ("A Senha informada é invalida");
            
 
             \Auth::login($user);
@@ -64,3 +64,4 @@ class DashboardController extends Controller
 
     }
 }
+
