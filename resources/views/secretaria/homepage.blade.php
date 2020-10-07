@@ -44,7 +44,7 @@
     </div>
 
     <div class="form-group row">
-        <label for="name" id="name" class="col-sm-4 col-form-label"> Gênero:</label>
+        <label for="gender" id="gender" class="col-sm-4 col-form-label"> Gênero:</label>
         <label class="col-sm-4 col-form-label" id="masculino">Masculino
           <input type="radio" checked="checked" name="radio">
           <span class=""></span>

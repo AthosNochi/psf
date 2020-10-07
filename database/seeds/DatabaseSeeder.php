@@ -13,7 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        dd(Hash::make('password'));
         User::create([
             'isAdm'         => true,
         	'name' 			=> 'athos',

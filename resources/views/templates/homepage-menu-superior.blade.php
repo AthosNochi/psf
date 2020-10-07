@@ -20,6 +20,12 @@
         <li class="nav-item">
           <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
         </li>
+        <li class="nav-item">
+            <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        </li>
+        <li class="nav-item">
+            <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+        </li>
       </ul>
     </div>
   </nav>

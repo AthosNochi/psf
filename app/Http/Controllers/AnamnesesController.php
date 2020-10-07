@@ -11,6 +11,7 @@ use App\Http\Requests\AnamneseCreateRequest;
 use App\Http\Requests\AnamneseUpdateRequest;
 use App\Repositories\AnamneseRepository;
 use App\Validators\AnamneseValidator;
+use App\Entities\Anamnese;
 
 /**
  * Class AnamnesesController.
@@ -72,6 +73,14 @@ class AnamnesesController extends Controller
      */
     public function store(AnamneseCreateRequest $request)
     {
+        if(isset($request->gender) && !strcmp($request->gender,'on')){
+            $gender=true;
+        }else{
+            $gender=false;
+        }
+        $request->merge(["gender"=>$gender]);
+        
+        $anamnese = Anamnese::create($request->all());
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
