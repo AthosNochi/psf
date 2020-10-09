@@ -43,6 +43,3 @@ Route::get('/homepage-paciente', 'AgendamentosController@homepagePaciente');
 
 Route::resource('/Secretaria', 'SecretariasController');
 
-
-
-
