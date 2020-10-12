@@ -33,6 +33,7 @@
   <script src="{{ asset('site/jquery.js') }}"></script>
   <script src="{{ asset('site/bootstrap.js') }}"></script>
   <script src="{{ asset('site/contrast.class.js') }}"></script>
+  <script src="{{ asset('site/fonte.js') }}"></script>
 
   <div id="id01" class="modal">
     {!! Form::open(['route' => 'user.login', 'method' => 'post', 'class' => 'modal-content animate']) !!}
@@ -76,6 +77,7 @@
  <!-- nesse ponto você acha o diretório site onde esta o jquery e o bootstrap
  
   <!-- Navigation -->
+  <div class="topnav">
     <nav class="navbar navbar-dark bg-dark static-top">
       <div class="container">
       <a class="navbar-brand" href="#">PSF</a>
@@ -84,10 +86,17 @@
 
       <ul id="mudanav" class="navbar-nav">
         <li class="nav-item">
-          <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
+          <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" style="width:auto;">Auto contraste</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-primary" name="increase-font" id="increase-font" title="Aumentar fonte" style="width:auto;">A +</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-primary" name="decrease-font" id="decrease-font" title="Diminuir fonte" style="width:auto;">A -</button>
         </li>
       </ul>
     </nav>
+  </div>
     
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">

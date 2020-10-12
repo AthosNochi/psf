@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
@@ -72,18 +73,23 @@ class AgendamentosController extends Controller
     }
 
     public function homepagePaciente(){
+        DB::table('horarios')->where('id_doctor');
+        
 
         $agendamentos       = $this->repository->all();
         $agendamento        = Agendamento::all();
         $patient_list       = $this->patientRepository->selectBoxList();
         $doctor_list        = $this->doctorRepository->selectBoxList();
-        //dd( $agendamentos );
-        
+        $horarios            = DB::table('horarios')->where('id_doctor', "1")->get();
+        //dd($horarios );
 
+
+    
         return view('patient.homepage', [
             'agendamentos'      => $agendamentos,
             'patient_list'      => $patient_list,
             'doctor_list'       => $doctor_list,
+            'horarios'          => $horarios[0],
         ]);
     }
 
@@ -117,7 +123,6 @@ class AgendamentosController extends Controller
             $agendamento = new Agendamento();
             $agendamento->descricao     = $request->input('descricao');
             $agendamento->datahora      = $request->input('datahora');
-            $agendamento->id_patient    = $request->input('patient_id');
             $agendamento->id_doctor     = $request->input('doctor_id');
             $agendamento->legenda       = $request->input('legenda');
             $agendamento->save();

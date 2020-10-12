@@ -21,6 +21,8 @@
     <script src="{{ asset('site/jquery.js') }}"></script>
     <script src="{{ asset('site/bootstrap.js') }}"></script>
     <script src="{{ asset('site/fullcalendar.js') }}"></script>
+    <script src="{{ asset('site/fonte.js') }}"></script>
+    <script src="{{ asset('site/navbar.js') }}"></script>
     <script src='{{asset('assets/fullcalendar/lib/main.js')}}'></script>
     <script src='{{asset('assets/fullcalendar/packages/daygrid/main.js')}}'></script>
     <script src='{{asset('assets/fullcalendar/lib/locales-all.js')}}'></script>

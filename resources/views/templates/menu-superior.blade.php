@@ -1,4 +1,6 @@
-
+<div id="mynav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,15 +27,19 @@
             <a class="nav-link" href="{{ route('enfermeiro.index') }}">Efermeiros</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('agendamentos.index') }}">Agendamentos</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}">SAIR</a>
         </li>
         <li class="nav-item">
           <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
         </li>
+        <li class="nav-item">
+          <button class="btn btn-primary" name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-primary" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+        </li>
       </ul>
     </div>
-  </nav>
+</nav>
+</div>
   

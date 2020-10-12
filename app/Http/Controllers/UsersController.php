@@ -67,10 +67,7 @@ class UsersController extends Controller
         
         $usuario = User::create($request->all());
         
-        session()->flash('success', [
-            'success'  => $request['success'],
-            'messages' => $request['messages']
-        ]);
+        $request->session()->flash('status', 'Task was successful!');
         
         return redirect()->route('user.index');
     }

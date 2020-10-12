@@ -16,7 +16,7 @@ use App\Validators\DoctorValidator;
 class DoctorRepositoryEloquent extends BaseRepository implements DoctorRepository
 {
 
-    public function selectBoxList(string $descricao = 'name', string $chave = 'id')
+    public function selectBoxList(string $descricao = 'specialty', string $chave = 'id')
     {
         return $this->model->pluck($descricao, $chave)->all();
     }
@@ -28,7 +28,7 @@ class DoctorRepositoryEloquent extends BaseRepository implements DoctorRepositor
     }
 
     /**
-    * Specify Validator class name
+    * Specify Validator class specialty
     *
     * @return mixed
     */

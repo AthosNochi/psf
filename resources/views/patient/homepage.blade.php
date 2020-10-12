@@ -40,12 +40,21 @@
         <input type="text" class="form-control" maxlength="255" name="legenda" placeholder="Legenda" required>
     </div>
 </div>
+<div class="form-group row">
+  <label for="id_doctor" class="col-sm-4 col-form-label">* Médico:</label>
+  <div class="col-sm-8">
+    @include('templates.formulario.select', ['select' => 'id_doctor', 'data' => $doctor_list, 'attributes' => ['placeholder' => "Medico"]])
+  </div>
+</div> 
 
 <!--colocar calendario somente com dia e horarios disponiveis -->
   <div class="form-group row">
     <label for="datahora" id="datahorapaciente" class="col-sm-4 col-form-label">* Data/Hora:</label>
     <div class="col-sm-8">
-        <input type="datetime-local" class="form-control" maxlength="255" name="datahora" required>
+      <input type="datetime-local" id="meeting-time" 
+      name="datahora"
+      min="{{str_replace (" ","T", $horarios->datahorainicio)}}" max="{{$horarios->datahorafim}}">
+      
     </div>
   </div>
   
