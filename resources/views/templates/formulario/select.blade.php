@@ -1,1 +1,1 @@
-{!! Form::select($select, $data ?? []) !!}
+{!! Form::select($select, $data, null, $attributes ?? []) !!}

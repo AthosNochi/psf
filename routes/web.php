@@ -26,6 +26,8 @@ Route::resource('/psf', 'PsfsController');
 
 Route::resource('/doctor', 'DoctorsController');
 
+Route::resource('/availability', 'AvailabilitiesController');
+
 Route::resource('/patient', 'PatientsController');
 
 Route::resource('/enfermeiro', 'EnfermeirosController');
@@ -40,6 +42,8 @@ Route::get('/homepage-Secretaria', 'Controller@homepageSecretaria');
 Route::get('/homepage-enfermeiro', 'Controller@homepageEnfermeiro');
 Route::get('/homepage-medico', 'Controller@homepageMedico');
 Route::get('/homepage-paciente', 'AgendamentosController@homepagePaciente');
+// Route::get('/availability/ajaxcall', 'AvailabilitiesController@ajaxcall');
+// Route::get('/availability/ajaxcall', ['as' => 'availability.ajaxcall', 'uses' => 'AvailabilitiesController@ajaxcall']);
 
 Route::resource('/Secretaria', 'SecretariasController');
 

@@ -17,7 +17,7 @@ class CreateAgendamentosTable extends Migration
             $table->increments('id');
             $table->integer('id_patient')->unsigned()->nullable();
             $table->integer('id_doctor')->unsigned()->nullable();
-            $table->integer('secretaria_id')->unsigned();
+            $table->integer('secretaria_id')->unsigned()->nullable();
             $table->integer('id_enfermeiro')->unsigned()->nullable();
             $table->string('descricao');
             $table->string('legenda');

@@ -6,11 +6,11 @@ use \Prettus\Validator\Contracts\ValidatorInterface;
 use \Prettus\Validator\LaravelValidator;
 
 /**
- * Class AgendamentoValidator.
+ * Class AvailabilityValidator.
  *
  * @package namespace App\Validators;
  */
-class AgendamentoValidator extends LaravelValidator
+class AvailabilityValidator extends LaravelValidator
 {
     /**
      * Validation Rules
@@ -19,12 +19,11 @@ class AgendamentoValidator extends LaravelValidator
      */
     protected $rules = [
         ValidatorInterface::RULE_CREATE => [
-            'descricao' => 'required|min:5',
-            'datahora' => 'required',
-            'patient_id' => 'required',
-            'doctor_id' => 'required', 
-            'secretaria_id' => 'required', 
-            'legenda' => 'required',
+            'id_medico'   => 'required', 
+            'consulta'   => 'required', 
+            'disponibilidade'  => '', 
+            'adicoes' => '',
+            'exclusoes'    => ''
         ],
 
         ValidatorInterface::RULE_UPDATE => [],

@@ -4,22 +4,17 @@ namespace App\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\SecretariaRepository;
-use App\Entities\Secretaria;
-use App\Validators\SecretariaValidator;
+use App\Repositories\AvailabilityRepository;
+use App\Entities\Availability;
+use App\Validators\AvailabilityValidator;
 
 /**
- * Class SecretariaRepositoryEloquent.
+ * Class AvailabilityRepositoryEloquent.
  *
  * @package namespace App\Repositories;
  */
-class SecretariaRepositoryEloquent extends BaseRepository implements SecretariaRepository
+class AvailabilityRepositoryEloquent extends BaseRepository implements AvailabilityRepository
 {
-    public function selectBoxList(string $descricao = 'name', string $chave = 'id')
-    {
-        return $this->model->pluck($descricao, $chave)->all();
-    }
-
     /**
      * Specify Model class name
      *
@@ -27,7 +22,7 @@ class SecretariaRepositoryEloquent extends BaseRepository implements SecretariaR
      */
     public function model()
     {
-        return Secretaria::class;
+        return Availability::class;
     }
 
     /**
@@ -38,7 +33,7 @@ class SecretariaRepositoryEloquent extends BaseRepository implements SecretariaR
     public function validator()
     {
 
-        return SecretariaValidator::class;
+        return AvailabilityValidator::class;
     }
 
 

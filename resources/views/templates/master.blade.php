@@ -12,7 +12,8 @@
     <link rel="stylesheet" href= "{{ asset('site/auto-contraste-actions.css') }}">
     <link rel="stylesheet" href= "{{ asset('site/auto-contraste-images.css') }}">
     <link rel="stylesheet" href= "{{ asset('site/auto-contraste-forms.css') }}">
-    <link href='{{asset('assets/fullcalendar/lib/main.css')}}' rel='stylesheet' />
+    <link rel="stylesheet" href="{{ asset('assets/fullcalendar/lib/main.css') }}" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
     @yield('css-view')
 </head>
@@ -23,9 +24,9 @@
     <script src="{{ asset('site/fullcalendar.js') }}"></script>
     <script src="{{ asset('site/fonte.js') }}"></script>
     <script src="{{ asset('site/navbar.js') }}"></script>
-    <script src='{{asset('assets/fullcalendar/lib/main.js')}}'></script>
-    <script src='{{asset('assets/fullcalendar/packages/daygrid/main.js')}}'></script>
-    <script src='{{asset('assets/fullcalendar/lib/locales-all.js')}}'></script>
+    <script src="{{ asset('assets/fullcalendar/lib/main.js') }}"></script>
+    <script src="{{ asset('assets/fullcalendar/packages/daygrid/main.js') }}"></script>
+    <script src="{{ asset('assets/fullcalendar/lib/locales-all.js') }}"></script>
 
     @include('templates.menu-superior')
 
@@ -34,8 +35,6 @@
     </section>
     
     @yield('js-view')
-    
-
     
 
 </html>
