@@ -25,6 +25,7 @@ class CreateSecretariasTable extends Migration
 
 			$table->string('email', 80)->unique();
 			$table->string('password', 254)->nullable();
+			
 
             $table->timestamps();
 		});

@@ -60,13 +60,13 @@ class SecretariasController extends Controller
     public function store(SecretariaCreateRequest $request)
     {
         //$request    = $this->service->store($request->all());//
-        $secretaria        = $request ['success'] ? $request['data'] : null;
-        $secretaria        = Secretaria::create($request->all());
-        
-        session()->flash('success', [
-            'success'  => $request['success'],
-            'messages' => $request['messages']
-        ]);
+        Secretaria::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            ]);
+
+            $request->session()->flash('status', 'Task was successful!');
         
         return redirect()->route('secretaria.index');
     }

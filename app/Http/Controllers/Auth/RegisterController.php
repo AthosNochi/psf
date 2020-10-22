@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Entities\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use App\Entities\User;
-use App\Http\Requests\UserCreateRequest;
 
 class RegisterController extends Controller
 {
@@ -30,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -40,13 +39,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-    }
-
-    protected function registered(Request $request, $user)
-    {
-        $this->guard()->logout();
-        return redirect('/login')->with('status', 'We sent you an activation code. 
-                Check your email and click on the link to verify.');
     }
 
     /**
@@ -60,7 +52,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -68,22 +60,22 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\User
      */
-    public function create(UserCreateRequest $request)
+    protected function create(array $data)
     {
-         //$request = $this->service->store($request->all());//
-         if(isset($request->isAdm) && !strcmp($request->isAdm,'on')){
+        if(isset($data->isAdm) && !strcmp($data->isAdm,'on')){
             $isAdm=true;
         }else{
             $isAdm=false;
         }
-        $request->merge(["isAdm"=>$isAdm]);
-        
-        return $usuario = User::create($request->all());
-        session()->flash('success', [
-            'success'  => $request['success'],
-            'messages' => $request['messages']
+        $data->merge(["isAdm"=>$isAdm]);
+
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'isAdm' => $data['isAdm'],
+            'password' => Hash::make($data['password']),
         ]);
     }
 }

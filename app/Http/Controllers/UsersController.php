@@ -14,6 +14,8 @@ use App\Validators\UserValidator;
 use App\Services\UserService;
 use App\Entities\User;
 use Illuminate\Support\Arr;
+use Auth;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * Class UsersController.
@@ -38,13 +40,37 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index()
-    {
+     public function index(){
         $users = $this->repository->all();
         return view('user.index')->with([
-            'users'=>$users,
+        'users'=>$users,
         ]);
     }
+     
+
+    public function dashboard()
+    {
+        $users = $this->repository->all();
+
+        if(Auth::check()){
+            if(Auth::user()['isAdm']){
+
+            return view('admin.dashboard')->with([
+            'users'=>$users,
+            ]);
+        }
+        return redirect()->route('patient.homepage');
+        }
+        return view('welcome');
+    }
+
+    public function login()
+    {
+        return view('');
+    }
+
+
+    
 
     /**
      * Store a newly created resource in storage.
@@ -64,8 +90,15 @@ class UsersController extends Controller
             $isAdm=false;
         }
         $request->merge(["isAdm"=>$isAdm]);
+
         
-        $usuario = User::create($request->all());
+        
+        User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'isAdm' => $request['isAdm'],
+            'password' => Hash::make($request['password']),
+        ]);
         
         $request->session()->flash('status', 'Task was successful!');
         

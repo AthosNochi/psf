@@ -29,13 +29,5 @@ class Controller extends BaseController
 
     public function homepagePaciente(){
         return view ('patient.homepage');
-    }
-
-    public function login(){
-        return view ('index');
-    }
-
-    public function register(){
-        return view('auth.register');
-    }    
+    } 
 }

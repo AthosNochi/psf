@@ -71,6 +71,7 @@
             <input type="text" class="form-control" maxlength="255" name="notes" placeholder="Diabetes, pressão alta, etc..." required>
         </div>
     </div>
+    <input type="hidden" name="tipo" value="2">
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary" type="submit" name="submit" value="Enviar">
     </div>

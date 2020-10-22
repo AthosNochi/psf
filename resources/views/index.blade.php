@@ -36,7 +36,7 @@
   <script src="{{ asset('site/fonte.js') }}"></script>
 
   <div id="id01" class="modal">
-    {!! Form::open(['route' => 'user.login', 'method' => 'post', 'class' => 'modal-content animate']) !!}
+    {!! Form::open(['route' => 'login', 'method' => 'post', 'class' => 'modal-content animate']) !!}
       <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <img src="icone.jpg" alt="Avatar" class="avatar">
@@ -57,7 +57,7 @@
   
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <span class="password">Forgot <a href="#">password?</a></span>
       </div>
       {!! Form::close() !!}
     
@@ -82,8 +82,6 @@
       <div class="container">
       <a class="navbar-brand" href="#">PSF</a>
         <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-      </div>
-
       <ul id="mudanav" class="navbar-nav">
         <li class="nav-item">
           <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" style="width:auto;">Auto contraste</button>

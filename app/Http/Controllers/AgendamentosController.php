@@ -80,15 +80,11 @@ class AgendamentosController extends Controller
     }
 
     public function homepagePaciente(){
-        DB::table('horarios')->where('id_doctor');
-        
-
         $agendamentos       = $this->repository->all();
         $agendamento        = Agendamento::all();
         $patient_list       = $this->patientRepository->selectBoxList();
         $doctor_list        = $this->doctorRepository->selectBoxList();
         $secretaria_list    = $this->secretariaRepository->selectBoxList();
-        $horarios           = DB::table('horarios')->where('id_doctor', "1")->get();
         //dd($horarios );
 
 
@@ -168,7 +164,7 @@ class AgendamentosController extends Controller
 			$agendamento->legenda       = $request->input('legenda');
 			$agendamento->save();
 
-		return redirect()->route('agendamentos.index');
+		return redirect()->back();
 			
 		} else {
 			

@@ -25,10 +25,12 @@ class CreateDoctorsTable extends Migration
            $table->char('phone', 11);
 		   $table->char('crm', 50)->unique()->nullable();
 		   $table->char('specialty', 50)->nullable();
+		   
 
             //Auth data
            $table->string('email', 80)->unique();
-           $table->string('password', 254)->nullable();
+		   $table->string('password', 254)->nullable();
+		   
 
 			//Permission
 			//-----------//

@@ -27,6 +27,7 @@ class CreateEnfermeirosTable extends Migration
 			 //Auth data
 			 $table->string('email', 80)->unique();
 			 $table->string('password', 254)->nullable();
+			 
   
 			  //Permission
 			 //---//

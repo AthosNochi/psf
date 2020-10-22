@@ -16,7 +16,7 @@ class CreatePatientsTable extends Migration
 	public function up()
 	{
 		Schema::create('patients', function(Blueprint $table) {
-			$table->increments('id');
+			$table->increments('zid');
 			
 
 			 //People data
@@ -34,6 +34,7 @@ class CreatePatientsTable extends Migration
 			 //Auth data
 			 $table->string('email', 80)->unique();
 			 $table->string('password', 254)->nullable();
+			
   
 			  //Permission
 			 //---//

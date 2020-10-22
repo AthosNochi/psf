@@ -27,4 +27,8 @@ class User extends Authenticatable
        $phone = $this->attributes['phone'];
        return "(" . substr($phone, 0, 2) . ")" . substr($phone, 2, 4) . "-" . substr($phone, -4) ;
    }
+
+   public function setPasswordAtributte($value){
+       $this->attributes['password'] =  bcrypt('$value');
+   }
 }
