@@ -123,7 +123,9 @@ class PatientsController extends Controller
     {
         $patient = $this->repository->find($id);
 
-        return view('patient.editP');
+        return view('patient.editP')->with([
+            'patient'=>$patient,
+        ]);
     }
 
     
@@ -158,9 +160,7 @@ class PatientsController extends Controller
                 return response()->json($response);
             }
 
-            return view('patient.show', [
-                'patients' => $patients,
-            ]);
+            return redirect()->back();
 
         } catch (ValidatorException $e) {
 

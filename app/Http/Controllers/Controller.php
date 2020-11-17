@@ -32,4 +32,8 @@ class Controller extends BaseController
     public function dadosPaciente(){
         return view('patient.dados');
     }
+
+    public function agendamentosPaciente(){
+        return view('patient.agendamentos');
+    }
 }

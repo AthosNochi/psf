@@ -17,7 +17,7 @@
               <a class="nav-link" id="anamneseEnfermeiro" href="/homepage-paciente/meus-dados">Meus dados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="anamneseEnfermeiro" href="">Meus Agendamentos</a>
+            <a class="nav-link" id="anamneseEnfermeiro" href="/homepage-paciente/meus-agendamentos">Meus Agendamentos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="anamneseEnfermeiro" href="">Novo Agendamento</a>

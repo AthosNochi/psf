@@ -35,7 +35,10 @@ Route :: group ([ 'middleware' => 'patient' ], function () {
     Route::get('homepage-paciente/logout', 'LoginController@logout');
 
     Route::get('/homepage-paciente/meus-dados', 'Controller@dadosPaciente' );
-    Route::get('/homepage-paciente/meus-dados/editar', 'PatientsController@editar'{id})->name('patient.editar');
+    Route::get('/homepage-paciente/meus-dados/editar/{id}', 'PatientsController@editar')->name('patient.editar');
+
+    Route::get('/homepage-paciente/meus-agendamentos/', 'AgendamentosController@showPaciente');
+    Route::get('/homepage-paciente/meus-agendamentos/editar/{id}', 'AgendamentosController@editar')->name('agendamento.editar');
 });
 
 //////--------ROTAS DE SECRETARIA ----------///////

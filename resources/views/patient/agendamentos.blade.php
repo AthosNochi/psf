@@ -20,7 +20,7 @@
             <a class="nav-link" id="anamneseEnfermeiro" href="/homepage-paciente/meus-agendamentos">Meus Agendamentos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="anamneseEnfermeiro" href="">Novo Agendamento</a>
+            <a class="nav-link" id="anamneseEnfermeiro" href="/homepage-paciente/novo-agendamento">Novo Agendamento</a>
           </li>
           <li class="nav-item" id="mudanav">
             <a class="nav-link" href="{{ route('logout') }}"
@@ -38,28 +38,30 @@
           <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
       </li>
   </nav>
-<div class="panel">
+  <div class="panel">
     <table class="table" align="center">
-    <thead>
+      <thead>
+        
+          <tr>
+              <th>Legenda</th>
+              <th>Descrição</th>
+              <th>Data/Hora</th>
+              <th>Paciente</th>
+              
+             
+              <th>Opções</th>
+          </tr>
+      </thead>
+      <tbody>
+        @foreach($agendamentos as $agendamento)
         <tr>
-            <th>Nome</th>
-            <th>Email</td>
-            <th>Nascimento</th>
-            <th>Telefone</th>
-            <th>opções</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-         <td>{{Auth::guard('patient')->user()->name}}</td>
-         <td>{{Auth::guard('patient')->user()->email}}</td>
-         <td>{{Auth::guard('patient')->user()->birth}}</td>
-         <td>{{Auth::guard('patient')->user()->phone}}</td>
-            <td>
-                <a href="{{ route('patient.editar', Auth::guard('patient')->user()->id) }}"> Editar</a>
-            </td>
-        </tr>
-    </tbody>
+            <td>{{Auth::guard('patient')->user()->$agendamento->legenda}}</td>
+            
+         </tr>
+
+         @endforeach
+          
+      </tbody>
     </table>
-</div>
+  </div>
 @endsection

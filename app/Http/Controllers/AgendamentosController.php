@@ -254,6 +254,23 @@ class AgendamentosController extends Controller
 
     }
 
+    public function showPaciente($id)
+    {
+        $agendamentos       = $this->repository->all();
+        $agendamento        = Agendamento::all();
+        $patient_list       = $this->patientRepository->selectBoxList();
+        $doctor_list        = $this->doctorRepository->selectBoxList();
+        $secretaria_list    = $this->secretariaRepository->selectBoxList();
+        //dd( $agendamentos );
+        
+
+        return view('patient.agendamentos', [
+            'agendamentos' => $agendamentos,
+            'patient_list' => $patient_list
+        ]);
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -262,6 +279,13 @@ class AgendamentosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
+    {
+        $agendamento = $this->repository->find($id);
+
+        return view('agendamentos.edit', compact('agendamento'));
+    }
+
+    public function editar($id)
     {
         $agendamento = $this->repository->find($id);
 

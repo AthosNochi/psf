@@ -13,7 +13,7 @@
     @endif
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="homepage-paciente">Home</a>
+        <a class="navbar-brand" href="/homepage-paciente">Home</a>
         <button class="navbar-toggler" id="botao1" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> 
@@ -62,9 +62,21 @@
     @csrf
 
     <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">* Nome:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="name" value="{{$patient->name}}">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="email" class="col-sm-4 col-form-label">* Email:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" maxlength="255" name="email" value="{{$patient->email}}">
+        </div>
+    </div>
+    <div class="form-group row">
         <label for="cpf" class="col-sm-4 col-form-label">* CPF:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="gender" value="{{$patient->cpf}}">
+            <input type="text" class="form-control" maxlength="255" name="cpf" value="{{$patient->cpf}}">
         </div>
     </div>
   
@@ -74,14 +86,6 @@
             <input type="text" class="form-control" maxlength="255" name="rg" value="{{$patient->rg}}">
         </div>
       </div>
-  
-      <div class="form-group row">
-          <label for="name" id="age" class="col-sm-4 col-form-label"> Nome: </label>
-          <div class="col-sm-8">
-              <input type="text" class="form-control" maxlength="255" name="name"  value="{{$patient->name}}">
-          </div>
-      </div>
-  
       <div class="form-group row">
         <label for="phone" class="col-sm-4 col-form-label">Telefone:</label>
         <div class="col-sm-8">
