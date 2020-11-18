@@ -155,5 +155,17 @@ class SecretariasController extends Controller
             return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
+
+    public function destroy($id)
+    {
+        $request = $this->service->destroy($id);
+
+        session()->flash('success', [
+            'success'  => $request['success'],
+            'messages' => $request['messages']
+        ]);
+        
+        return redirect()->route('user.index');
+    }
 }
 

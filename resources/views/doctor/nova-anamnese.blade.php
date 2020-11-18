@@ -23,25 +23,10 @@
               <a class="nav-link" id="" href="/homepage-medico/agendamentos" >Calendário</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="" href="/homepage-medico">Anameneses</a>
+            <a class="nav-link" id="" href="/homepage-medico/anamneses">Anameneses</a>
           </li>
-          </li>
-          <li class="nav-item" id="mudanav">
-            <a class="nav-link" href="{{ route('logout') }}"
-              onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">
-              {{ __('Logout') }}
-            </a>
-  
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-              @csrf
-            </form>
-          </li>
-
-          <li>
           
-          </li>
-
+         
           <li class="nav-item">
             <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
           </li>
@@ -51,6 +36,26 @@
           <li class="nav-item">
             <button class="btn btn-primary" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
           </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                {{Auth::guard('doctor')->user()->name}} <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                </li>
+            </ul>
+          </li>
+          
       </ul>
     </nav>
 

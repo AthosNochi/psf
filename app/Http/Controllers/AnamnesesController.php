@@ -73,6 +73,39 @@ class AnamnesesController extends Controller
         ]);
     }
 
+    public function anamnesesSecretaria(){;
+        $anamneses          = $this->repository->all();
+        $patient_list       = $this->patientRepository->selectBoxList();
+        
+        //dd($horarios );
+        return view('secretaria.anamneses', [
+            'anamneses'         => $anamneses,
+            'patient_list'      => $patient_list,
+        ]);
+    }
+
+    public function anamnesesEnfermeiro(){;
+        $anamneses          = $this->repository->all();
+        $patient_list       = $this->patientRepository->selectBoxList();
+        
+        //dd($horarios );
+        return view('enfermeiro.anamneses', [
+            'anamneses'         => $anamneses,
+            'patient_list'      => $patient_list,
+        ]);
+    }
+
+    public function anamnesesMedico(){;
+        $anamneses          = $this->repository->all();
+        $patient_list       = $this->patientRepository->selectBoxList();
+        
+        //dd($horarios );
+        return view('doctor.anamneses', [
+            'anamneses'         => $anamneses,
+            'patient_list'      => $patient_list,
+        ]);
+    }
+
     //////-------HOMEPAGE-ENFERMEIRO------------//////
 
     public function homepageEnfermeiro(){;

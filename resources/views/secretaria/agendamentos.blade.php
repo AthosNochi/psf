@@ -23,27 +23,14 @@
             <a class="nav-link" id="" href="/homepage-Secretaria/pacientes">Pacientes</a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" id="" href="/homepage-Secretaria">Anameneses</a>
+          <a class="nav-link" id="" href="/homepage-Secretaria/anamneses">Anameneses</a>
         </li>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="" href="/homepage-Secretaria/novo-agendamento">Novo Agendamento</a>
         </li>
-        
-        <li class="nav-item" id="mudanav">
-          <a class="nav-link" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
-          </a>
-
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-          </form>
-        </li>
-
-        <li>
-        
+        <li class="nav-item">
+          <a class="nav-link" id="" href="/homepage-Secretaria/horarios">Horarios</a>
         </li>
 
         <li class="nav-item">
@@ -55,6 +42,8 @@
         <li class="nav-item">
           <button class="btn btn-primary" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
         </li>
+
+        
     </ul>
   </nav>
 <div class="panel">

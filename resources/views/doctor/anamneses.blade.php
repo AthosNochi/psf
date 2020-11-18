@@ -21,12 +21,6 @@
         <li class="nav-item">
             <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>
         </li>
-        <li class="nav-item">
-            <button class="btn btn-primary" name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-primary" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-          </li>
         <li class="dropdown">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                 {{Auth::guard('doctor')->user()->name}} <span class="caret"></span>
@@ -47,13 +41,47 @@
             </ul>
           </li>
         </ul>
+
+        
     </nav>
 
-
-    <h1 id="areamedico">Area do Médico</h1>
-    <h1 id="areamedico2">Bem vindo(a)</h1>
-    <h1 id="mnome">{{Auth::guard('doctor')->user()->name}}</h1>
-    
+    <div class="panel">
+        <table class="table" align="center">
+        <thead>
+            <tr>
+                <th>Paciente</th>
+                <th>Genero</td>
+                
+                <th>Idade</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($anamneses as $anamnese)
+            <tr>
+                <td>{{ $patient_list[$anamnese->name] }}</td>
+                <td>{{ $anamnese->gender }}</td>
+                
+                <td>{{ $anamnese->age }}</td>
+  
+                <td>
+                  {!! Form::open(['route' => ['anamnese.destroy', $anamnese->id], 'method' => 'DELETE']) !!}
+                  <input class="btn btn-primary" type="submit" name="submit" value="Remover">
+                  {!! Form::close() !!}
+                </td>
+                <td>
+                <a href="{{ route('anamnese.edit', $anamnese->id) }}"> Editar</a>
+                </td>
+                <td>
+                  <a href="{{ route('anamnese.show', $anamnese->id) }}"> Detalhes</a>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+        </table>
+    </div>
+    <a class="btn btn-primary" href="/homepage-medico/nova-anamnese">Nova Anamnese</a>
+    <input type="button" class="btn btn-primary" value="Atualizar" onClick="document.location.reload(true)">
   
     @endsection
 

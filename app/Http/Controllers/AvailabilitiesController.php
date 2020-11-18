@@ -77,6 +77,27 @@ class AvailabilitiesController extends Controller
         ]);
     }
 
+    public function horarios()
+    {
+        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
+        $availabilities = $this->repository->all();
+        $patient_list       = $this->patientRepository->selectBoxList();
+        $doctor_list        = $this->doctorRepository->selectBoxList();
+
+        if (request()->wantsJson()) {
+
+            return response()->json([
+                'data' => $availabilities,
+            ]);
+        }
+
+        return view('secretaria.horarios',[
+            'availabilities'      => $availabilities,
+            'patient_list'      => $patient_list,
+            'doctor_list'       => $doctor_list,
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

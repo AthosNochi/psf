@@ -10882,10 +10882,7 @@ a.text-dark:focus {
     border-collapse: collapse !important;
   }
 
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
+  
 
   .table-bordered th,
   .table-bordered td {
@@ -11165,7 +11162,7 @@ th {
 }
 
 td {
-  background-color: #eee;
+  
   width: 200px;
   height: 50px;
   border: 1px dotted black;
@@ -11180,8 +11177,76 @@ table {
   border-collapse: collapse;
 
 
-
 /* -------- navbar---------*/
-
-
 }
+
+#areapaciente {
+	position: absolute;
+	left: 35%;
+	top: 50%
+}
+ #areasecretaria{
+  position: absolute;
+	left: 35%;
+	top: 40%
+ }
+ #areasecretaria2{
+  position: absolute;
+	left: 35%;
+	top: 50%
+ }
+
+ #snome{
+  position: absolute;
+	left: 35%;
+	top: 60%
+ }
+
+ #areaenfermeiro{
+  position: absolute;
+	left: 35%;
+	top: 40%
+ }
+ #areaenfermeiro2{
+  position: absolute;
+	left: 35%;
+	top: 50%
+ }
+
+ #enome{
+  position: absolute;
+	left: 35%;
+	top: 60%
+ }
+ #areapaciente{
+  position: absolute;
+	left: 35%;
+	top: 40%
+ }
+ #areapaciente2{
+  position: absolute;
+	left: 35%;
+	top: 50%
+ }
+
+ #pnome{
+  position: absolute;
+	left: 35%;
+	top: 60%
+ }
+ #areamedico{
+  position: absolute;
+	left: 35%;
+	top: 40%
+ }
+ #areamedico2{
+  position: absolute;
+	left: 35%;
+	top: 50%
+ }
+
+ #mnome{
+  position: absolute;
+	left: 35%;
+	top: 60%
+ }

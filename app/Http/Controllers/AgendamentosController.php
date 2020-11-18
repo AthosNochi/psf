@@ -117,6 +117,22 @@ class AgendamentosController extends Controller
         ]);
     }
 
+    public function novoAgendamentoPaciente(){
+        $agendamentos       = $this->repository->all();
+        $agendamento        = Agendamento::all();
+        $patient_list       = $this->patientRepository->selectBoxList();
+        $doctor_list        = $this->doctorRepository->selectBoxList();
+        $secretaria_list    = $this->secretariaRepository->selectBoxList();
+        //dd($horarios );
+    
+        return view('patient.novo-agendamento', [
+            'agendamentos'      => $agendamentos,
+            'patient_list'      => $patient_list,
+            'doctor_list'       => $doctor_list,
+            'secretaria_list'   => $secretaria_list,
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -254,9 +270,14 @@ class AgendamentosController extends Controller
 
     }
 
-    public function showPaciente($id)
+    public function showPaciente()
     {
-        $agendamentos       = $this->repository->all();
+
+        $pacienteid = 0;
+
+        if (Auth::guard('patient')->check()) {$pacienteid = Auth::guard('patient')->user()->id;
+
+            $agendamentos       = $this->repository->where('id_patient',$pacienteid)->get();
         $agendamento        = Agendamento::all();
         $patient_list       = $this->patientRepository->selectBoxList();
         $doctor_list        = $this->doctorRepository->selectBoxList();
@@ -268,7 +289,11 @@ class AgendamentosController extends Controller
             'agendamentos' => $agendamentos,
             'patient_list' => $patient_list
         ]);
+        } else {
 
+        return redirect()->back();
+
+        }
     }
 
     /**

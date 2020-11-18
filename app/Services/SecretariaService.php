@@ -46,4 +46,31 @@ class SecretariaService
             }
         }
     }
+
+    public function destroy($data)
+    {
+        try
+        {
+            $secretaria = $this->repository->delete($data);
+
+
+            return [
+                'success'   => true,
+                'messages'  => "Usuário removido",
+                'data'      => $secretaria,
+            ];
+        }
+
+        catch(Exception $e)
+        {
+            switch(get_class($e))
+            {
+
+                case QueryException::class      : return ['success' => false, 'messages' => $e->getMessage()];
+                case ValidatorException::class  : return ['success' => false, 'messages' => $e->getMessageBag()];
+                case Exception::class           : return ['success' => false, 'messages' => $e->getMessage()];
+                default                         : return ['success' => false, 'messages' => $e->getMessage()];
+            }
+        }
+    }
 }

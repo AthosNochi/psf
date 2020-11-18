@@ -38,7 +38,7 @@ Route :: group ([ 'middleware' => 'patient' ], function () {
     Route::get('/homepage-paciente/meus-dados/editar/{id}', 'PatientsController@editar')->name('patient.editar');
 
     Route::get('/homepage-paciente/meus-agendamentos/', 'AgendamentosController@showPaciente');
-    Route::get('/homepage-paciente/meus-agendamentos/editar/{id}', 'AgendamentosController@editar')->name('agendamento.editar');
+    Route::get('/homepage-paciente/meus-agendamentos/novo-agendamento', 'AgendamentosController@novoAgendamentoPaciente');
 });
 
 //////--------ROTAS DE SECRETARIA ----------///////
@@ -49,6 +49,7 @@ Route :: group ([ 'middleware' => 'secretaria' ], function () {
     });
     // $value = session('key');
     Route::get('/homepage-Secretaria', 'AnamnesesController@homepageSecretaria')->name('secretaria.homepage');
+    Route::get('/homepage-Secretaria/anamneses', 'AnamnesesController@anamnesesSecretaria')->name('secretaria.anamneses');
 
     Route::get('/',['as'=>'login.index','uses'=>'LoginController@index']);
     Route::post('/login/postLogin',['as'=>'login.postLogin','uses'=>'LoginController@postLogin']);
@@ -59,6 +60,7 @@ Route :: group ([ 'middleware' => 'secretaria' ], function () {
     Route::get('/homepage-Secretaria/novo-agendamento', 'AgendamentosController@novoAgendamento');
     Route::get('/homepage-Secretaria/novo-paciente', 'PatientsController@novoPaciente');
     Route::get('/homepage-Secretaria/nova-anamnese', 'AnamnesesController@novaAnamnese');
+    Route::get('/homepage-Secretaria/horarios', 'AvailabilitiesController@horarios');
 });
 
 
@@ -76,6 +78,7 @@ Route :: group ([ 'middleware' => 'doctor' ], function () {
     Route::get('homepage-medico/logout', 'LoginController@logout');
 
     Route::get('/homepage-medico/agendamentos', 'AgendamentosController@showMedico');
+    Route::get('/homepage-medico/anamneses', 'AnamnesesController@anamnesesMedico')->name('medico.anamneses');
     Route::get('/homepage-medico/nova-anamnese', 'AnamnesesController@novaAnamneseMedico');
 });
 
@@ -88,6 +91,7 @@ Route :: group ([ 'middleware' => 'enfermeiro' ], function () {
     });
 
     Route::get('/homepage-enfermeiro', 'AnamnesesController@homepageEnfermeiro')->name('enfermeiro.homepage');
+    Route::get('/homepage-enfermeiro/anamneses', 'AnamnesesController@anamnesesEnfermeiro')->name('enfermeiro.anamneses');
     
     Route::get('/',['as'=>'login.index','uses'=>'LoginController@index']);
     Route::post('/login/postLogin',['as'=>'login.postLogin','uses'=>'LoginController@postLogin']);
@@ -95,6 +99,7 @@ Route :: group ([ 'middleware' => 'enfermeiro' ], function () {
 
     Route::get('/homepage-enfermeiro/agendamentos', 'AgendamentosController@showEnfermeiro');
     Route::get('/homepage-enfermeiro/nova-anamnese', 'AnamnesesController@novaAnamneseEnfermeiro');
+    
 
 });
 
