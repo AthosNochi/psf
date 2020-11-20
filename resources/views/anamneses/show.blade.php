@@ -57,7 +57,7 @@
         <table id="customers" class="table" align="center">
         <thead>
             <tr>
-                <th>Id do Paciente</th>
+                <th>Nome do Paciente</th>
                 <th>Genero</td>
                 
                 <th>Idade</th>

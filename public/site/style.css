@@ -11180,73 +11180,68 @@ table {
 /* -------- navbar---------*/
 }
 
-#areapaciente {
-	position: absolute;
-	left: 35%;
-	top: 50%
-}
  #areasecretaria{
   position: absolute;
 	left: 35%;
-	top: 40%
+	top: 65%
  }
  #areasecretaria2{
   position: absolute;
 	left: 35%;
-	top: 50%
+	top: 75%
  }
 
  #snome{
   position: absolute;
 	left: 35%;
-	top: 60%
+	top: 85%
  }
 
  #areaenfermeiro{
   position: absolute;
 	left: 35%;
-	top: 40%
+	top: 65%
  }
  #areaenfermeiro2{
   position: absolute;
 	left: 35%;
-	top: 50%
+	top: 75%
  }
 
  #enome{
   position: absolute;
 	left: 35%;
-	top: 60%
+	top: 85%
  }
  #areapaciente{
   position: absolute;
 	left: 35%;
-	top: 40%
+	top: 65%
  }
  #areapaciente2{
   position: absolute;
 	left: 35%;
-	top: 50%
+	top: 75%
  }
 
  #pnome{
   position: absolute;
 	left: 35%;
-	top: 60%
+	top: 85%
  }
  #areamedico{
   position: absolute;
 	left: 35%;
-	top: 40%
+	top: 65%
  }
  #areamedico2{
   position: absolute;
 	left: 35%;
-	top: 50%
+	top: 75%
  }
 
  #mnome{
   position: absolute;
 	left: 35%;
-	top: 60%
+	top: 85%
  }

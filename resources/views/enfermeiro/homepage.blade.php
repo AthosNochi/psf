@@ -57,15 +57,8 @@
           </li>
       </ul>
     </nav>
-
-    <h1 id="areaenfermeiro">Area do enfermeiro</h1>
-    <h1 id="areaenfermeiro2">Bem vindo(a)</h1>
-    <h1 id="enome">{{Auth::guard('enfermeiro')->user()->name}}</h1>
+    <h1 id="areaenfermeiro" style="font-size:5vw;">Area do enfermeiro</h1>
+    <h1 id="areaenfermeiro2" style="font-size:5vw;">Bem vindo(a)</h1>
+    <h1 id="enome" style="font-size:5vw;">{{Auth::guard('enfermeiro')->user()->name}}</h1>
    
 @endsection
-
-
-<!-- salvar na anamnese quem preencheu os dados -->
-
-    
-    <!-- salvar na anamnese quem preencheu os dados -->
