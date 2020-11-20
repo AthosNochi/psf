@@ -12,6 +12,7 @@
         <h3>{{ session('success')['messages'] }}</h3>
     @endif
 
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/homepage-Secretaria">Home</a>
       <button class="navbar-toggler" id="botao1" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,9 +26,7 @@
           <li>
               <a class="nav-link" id="" href="/homepage-Secretaria/pacientes">Pacientes</a>
           </li> 
-          <li class="nav-item">
-            <a class="nav-link" id="" href="/homepage-Secretaria/anamneses">Anameneses</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" id="" href="/homepage-Secretaria/horarios">Horarios</a>
           </li>
@@ -171,14 +170,23 @@
       </div>
     </div>
     
-    @if (Auth::guard('secretaria')->check())
+  @if (Auth::guard('secretaria')->check())
     <input type="hidden" name="secretaria_id" value="{{Auth::guard('secretaria')->user()->id}}">
+  @else
+    <input type="hidden" name="secretaria_id" value="{{$anamnese->secretaria_id}}">
+  @endif
 
-    @else
+  @if (Auth::guard('enfermeiro')->check())
+    <input type="hidden" name="enfermeiro_id" value="{{Auth::guard('enfermeiro')->user()->id}}">
+  @else
+    <input type="hidden" name="enfermeiro_id" value="{{$anamnese->enfermeiro_id}}">
+  @endif
 
-    <input type="hidden" name="secretaria_id" value="">
-
-    @endif
+  @if (Auth::guard('doctor')->check())
+    <input type="hidden" name="doctor_id" value="{{Auth::guard('doctor')->user()->id}}">
+  @else
+    <input type="hidden" name="doctor_id" value="{{$anamnese->doctor_id}}">
+  @endif
 
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary " id="mudabotao1" type="submit" name="submit" value="Enviar">

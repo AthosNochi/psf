@@ -21,7 +21,7 @@ class Anamnese extends Model implements Transformable
      * @var array
      */
 
-     protected $fillable = ['name','gender','age','corEtnia','estadoCivil','profissao','naturalidade','address','nomeMae','religiao','alergias','queixaPrincipal','historicoDoenca','sintomas','doctor_id','enfermeiro_id','updated_at','dados','id_patient', 'secretaria_id'];
+     protected $fillable = ['name','gender','age','corEtnia','estadoCivil','profissao','naturalidade','address','nomeMae','religiao','alergias','queixaPrincipal','historicoDoenca','sintomas','resultado','doctor_id','enfermeiro_id','updated_at','id_patient', 'secretaria_id'];
     
    
     public function patient()

@@ -43,6 +43,12 @@
             <input type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
         </div>
     </div>
+    <div class="form-group row">
+        <label for="coren" class="col-sm-4 col-form-label">* COREN:</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" maxlength="10" name="coren" placeholder="insira seu registro COREN" required>
+        </div>
+    </div>
     <div>
         <input type="hidden" name="tipo" value="enfermeiro">
     </div>
@@ -80,3 +86,12 @@
         </table>
     </div>
 @endsection
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $('#phone').mask('(00) 0 0000-0000');
+        $('#cpf').mask('000.000.000-00');
+        $('#rg').mask('00.000.000-0');
+        
+    </script>

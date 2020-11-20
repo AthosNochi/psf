@@ -63,6 +63,7 @@ class EnfermeirosController extends Controller
             'tipo'  => $request['tipo'],
             'cpf'   => $request['cpf'],
             'phone' => $request['phone'],
+            'coren' => $request['coren'],
             'password' => $request['password'],
         ]);
         

@@ -167,15 +167,24 @@
           <input type="text" class="form-control" rows="10" cols="30" style="width:600px; height:300px;" maxlength="255" name="sintomas" placeholder="Insira o interrogatório" >
       </div>
     </div>
-    
-    @if (Auth::guard('doctor')->check())
-    <input type="hidden" name="id_doctor" value="{{Auth::guard('doctor')->user()->id}}">
 
-    @else
+  @if (Auth::guard('secretaria')->check())
+    <input type="hidden" name="secretaria_id" value="{{Auth::guard('secretaria')->user()->id}}">
+  @else
+    <input type="hidden" name="secretaria_id" value="{{$anamnese->secretaria_id}}">
+  @endif
 
-    <input type="hidden" name="id_doctor" value="">
+  @if (Auth::guard('enfermeiro')->check())
+    <input type="hidden" name="enfermeiro_id" value="{{Auth::guard('enfermeiro')->user()->id}}">
+  @else
+    <input type="hidden" name="enfermeiro_id" value="{{$anamnese->enfermeiro_id}}">
+  @endif
 
-    @endif
+  @if (Auth::guard('doctor')->check())
+    <input type="hidden" name="doctor_id" value="{{Auth::guard('doctor')->user()->id}}">
+  @else
+    <input type="hidden" name="doctor_id" value="{{$anamnese->doctor_id}}">
+  @endif
 
     <div class="modal-footer d-flex justify-content-center">
         <input class="btn btn-primary " id="mudabotao1" type="submit" name="submit" value="Enviar">

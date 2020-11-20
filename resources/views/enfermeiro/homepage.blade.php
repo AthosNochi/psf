@@ -58,7 +58,7 @@
       </ul>
     </nav>
 
-    <h1 id="areaenfermeiro">Area da secretaria</h1>
+    <h1 id="areaenfermeiro">Area do enfermeiro</h1>
     <h1 id="areaenfermeiro2">Bem vindo(a)</h1>
     <h1 id="enome">{{Auth::guard('enfermeiro')->user()->name}}</h1>
    

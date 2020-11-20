@@ -72,6 +72,7 @@
                 <th>Queixa Principal</th>
                 <th>Historico de doenças</th>
                 <th>Sintomas</th>
+                <th>Resultado</th>
                 <th>Opções</th>
             </tr>
         </thead>
@@ -93,6 +94,7 @@
                 <td>{{ $anamnese->queixaPrincipal }}</td>
                 <td>{{ $anamnese->historicoDoenca }}</td>
                 <td>{{ $anamnese->sintomas }}</td>
+                <td>{{ $anamnese->resultado }}</td>
   
                 <td>
                   {!! Form::open(['route' => ['anamnese.destroy', $anamnese->id], 'method' => 'DELETE']) !!}

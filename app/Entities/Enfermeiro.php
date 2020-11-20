@@ -29,7 +29,7 @@ class Enfermeiro extends Authenticatable
 
     public 	  $timestamps   =  true;
     protected $table        = 'enfermeiros';
-    protected $fillable     = ['cpf', 'name', 'rg','password', 'phone', 'email', 'tipo'];
+    protected $fillable     = ['cpf', 'name', 'rg','password', 'phone', 'email', 'tipo', 'coren'];
     protected $hidden       = ['password', 'remember_token'];
 
 

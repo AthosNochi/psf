@@ -22,9 +22,7 @@
         <li>
             <a class="nav-link" id="" href="/homepage-Secretaria/pacientes">Pacientes</a>
         </li> 
-        <li class="nav-item">
-          <a class="nav-link" id="" href="/homepage-Secretaria/anamneses">Anameneses</a>
-        </li>
+        
         </li>
         <li class="nav-item">
           <a class="nav-link" id="" href="/homepage-Secretaria/novo-agendamento">Novo Agendamento</a>

@@ -33,13 +33,19 @@
     <div class="form-group row">
         <label for="cpf" id="cpfsecretaria" class="col-sm-4 col-form-label">* CPF:</label>
         <div class="col-sm-5">
-            <input type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
+            <input id="cpf" type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
         </div>
     </div>
     <div class="form-group row">
         <label for="rg" id="rgsecretaria" class="col-sm-4 col-form-label">* RG:</label>
         <div class="col-sm-5">
-            <input type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
+            <input id="rg" type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
+        </div>
+    </div> 
+    <div class="form-group row">
+        <label for="coren" id="coren" class="col-sm-4 col-form-label">* COREN:</label>
+        <div class="col-sm-5">
+            <input id="rg" type="text" class="form-control" maxlength="9" name="rg" placeholder="Insira seu registro" required>
         </div>
     </div> 
     <div>
@@ -77,3 +83,12 @@
     </table>
     </div>
 @endsection
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $('#phone').mask('(00) 0 0000-0000');
+        $('#cpf').mask('000.000.000-00');
+        $('#rg').mask('00.000.000-0');
+        
+    </script> 

@@ -24,27 +24,27 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="cpf" id="cpf" class="col-sm-4 col-form-label">* CPF:</label>
+        <label for="cpf" class="col-sm-4 col-form-label">* CPF:</label>
         <div class="col-sm-5">
-            <input type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
+            <input id="cpf" type="text" class="form-control" maxlength="11" name="cpf" placeholder="000.000.000-00" required>
         </div>
     </div>
     <div class="form-group row">
         <label for="rg" class="col-sm-4 col-form-label">* RG:</label>
         <div class="col-sm-5">
-            <input type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
+            <input id="rg" type="text" class="form-control" maxlength="9" name="rg" placeholder="00.000.000-0" required>
         </div>
     </div> 
     <div class="form-group row">
         <label for="phone" class="col-sm-4 col-form-label">* Telefone:</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
+            <input id="phone" type="text" class="form-control" maxlength="10" name="phone" placeholder="(99)9999-9999" required>
         </div>
     </div>
     <div class="form-group row">
         <label for="crm" class="col-sm-4 col-form-label"> CRM:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="crm" placeholder="CRM" required>
+            <input id="crm" type="text" class="form-control" maxlength="255" name="crm" placeholder="CRM" required>
         </div>
     </div>
     <div class="form-group row">
@@ -94,3 +94,12 @@
         </table>
     </div>
 @endsection
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $('#phone').mask('(00) 0 0000-0000');
+        $('#cpf').mask('000.000.000-00');
+        $('#rg').mask('00.000.000-0');
+        $('#crm').mask('0000000000/aa');
+    </script>

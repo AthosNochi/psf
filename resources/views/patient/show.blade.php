@@ -30,7 +30,7 @@
               <a class="nav-link" id="" href="/homepage-Secretaria/pacientes">Pacientes</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" id="" href="/homepage-Secretaria/anamneses">Anameneses</a>
+            <a class="nav-link" id="" href="/homepage-Secretaria/horarios">Horarios</a>
           </li>
           <li class="nav-item">
             <button class="btn btn-primary" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Auto contraste</button>

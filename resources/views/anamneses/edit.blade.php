@@ -98,7 +98,7 @@
       <div class="form-group row">
         <label for="profissao" id="profissao" class="col-sm-4 col-form-label"> Profissão: </label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="profissao"  value="{{$anamnese->profissão}}">
+            <input type="text" class="form-control" maxlength="255" name="profissao"  value="{{$anamnese->profissao}}">
         </div>
       </div>
       <div class="form-group row">
@@ -152,7 +152,7 @@
       <div class="form-group row">
         <label for="resultado" class="col-sm-4 col-form-label">Resultado:</label>
         <div class="col-sm-8">
-          <input type="checkbox" name="resultado" id="resultado"  value="Preescrever receituario">
+          <input type="checkbox" name="resultado" id="resultado"  value="{{$anamnese->resultado}}">
           <label for="resultado"> Preescrever receituário</label><br>
 
           <input type="checkbox" name="resultado" id="resultado"  value="Marcar retorno">
@@ -161,14 +161,23 @@
       </div>
 
 
-      @if (Auth::guard('secretaria')->check())
+    @if (Auth::guard('secretaria')->check())
       <input type="hidden" name="secretaria_id" value="{{Auth::guard('secretaria')->user()->id}}">
-  
       @else
-  
-    <input type="hidden" name="secretaria_id" value="{{$anamnese->secretaria_id}}">
-  
-      @endif
+      <input type="hidden" name="secretaria_id" value="{{$anamnese->secretaria_id}}">
+    @endif
+
+    @if (Auth::guard('enfermeiro')->check())
+      <input type="hidden" name="enfermeiro_id" value="{{Auth::guard('enfermeiro')->user()->id}}">
+      @else
+      <input type="hidden" name="enfermeiro_id" value="{{$anamnese->enfermeiro_id}}">
+    @endif
+
+    @if (Auth::guard('doctor')->check())
+      <input type="hidden" name="doctor_id" value="{{Auth::guard('doctor')->user()->id}}">
+      @else
+      <input type="hidden" name="doctor_id" value="{{$anamnese->doctor_id}}">
+    @endif
 
     <div class="modal-footer d-flex justify-content-center">
       <input class="btn btn-primary" type="submit" name="submit" value="Enviar">

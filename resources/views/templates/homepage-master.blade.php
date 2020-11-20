@@ -24,6 +24,7 @@
     <script src="{{ asset('site/fonte.js') }}"></script>
     <script src="{{ asset('site/navbar.js') }}"></script>
     <script src="{{asset('assets/fullcalendar/lib/locales-all.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
 
     <section id="view-conteudo">

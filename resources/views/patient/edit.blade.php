@@ -76,14 +76,14 @@
     <div class="form-group row">
         <label for="cpf" class="col-sm-4 col-form-label">* CPF:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="gender" value="{{$patient->cpf}}">
+            <input id="cpf" type="text" class="form-control" maxlength="255" name="gender" value="{{$patient->cpf}}">
         </div>
     </div>
   
       <div class="form-group row">
         <label for="rg" class="col-sm-4 col-form-label">RG:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="rg" value="{{$patient->rg}}">
+            <input id="rg" type="text" class="form-control" maxlength="255" name="rg" value="{{$patient->rg}}">
         </div>
       </div>
   
@@ -97,7 +97,7 @@
       <div class="form-group row">
         <label for="phone" class="col-sm-4 col-form-label">Telefone:</label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="phone" value="{{$patient->phone}}">       
+            <input id="phone" type="text" class="form-control" maxlength="255" name="phone" value="{{$patient->phone}}">       
       
         </div>
       </div>
@@ -126,7 +126,7 @@
       <div class="form-group row">
         <label for="sus" id="sus" class="col-sm-4 col-form-label"> SUS: </label>
         <div class="col-sm-8">
-            <input type="text" class="form-control" maxlength="255" name="notes" value="{{$patient->sus}}">
+            <input id="sus" type="text" class="form-control" maxlength="255" name="notes" value="{{$patient->sus}}">
         </div>
       </div>
 
@@ -151,3 +151,4 @@
 
 
 @endsection
+
