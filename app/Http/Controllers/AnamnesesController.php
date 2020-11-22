@@ -199,6 +199,8 @@ class AnamnesesController extends Controller
         $anamnese->secretaria_id        = $request->input('secretaria_id');
         $anamnese->resultado            = $request->input('resultado');
         
+        $anamnese->enfermeiro_id        = $request->input('enfermeiro_id');
+        
 
         $anamnese->save();
 

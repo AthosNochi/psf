@@ -18,7 +18,7 @@
       <ul class="navbar-nav">
           
           <li>
-              <a class="nav-link" id="anamneseEnfermeiro" href="/homepage-Secretaria">Voltar</a>
+            <a class="nav-link" type="button"  onclick="JavaScript: history.go(-1);">Voltar</a>
           </li> 
           <li class="nav-item" id="mudanav">
             <a class="nav-link" href="{{ route('logout') }}"
@@ -63,9 +63,14 @@
     <div class="form-group row">
         <label for="name" class="col-sm-4 col-form-label">* Paciente:</label>
         <div class="col-sm-8">
-          <td>{{ $patient_list[$anamnese->name] }}</td>
+          <div style=" background-color: #929292;
+          color: white;" class="form-control">
+            <td> {{ $patient_list[$anamnese->name]}}</td>
+          </div>
         </div>
     </div>
+
+    
   
       <div class="form-group row">
         <label for="gender" class="col-sm-4 col-form-label">Genero:</label>
@@ -152,7 +157,7 @@
       <div class="form-group row">
         <label for="resultado" class="col-sm-4 col-form-label">Resultado:</label>
         <div class="col-sm-8">
-          <input type="checkbox" name="resultado" id="resultado"  value="{{$anamnese->resultado}}">
+          <input type="checkbox" name="resultado" id="resultado" value="Preescrever receituário">
           <label for="resultado"> Preescrever receituário</label><br>
 
           <input type="checkbox" name="resultado" id="resultado"  value="Marcar retorno">

@@ -53,9 +53,9 @@
       
   </nav>
   
-  <h1 id="areapaciente">Area do paciente</h1>
-  <h1 id="areapaciente2">Bem vindo(a)</h1>
-    <h1 id="pnome">{{Auth::guard('patient')->user()->name}}</h1>
+  <h1 id="areapaciente" style="font-size:5vw;">Area do paciente</h1>
+  <h1 id="areapaciente2" style="font-size:5vw;">Bem vindo(a)</h1>
+    <h1 id="pnome" style="font-size:5vw;">{{Auth::guard('patient')->user()->name}}</h1>
 
 @endsection
 	

@@ -63,9 +63,9 @@
           </li>
       </ul>
     </nav>
-    <h1 id="areasecretaria">Area da secretaria</h1>
-    <h1 id="areasecretaria2">Bem vindo(a)</h1>
-    <h1 id="snome">{{Auth::guard('secretaria')->user()->name}}</h1>
+    <h1 id="areasecretaria" style="font-size:5vw;">Area da secretaria</h1>
+    <h1 id="areasecretaria2" style="font-size:5vw;">Bem vindo(a)</h1>
+    <h1 id="snome" style="font-size:5vw;">{{Auth::guard('secretaria')->user()->name}}</h1>
 
     
     

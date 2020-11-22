@@ -61,19 +61,19 @@
     <table class="table" align="center">
       <thead>
           <tr>
+              <th>Paciente</th>
               <th>Legenda</th>
               <th>Descrição</th>
               <th>Data/Hora</th>
-              <th>Paciente</th>
           </tr>
       </thead>
       <tbody>
           @foreach($agendamentos as $agendamento)
           <tr>
+              <td>{{ $patient_list[$agendamento->id_patient] }}</td>
               <td>{{ $agendamento->legenda}}</td>
               <td>{{ $agendamento->descricao }}</td>
               <td>{{ date("d/m/Y H:i:s", strtotime($agendamento->datahora)) }}</td>
-              <td>{{ $patient_list[$agendamento->id_patient] }}</td>
           </tr>
           @endforeach
       </tbody>

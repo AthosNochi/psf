@@ -50,9 +50,9 @@
     </nav>
 
 
-    <h1 id="areamedico">Area do Médico</h1>
-    <h1 id="areamedico2">Bem vindo(a)</h1>
-    <h1 id="mnome">{{Auth::guard('doctor')->user()->name}}</h1>
+    <h1 id="areamedico" style="font-size:5vw;">Area do Médico</h1>
+    <h1 id="areamedico2" style="font-size:5vw;">Bem vindo(a)</h1>
+    <h1 id="mnome" style="font-size:5vw;">{{Auth::guard('doctor')->user()->name}}</h1>
     
   
     @endsection

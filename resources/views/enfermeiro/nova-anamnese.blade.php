@@ -67,7 +67,7 @@
         @include('templates.formulario.select', ['select' => 'id_patient', 'data' => $patient_list, 'attributes' => ['placeholder' => "Paciente", 'class' => 'form-control', 'required' => 'required']])
       </div>
     </div>
-
+    
     <div class="form-group row">
       <label for="gender" class="col-sm-4 col-form-label">Genero:</label>
       <div class="col-sm-8">
@@ -167,23 +167,10 @@
           <input type="text" class="form-control" rows="10" cols="30" style="width:600px; height:300px;" maxlength="255" name="sintomas" placeholder="Insira o interrogatório" >
       </div>
     </div>
-    
-  @if (Auth::guard('secretaria')->check())
-    <input type="hidden" name="secretaria_id" value="{{Auth::guard('secretaria')->user()->id}}">
-  @else
-    <input type="hidden" name="secretaria_id" value="{{$anamnese->secretaria_id}}">
-  @endif
-
   @if (Auth::guard('enfermeiro')->check())
     <input type="hidden" name="enfermeiro_id" value="{{Auth::guard('enfermeiro')->user()->id}}">
-  @else
+    @else
     <input type="hidden" name="enfermeiro_id" value="{{$anamnese->enfermeiro_id}}">
-  @endif
-
-  @if (Auth::guard('doctor')->check())
-    <input type="hidden" name="doctor_id" value="{{Auth::guard('doctor')->user()->id}}">
-  @else
-    <input type="hidden" name="doctor_id" value="{{$anamnese->doctor_id}}">
   @endif
 
     <div class="modal-footer d-flex justify-content-center">
